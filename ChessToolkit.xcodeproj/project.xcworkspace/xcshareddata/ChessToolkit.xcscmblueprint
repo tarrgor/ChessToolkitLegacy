@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D4FB4285E84F344A4A0DD36243C06E37C26A184E" : 9223372036854775807,
+    "1AC71448F81B4CD8B1053EC3E05CBBCEAC259B61" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2CF383E0-668F-4CFC-9E49-B54345C8C6D7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D4FB4285E84F344A4A0DD36243C06E37C26A184E" : "ChessToolkit\/SVGKit\/",
+    "1AC71448F81B4CD8B1053EC3E05CBBCEAC259B61" : "CTArchive\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ChessToolkit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ChessToolkit.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tarrgor\/ChessToolkit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1AC71448F81B4CD8B1053EC3E05CBBCEAC259B61"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SVGKit\/SVGKit",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D4FB4285E84F344A4A0DD36243C06E37C26A184E"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+[submodule "SVGKit"]
+	path = SVGKit
+	url = https://github.com/SVGKit/SVGKit
+[submodule "CocoaLumberjack"]
+	path = CocoaLumberjack
+	url = https://github.com/CocoaLumberjack/CocoaLumberjack
