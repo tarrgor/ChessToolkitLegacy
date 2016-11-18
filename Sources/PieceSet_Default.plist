@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FileName.K</key>
+	<string>Chess_klt45</string>
+	<key>FileName.Q</key>
+	<string>Chess_qlt45</string>
+	<key>FileName.R</key>
+	<string>Chess_rlt45</string>
+	<key>FileName.B</key>
+	<string>Chess_blt45</string>
+	<key>FileName.N</key>
+	<string>Chess_nlt45</string>
+	<key>FileName.P</key>
+	<string>Chess_plt45</string>
+	<key>FileName.k</key>
+	<string>Chess_kdt45</string>
+	<key>FileName.q</key>
+	<string>Chess_qdt45</string>
+	<key>FileName.r</key>
+	<string>Chess_rdt45</string>
+	<key>FileName.b</key>
+	<string>Chess_bdt45</string>
+	<key>FileName.n</key>
+	<string>Chess_ndt45</string>
+	<key>FileName.p</key>
+	<string>Chess_pdt45</string>
+</dict>
+</plist>

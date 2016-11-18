@@ -3,11 +3,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "35B5C9A93714EC9BEB56BAE809C5551E5C66E52D" : 9223372036854775807,
     "D4FB4285E84F344A4A0DD36243C06E37C26A184E" : 9223372036854775807,
     "1AC71448F81B4CD8B1053EC3E05CBBCEAC259B61" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2CF383E0-668F-4CFC-9E49-B54345C8C6D7",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "35B5C9A93714EC9BEB56BAE809C5551E5C66E52D" : "ChessToolkit\/CocoaLumberjack\/",
     "D4FB4285E84F344A4A0DD36243C06E37C26A184E" : "ChessToolkit\/SVGKit\/",
     "1AC71448F81B4CD8B1053EC3E05CBBCEAC259B61" : "CTArchive\/"
   },
@@ -19,6 +21,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tarrgor\/ChessToolkit.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1AC71448F81B4CD8B1053EC3E05CBBCEAC259B61"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CocoaLumberjack\/CocoaLumberjack",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "35B5C9A93714EC9BEB56BAE809C5551E5C66E52D"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SVGKit\/SVGKit",

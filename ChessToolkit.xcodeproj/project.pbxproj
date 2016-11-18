@@ -29,9 +29,31 @@
 		F2D143841DDE260600288DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D143821DDE260600288DFC /* Main.storyboard */; };
 		F2D143861DDE260600288DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D143851DDE260600288DFC /* Assets.xcassets */; };
 		F2D143891DDE260600288DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D143871DDE260600288DFC /* LaunchScreen.storyboard */; };
-		F2D1438E1DDE261800288DFC /* ChessToolkitiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D1435F1DDE245800288DFC /* ChessToolkitiOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		F2D1438E1DDE261800288DFC /* ChessToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D1435F1DDE245800288DFC /* ChessToolkit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F2D143921DDE27BA00288DFC /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D143531DDE23F000288DFC /* SVGKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F2D143931DDE27BA00288DFC /* SVGKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2D143531DDE23F000288DFC /* SVGKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2D3446E1DDE2E610067F51F /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */; };
+		F2D3446F1DDE2E610067F51F /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2D3447F1DDE2F3A0067F51F /* Chess_bdt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344731DDE2F3A0067F51F /* Chess_bdt45.svg */; };
+		F2D344801DDE2F3A0067F51F /* Chess_blt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344741DDE2F3A0067F51F /* Chess_blt45.svg */; };
+		F2D344811DDE2F3A0067F51F /* Chess_kdt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344751DDE2F3A0067F51F /* Chess_kdt45.svg */; };
+		F2D344821DDE2F3A0067F51F /* Chess_klt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344761DDE2F3A0067F51F /* Chess_klt45.svg */; };
+		F2D344831DDE2F3A0067F51F /* Chess_ndt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344771DDE2F3A0067F51F /* Chess_ndt45.svg */; };
+		F2D344841DDE2F3A0067F51F /* Chess_nlt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344781DDE2F3A0067F51F /* Chess_nlt45.svg */; };
+		F2D344851DDE2F3A0067F51F /* Chess_pdt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344791DDE2F3A0067F51F /* Chess_pdt45.svg */; };
+		F2D344861DDE2F3A0067F51F /* Chess_plt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D3447A1DDE2F3A0067F51F /* Chess_plt45.svg */; };
+		F2D344871DDE2F3A0067F51F /* Chess_qdt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D3447B1DDE2F3A0067F51F /* Chess_qdt45.svg */; };
+		F2D344881DDE2F3A0067F51F /* Chess_qlt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D3447C1DDE2F3A0067F51F /* Chess_qlt45.svg */; };
+		F2D344891DDE2F3A0067F51F /* Chess_rdt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D3447D1DDE2F3A0067F51F /* Chess_rdt45.svg */; };
+		F2D3448A1DDE2F3A0067F51F /* Chess_rlt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D3447E1DDE2F3A0067F51F /* Chess_rlt45.svg */; };
+		F2D3448C1DDE2F490067F51F /* PieceSet_Default.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2D3448B1DDE2F490067F51F /* PieceSet_Default.plist */; };
+		F2D3448F1DDE35760067F51F /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */; };
+		F2DAFE8B1DDF74B30094F9A3 /* ChessToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D1435F1DDE245800288DFC /* ChessToolkit.framework */; };
+		F2DAFE961DDF74E20094F9A3 /* CTFENParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAFE911DDF74E20094F9A3 /* CTFENParserTests.swift */; };
+		F2DAFE971DDF74E20094F9A3 /* CTGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAFE921DDF74E20094F9A3 /* CTGameTests.swift */; };
+		F2DAFE981DDF74E20094F9A3 /* CTMoveGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAFE931DDF74E20094F9A3 /* CTMoveGeneratorTests.swift */; };
+		F2DAFE991DDF74E20094F9A3 /* CTMoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAFE941DDF74E20094F9A3 /* CTMoveTests.swift */; };
+		F2DAFE9A1DDF74E20094F9A3 /* CTPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAFE951DDF74E20094F9A3 /* CTPositionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,19 +106,146 @@
 			remoteGlobalIDString = 825CDAAE1BDA4BC0003C1C12;
 			remoteInfo = "SVGKitFramework-iOS";
 		};
+		F2D344491DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCB3185114EB418E001CFBEE;
+			remoteInfo = CocoaLumberjack;
+		};
+		F2D3444B1DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 18F3BF0F1A81D8B700692297;
+			remoteInfo = CocoaLumberjackSwift;
+		};
+		F2D3444D1DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19FF46021B8B4CF400B43179;
+			remoteInfo = "CocoaLumberjack-iOS";
+		};
+		F2D3444F1DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19FF460F1B8B4D1400B43179;
+			remoteInfo = "CocoaLumberjackSwift-iOS";
+		};
+		F2D344511DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 18F3BFD71A81E06E00692297;
+			remoteInfo = "CocoaLumberjack-iOS-Static";
+		};
+		F2D344531DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19190EDE1B84D812008D059E;
+			remoteInfo = "CocoaLumberjack-watchOS";
+		};
+		F2D344551DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19190EEB1B84D826008D059E;
+			remoteInfo = "CocoaLumberjackSwift-watchOS";
+		};
+		F2D344571DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19D90B261BBFA9DB00947169;
+			remoteInfo = "CocoaLumberjack-tvOS";
+		};
+		F2D344591DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19D90B351BBFAA7500947169;
+			remoteInfo = "CocoaLumberjackSwift-tvOS";
+		};
+		F2D3445B1DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCB318CA14ED6C3B001CFBEE;
+			remoteInfo = FmwkTest;
+		};
+		F2D3445D1DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55CCBEFF19BA679200957A39;
+			remoteInfo = SwiftTest;
+		};
+		F2D3445F1DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 18F3BF5F1A81DD2E00692297;
+			remoteInfo = iOSSwiftTest;
+		};
+		F2D344611DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19EC14671B84D134000EC2E7;
+			remoteInfo = watchOSSwiftTest;
+		};
+		F2D344631DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19EC14731B84D134000EC2E7;
+			remoteInfo = "watchOSSwiftTest Extension";
+		};
+		F2D344651DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19406BE11BDBABFF001194DC;
+			remoteInfo = tvOSSwiftTest;
+		};
+		F2D344671DDE2E090067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 18F3BFF21A81E0C700692297;
+			remoteInfo = iOSLibStaticTest;
+		};
+		F2D344701DDE2E610067F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DCB3185014EB418E001CFBEE;
+			remoteInfo = CocoaLumberjack;
+		};
+		F2DAFE8C1DDF74B30094F9A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D1432E1DDE222800288DFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2D1435E1DDE245800288DFC;
+			remoteInfo = "ChessToolkit-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F2D143911DDE27A000288DFC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F2D3446F1DDE2E610067F51F /* CocoaLumberjack.framework in Embed Frameworks */,
 				F2D143931DDE27BA00288DFC /* SVGKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -117,7 +266,7 @@
 		F2D143431DDE235900288DFC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "../../CTArchive/ChessToolkit/ChessToolkit/String+Extension.swift"; sourceTree = "<group>"; };
 		F2D143441DDE235900288DFC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "../../CTArchive/ChessToolkit/ChessToolkit/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SVGKit-iOS.xcodeproj"; path = "SVGKit/SVGKit-iOS.xcodeproj"; sourceTree = "<group>"; };
-		F2D1435F1DDE245800288DFC /* ChessToolkitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2D1435F1DDE245800288DFC /* ChessToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D143621DDE245800288DFC /* ChessToolkit-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkit-iOS.h"; sourceTree = "<group>"; };
 		F2D143631DDE245800288DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2D1437C1DDE260600288DFC /* ChessToolkitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessToolkitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +276,27 @@
 		F2D143851DDE260600288DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2D143881DDE260600288DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2D1438A1DDE260600288DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = CocoaLumberjack/Lumberjack.xcodeproj; sourceTree = "<group>"; };
+		F2D344731DDE2F3A0067F51F /* Chess_bdt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_bdt45.svg; sourceTree = "<group>"; };
+		F2D344741DDE2F3A0067F51F /* Chess_blt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_blt45.svg; sourceTree = "<group>"; };
+		F2D344751DDE2F3A0067F51F /* Chess_kdt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_kdt45.svg; sourceTree = "<group>"; };
+		F2D344761DDE2F3A0067F51F /* Chess_klt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_klt45.svg; sourceTree = "<group>"; };
+		F2D344771DDE2F3A0067F51F /* Chess_ndt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_ndt45.svg; sourceTree = "<group>"; };
+		F2D344781DDE2F3A0067F51F /* Chess_nlt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_nlt45.svg; sourceTree = "<group>"; };
+		F2D344791DDE2F3A0067F51F /* Chess_pdt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_pdt45.svg; sourceTree = "<group>"; };
+		F2D3447A1DDE2F3A0067F51F /* Chess_plt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_plt45.svg; sourceTree = "<group>"; };
+		F2D3447B1DDE2F3A0067F51F /* Chess_qdt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_qdt45.svg; sourceTree = "<group>"; };
+		F2D3447C1DDE2F3A0067F51F /* Chess_qlt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_qlt45.svg; sourceTree = "<group>"; };
+		F2D3447D1DDE2F3A0067F51F /* Chess_rdt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_rdt45.svg; sourceTree = "<group>"; };
+		F2D3447E1DDE2F3A0067F51F /* Chess_rlt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_rlt45.svg; sourceTree = "<group>"; };
+		F2D3448B1DDE2F490067F51F /* PieceSet_Default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PieceSet_Default.plist; sourceTree = "<group>"; };
+		F2DAFE861DDF74B30094F9A3 /* ChessToolkitiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessToolkitiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2DAFE8A1DDF74B30094F9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2DAFE911DDF74E20094F9A3 /* CTFENParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTFENParserTests.swift; sourceTree = "<group>"; };
+		F2DAFE921DDF74E20094F9A3 /* CTGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTGameTests.swift; sourceTree = "<group>"; };
+		F2DAFE931DDF74E20094F9A3 /* CTMoveGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveGeneratorTests.swift; sourceTree = "<group>"; };
+		F2DAFE941DDF74E20094F9A3 /* CTMoveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveTests.swift; sourceTree = "<group>"; };
+		F2DAFE951DDF74E20094F9A3 /* CTPositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPositionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D3448F1DDE35760067F51F /* CocoaLumberjack.framework in Frameworks */,
 				F2D143681DDE246F00288DFC /* SVGKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +314,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2D143921DDE27BA00288DFC /* SVGKit.framework in Frameworks */,
-				F2D1438E1DDE261800288DFC /* ChessToolkitiOS.framework in Frameworks */,
+				F2D3446E1DDE2E610067F51F /* CocoaLumberjack.framework in Frameworks */,
+				F2D1438E1DDE261800288DFC /* ChessToolkit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2DAFE831DDF74B30094F9A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2DAFE8B1DDF74B30094F9A3 /* ChessToolkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,10 +333,13 @@
 		F2D1432D1DDE222800288DFC = {
 			isa = PBXGroup;
 			children = (
+				F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */,
 				F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */,
 				F2D143351DDE227000288DFC /* Sources */,
+				F2DAFE6D1DDF74010094F9A3 /* Tests */,
 				F2D143611DDE245800288DFC /* ChessToolkit-iOS */,
 				F2D1437D1DDE260600288DFC /* ChessToolkit-Example */,
+				F2DAFE871DDF74B30094F9A3 /* ChessToolkit-iOS-Tests */,
 				F2D143601DDE245800288DFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +347,7 @@
 		F2D143351DDE227000288DFC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F2D344721DDE2F190067F51F /* PieceSets */,
 				F2D143361DDE235900288DFC /* CTCastlingRights.swift */,
 				F2D143371DDE235900288DFC /* CTChessboardView.swift */,
 				F2D143381DDE235900288DFC /* CTConstants.swift */,
@@ -199,8 +383,9 @@
 		F2D143601DDE245800288DFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F2D1435F1DDE245800288DFC /* ChessToolkitiOS.framework */,
+				F2D1435F1DDE245800288DFC /* ChessToolkit.framework */,
 				F2D1437C1DDE260600288DFC /* ChessToolkitExample.app */,
+				F2DAFE861DDF74B30094F9A3 /* ChessToolkitiOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +410,69 @@
 				F2D1438A1DDE260600288DFC /* Info.plist */,
 			);
 			path = "ChessToolkit-Example";
+			sourceTree = "<group>";
+		};
+		F2D344371DDE2E090067F51F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */,
+				F2D3444C1DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
+				F2D3444E1DDE2E090067F51F /* CocoaLumberjack.framework */,
+				F2D344501DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
+				F2D344521DDE2E090067F51F /* libCocoaLumberjack-iOS-Static.a */,
+				F2D344541DDE2E090067F51F /* CocoaLumberjack.framework */,
+				F2D344561DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
+				F2D344581DDE2E090067F51F /* CocoaLumberjack.framework */,
+				F2D3445A1DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
+				F2D3445C1DDE2E090067F51F /* FmwkTest.app */,
+				F2D3445E1DDE2E090067F51F /* SwiftTest.app */,
+				F2D344601DDE2E090067F51F /* iOSSwiftTest.app */,
+				F2D344621DDE2E090067F51F /* watchOSSwiftTest.app */,
+				F2D344641DDE2E090067F51F /* watchOSSwiftTest Extension.appex */,
+				F2D344661DDE2E090067F51F /* tvOSSwiftTest.app */,
+				F2D344681DDE2E090067F51F /* iOSLibStaticTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2D344721DDE2F190067F51F /* PieceSets */ = {
+			isa = PBXGroup;
+			children = (
+				F2D3448B1DDE2F490067F51F /* PieceSet_Default.plist */,
+				F2D344731DDE2F3A0067F51F /* Chess_bdt45.svg */,
+				F2D344741DDE2F3A0067F51F /* Chess_blt45.svg */,
+				F2D344751DDE2F3A0067F51F /* Chess_kdt45.svg */,
+				F2D344761DDE2F3A0067F51F /* Chess_klt45.svg */,
+				F2D344771DDE2F3A0067F51F /* Chess_ndt45.svg */,
+				F2D344781DDE2F3A0067F51F /* Chess_nlt45.svg */,
+				F2D344791DDE2F3A0067F51F /* Chess_pdt45.svg */,
+				F2D3447A1DDE2F3A0067F51F /* Chess_plt45.svg */,
+				F2D3447B1DDE2F3A0067F51F /* Chess_qdt45.svg */,
+				F2D3447C1DDE2F3A0067F51F /* Chess_qlt45.svg */,
+				F2D3447D1DDE2F3A0067F51F /* Chess_rdt45.svg */,
+				F2D3447E1DDE2F3A0067F51F /* Chess_rlt45.svg */,
+			);
+			name = PieceSets;
+			sourceTree = "<group>";
+		};
+		F2DAFE6D1DDF74010094F9A3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F2DAFE911DDF74E20094F9A3 /* CTFENParserTests.swift */,
+				F2DAFE921DDF74E20094F9A3 /* CTGameTests.swift */,
+				F2DAFE931DDF74E20094F9A3 /* CTMoveGeneratorTests.swift */,
+				F2DAFE941DDF74E20094F9A3 /* CTMoveTests.swift */,
+				F2DAFE951DDF74E20094F9A3 /* CTPositionTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F2DAFE871DDF74B30094F9A3 /* ChessToolkit-iOS-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F2DAFE8A1DDF74B30094F9A3 /* Info.plist */,
+			);
+			path = "ChessToolkit-iOS-Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +504,7 @@
 			);
 			name = "ChessToolkit-iOS";
 			productName = "ChessToolkit-iOS";
-			productReference = F2D1435F1DDE245800288DFC /* ChessToolkitiOS.framework */;
+			productReference = F2D1435F1DDE245800288DFC /* ChessToolkit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F2D1437B1DDE260600288DFC /* ChessToolkit-Example */ = {
@@ -272,11 +520,30 @@
 			);
 			dependencies = (
 				F2D143951DDE27BA00288DFC /* PBXTargetDependency */,
+				F2D344711DDE2E610067F51F /* PBXTargetDependency */,
 			);
 			name = "ChessToolkit-Example";
 			productName = "ChessToolkit-Example";
 			productReference = F2D1437C1DDE260600288DFC /* ChessToolkitExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F2DAFE851DDF74B30094F9A3 /* ChessToolkit-iOS-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2DAFE8E1DDF74B30094F9A3 /* Build configuration list for PBXNativeTarget "ChessToolkit-iOS-Tests" */;
+			buildPhases = (
+				F2DAFE821DDF74B30094F9A3 /* Sources */,
+				F2DAFE831DDF74B30094F9A3 /* Frameworks */,
+				F2DAFE841DDF74B30094F9A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2DAFE8D1DDF74B30094F9A3 /* PBXTargetDependency */,
+			);
+			name = "ChessToolkit-iOS-Tests";
+			productName = "ChessToolkit-iOS-Tests";
+			productReference = F2DAFE861DDF74B30094F9A3 /* ChessToolkitiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -297,6 +564,12 @@
 						DevelopmentTeam = YZB6HYGFR3;
 						ProvisioningStyle = Automatic;
 					};
+					F2DAFE851DDF74B30094F9A3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YZB6HYGFR3;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = F2D143311DDE222800288DFC /* Build configuration list for PBXProject "ChessToolkit" */;
@@ -312,6 +585,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = F2D344371DDE2E090067F51F /* Products */;
+					ProjectRef = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+				},
+				{
 					ProductGroup = F2D143461DDE23F000288DFC /* Products */;
 					ProjectRef = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
 				},
@@ -320,6 +597,7 @@
 			targets = (
 				F2D1435E1DDE245800288DFC /* ChessToolkit-iOS */,
 				F2D1437B1DDE260600288DFC /* ChessToolkit-Example */,
+				F2DAFE851DDF74B30094F9A3 /* ChessToolkit-iOS-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -367,6 +645,118 @@
 			remoteRef = F2D143581DDE23F000288DFC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLumberjack.framework;
+			remoteRef = F2D344491DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D3444C1DDE2E090067F51F /* CocoaLumberjackSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLumberjackSwift.framework;
+			remoteRef = F2D3444B1DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D3444E1DDE2E090067F51F /* CocoaLumberjack.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLumberjack.framework;
+			remoteRef = F2D3444D1DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D344501DDE2E090067F51F /* CocoaLumberjackSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLumberjackSwift.framework;
+			remoteRef = F2D3444F1DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D344521DDE2E090067F51F /* libCocoaLumberjack-iOS-Static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCocoaLumberjack-iOS-Static.a";
+			remoteRef = F2D344511DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D344541DDE2E090067F51F /* CocoaLumberjack.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLumberjack.framework;
+			remoteRef = F2D344531DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D344561DDE2E090067F51F /* CocoaLumberjackSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLumberjackSwift.framework;
+			remoteRef = F2D344551DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D344581DDE2E090067F51F /* CocoaLumberjack.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLumberjack.framework;
+			remoteRef = F2D344571DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D3445A1DDE2E090067F51F /* CocoaLumberjackSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLumberjackSwift.framework;
+			remoteRef = F2D344591DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D3445C1DDE2E090067F51F /* FmwkTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FmwkTest.app;
+			remoteRef = F2D3445B1DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D3445E1DDE2E090067F51F /* SwiftTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwiftTest.app;
+			remoteRef = F2D3445D1DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D344601DDE2E090067F51F /* iOSSwiftTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iOSSwiftTest.app;
+			remoteRef = F2D3445F1DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D344621DDE2E090067F51F /* watchOSSwiftTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = watchOSSwiftTest.app;
+			remoteRef = F2D344611DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D344641DDE2E090067F51F /* watchOSSwiftTest Extension.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = "watchOSSwiftTest Extension.appex";
+			remoteRef = F2D344631DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D344661DDE2E090067F51F /* tvOSSwiftTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = tvOSSwiftTest.app;
+			remoteRef = F2D344651DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2D344681DDE2E090067F51F /* iOSLibStaticTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iOSLibStaticTest.app;
+			remoteRef = F2D344671DDE2E090067F51F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -374,6 +764,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D344811DDE2F3A0067F51F /* Chess_kdt45.svg in Resources */,
+				F2D344841DDE2F3A0067F51F /* Chess_nlt45.svg in Resources */,
+				F2D344871DDE2F3A0067F51F /* Chess_qdt45.svg in Resources */,
+				F2D3447F1DDE2F3A0067F51F /* Chess_bdt45.svg in Resources */,
+				F2D344861DDE2F3A0067F51F /* Chess_plt45.svg in Resources */,
+				F2D344821DDE2F3A0067F51F /* Chess_klt45.svg in Resources */,
+				F2D344801DDE2F3A0067F51F /* Chess_blt45.svg in Resources */,
+				F2D344851DDE2F3A0067F51F /* Chess_pdt45.svg in Resources */,
+				F2D3448C1DDE2F490067F51F /* PieceSet_Default.plist in Resources */,
+				F2D344881DDE2F3A0067F51F /* Chess_qlt45.svg in Resources */,
+				F2D3448A1DDE2F3A0067F51F /* Chess_rlt45.svg in Resources */,
+				F2D344831DDE2F3A0067F51F /* Chess_ndt45.svg in Resources */,
+				F2D344891DDE2F3A0067F51F /* Chess_rdt45.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +787,13 @@
 				F2D143891DDE260600288DFC /* LaunchScreen.storyboard in Resources */,
 				F2D143861DDE260600288DFC /* Assets.xcassets in Resources */,
 				F2D143841DDE260600288DFC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2DAFE841DDF74B30094F9A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +831,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2DAFE821DDF74B30094F9A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2DAFE9A1DDF74E20094F9A3 /* CTPositionTests.swift in Sources */,
+				F2DAFE981DDF74E20094F9A3 /* CTMoveGeneratorTests.swift in Sources */,
+				F2DAFE971DDF74E20094F9A3 /* CTGameTests.swift in Sources */,
+				F2DAFE961DDF74E20094F9A3 /* CTFENParserTests.swift in Sources */,
+				F2DAFE991DDF74E20094F9A3 /* CTMoveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -428,6 +850,16 @@
 			isa = PBXTargetDependency;
 			name = "SVGKitFramework-iOS";
 			targetProxy = F2D143941DDE27BA00288DFC /* PBXContainerItemProxy */;
+		};
+		F2D344711DDE2E610067F51F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaLumberjack;
+			targetProxy = F2D344701DDE2E610067F51F /* PBXContainerItemProxy */;
+		};
+		F2DAFE8D1DDF74B30094F9A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2D1435E1DDE245800288DFC /* ChessToolkit-iOS */;
+			targetProxy = F2DAFE8C1DDF74B30094F9A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -553,7 +985,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-iOS";
-				PRODUCT_NAME = ChessToolkitiOS;
+				PRODUCT_NAME = ChessToolkit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -612,7 +1044,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-iOS";
-				PRODUCT_NAME = ChessToolkitiOS;
+				PRODUCT_NAME = ChessToolkit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -652,10 +1084,6 @@
 				DEVELOPMENT_TEAM = YZB6HYGFR3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/SVGKit/3rd-party-frameworks/CocoaLumberjack-2.2.0/iOS",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -712,10 +1140,6 @@
 				DEVELOPMENT_TEAM = YZB6HYGFR3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/SVGKit/3rd-party-frameworks/CocoaLumberjack-2.2.0/iOS",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -730,6 +1154,79 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-Example";
 				PRODUCT_NAME = ChessToolkitExample;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2DAFE8F1DDF74B30094F9A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YZB6HYGFR3;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "ChessToolkit-iOS-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-iOS-Tests";
+				PRODUCT_NAME = ChessToolkitiOSTests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F2DAFE901DDF74B30094F9A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YZB6HYGFR3;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "ChessToolkit-iOS-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-iOS-Tests";
+				PRODUCT_NAME = ChessToolkitiOSTests;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -766,6 +1263,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F2DAFE8E1DDF74B30094F9A3 /* Build configuration list for PBXNativeTarget "ChessToolkit-iOS-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2DAFE8F1DDF74B30094F9A3 /* Debug */,
+				F2DAFE901DDF74B30094F9A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
