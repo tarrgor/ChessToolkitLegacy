@@ -1271,6 +1271,7 @@
 				F2DAFE901DDF74B30094F9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
