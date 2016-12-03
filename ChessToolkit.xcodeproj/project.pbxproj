@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F25B16091DF2C3220013F60C /* CTCastlingRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B15FA1DF2C3220013F60C /* CTCastlingRights.swift */; };
+		F25B160A1DF2C3220013F60C /* CTChessboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B15FB1DF2C3220013F60C /* CTChessboardView.swift */; };
+		F25B160B1DF2C3220013F60C /* CTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B15FC1DF2C3220013F60C /* CTConstants.swift */; };
+		F25B160C1DF2C3220013F60C /* CTEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B15FD1DF2C3220013F60C /* CTEnums.swift */; };
+		F25B160D1DF2C3220013F60C /* CTFENParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B15FE1DF2C3220013F60C /* CTFENParser.swift */; };
+		F25B160E1DF2C3220013F60C /* CTGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B15FF1DF2C3220013F60C /* CTGame.swift */; };
+		F25B160F1DF2C3220013F60C /* CTMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B16001DF2C3220013F60C /* CTMove.swift */; };
+		F25B16101DF2C3220013F60C /* CTMoveBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B16011DF2C3220013F60C /* CTMoveBuilder.swift */; };
+		F25B16111DF2C3220013F60C /* CTMoveGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B16021DF2C3220013F60C /* CTMoveGenerator.swift */; };
+		F25B16121DF2C3220013F60C /* CTMoveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B16031DF2C3220013F60C /* CTMoveNode.swift */; };
+		F25B16131DF2C3220013F60C /* CTPieceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B16041DF2C3220013F60C /* CTPieceSet.swift */; };
+		F25B16141DF2C3220013F60C /* CTPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B16051DF2C3220013F60C /* CTPosition.swift */; };
+		F25B16151DF2C3220013F60C /* CTUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B16061DF2C3220013F60C /* CTUtils.swift */; };
+		F25B16161DF2C3220013F60C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B16071DF2C3220013F60C /* String+Extension.swift */; };
+		F25B16171DF2C3220013F60C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B16081DF2C3220013F60C /* UIColor+Extension.swift */; };
 		F2D143641DDE245800288DFC /* ChessToolkit-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D143621DDE245800288DFC /* ChessToolkit-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2D143681DDE246F00288DFC /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D143531DDE23F000288DFC /* SVGKit.framework */; };
-		F2D143691DDE248D00288DFC /* CTCastlingRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143361DDE235900288DFC /* CTCastlingRights.swift */; };
-		F2D1436A1DDE248D00288DFC /* CTChessboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143371DDE235900288DFC /* CTChessboardView.swift */; };
-		F2D1436B1DDE248D00288DFC /* CTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143381DDE235900288DFC /* CTConstants.swift */; };
-		F2D1436C1DDE248D00288DFC /* CTEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143391DDE235900288DFC /* CTEnums.swift */; };
-		F2D1436D1DDE248D00288DFC /* CTFENParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1433A1DDE235900288DFC /* CTFENParser.swift */; };
-		F2D1436E1DDE248D00288DFC /* CTGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1433B1DDE235900288DFC /* CTGame.swift */; };
-		F2D1436F1DDE248D00288DFC /* CTMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1433C1DDE235900288DFC /* CTMove.swift */; };
-		F2D143701DDE248D00288DFC /* CTMoveBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1433D1DDE235900288DFC /* CTMoveBuilder.swift */; };
-		F2D143711DDE248D00288DFC /* CTMoveGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1433E1DDE235900288DFC /* CTMoveGenerator.swift */; };
-		F2D143721DDE248D00288DFC /* CTMoveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1433F1DDE235900288DFC /* CTMoveNode.swift */; };
-		F2D143731DDE248D00288DFC /* CTPieceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143401DDE235900288DFC /* CTPieceSet.swift */; };
-		F2D143741DDE248D00288DFC /* CTPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143411DDE235900288DFC /* CTPosition.swift */; };
-		F2D143751DDE248D00288DFC /* CTUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143421DDE235900288DFC /* CTUtils.swift */; };
-		F2D143761DDE248D00288DFC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143431DDE235900288DFC /* String+Extension.swift */; };
-		F2D143771DDE248D00288DFC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143441DDE235900288DFC /* UIColor+Extension.swift */; };
 		F2D1437F1DDE260600288DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1437E1DDE260600288DFC /* AppDelegate.swift */; };
 		F2D143811DDE260600288DFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143801DDE260600288DFC /* ViewController.swift */; };
 		F2D143841DDE260600288DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D143821DDE260600288DFC /* Main.storyboard */; };
@@ -250,21 +250,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F2D143361DDE235900288DFC /* CTCastlingRights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTCastlingRights.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTCastlingRights.swift; sourceTree = "<group>"; };
-		F2D143371DDE235900288DFC /* CTChessboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTChessboardView.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTChessboardView.swift; sourceTree = "<group>"; };
-		F2D143381DDE235900288DFC /* CTConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTConstants.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTConstants.swift; sourceTree = "<group>"; };
-		F2D143391DDE235900288DFC /* CTEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTEnums.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTEnums.swift; sourceTree = "<group>"; };
-		F2D1433A1DDE235900288DFC /* CTFENParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTFENParser.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTFENParser.swift; sourceTree = "<group>"; };
-		F2D1433B1DDE235900288DFC /* CTGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTGame.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTGame.swift; sourceTree = "<group>"; };
-		F2D1433C1DDE235900288DFC /* CTMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTMove.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTMove.swift; sourceTree = "<group>"; };
-		F2D1433D1DDE235900288DFC /* CTMoveBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTMoveBuilder.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTMoveBuilder.swift; sourceTree = "<group>"; };
-		F2D1433E1DDE235900288DFC /* CTMoveGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTMoveGenerator.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTMoveGenerator.swift; sourceTree = "<group>"; };
-		F2D1433F1DDE235900288DFC /* CTMoveNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTMoveNode.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTMoveNode.swift; sourceTree = "<group>"; };
-		F2D143401DDE235900288DFC /* CTPieceSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTPieceSet.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTPieceSet.swift; sourceTree = "<group>"; };
-		F2D143411DDE235900288DFC /* CTPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTPosition.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTPosition.swift; sourceTree = "<group>"; };
-		F2D143421DDE235900288DFC /* CTUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTUtils.swift; path = ../../CTArchive/ChessToolkit/ChessToolkit/CTUtils.swift; sourceTree = "<group>"; };
-		F2D143431DDE235900288DFC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "../../CTArchive/ChessToolkit/ChessToolkit/String+Extension.swift"; sourceTree = "<group>"; };
-		F2D143441DDE235900288DFC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "../../CTArchive/ChessToolkit/ChessToolkit/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		F25B15FA1DF2C3220013F60C /* CTCastlingRights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTCastlingRights.swift; sourceTree = "<group>"; };
+		F25B15FB1DF2C3220013F60C /* CTChessboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTChessboardView.swift; sourceTree = "<group>"; };
+		F25B15FC1DF2C3220013F60C /* CTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTConstants.swift; sourceTree = "<group>"; };
+		F25B15FD1DF2C3220013F60C /* CTEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTEnums.swift; sourceTree = "<group>"; };
+		F25B15FE1DF2C3220013F60C /* CTFENParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTFENParser.swift; sourceTree = "<group>"; };
+		F25B15FF1DF2C3220013F60C /* CTGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTGame.swift; sourceTree = "<group>"; };
+		F25B16001DF2C3220013F60C /* CTMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMove.swift; sourceTree = "<group>"; };
+		F25B16011DF2C3220013F60C /* CTMoveBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveBuilder.swift; sourceTree = "<group>"; };
+		F25B16021DF2C3220013F60C /* CTMoveGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveGenerator.swift; sourceTree = "<group>"; };
+		F25B16031DF2C3220013F60C /* CTMoveNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveNode.swift; sourceTree = "<group>"; };
+		F25B16041DF2C3220013F60C /* CTPieceSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPieceSet.swift; sourceTree = "<group>"; };
+		F25B16051DF2C3220013F60C /* CTPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPosition.swift; sourceTree = "<group>"; };
+		F25B16061DF2C3220013F60C /* CTUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTUtils.swift; sourceTree = "<group>"; };
+		F25B16071DF2C3220013F60C /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		F25B16081DF2C3220013F60C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SVGKit-iOS.xcodeproj"; path = "SVGKit/SVGKit-iOS.xcodeproj"; sourceTree = "<group>"; };
 		F2D1435F1DDE245800288DFC /* ChessToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D143621DDE245800288DFC /* ChessToolkit-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkit-iOS.h"; sourceTree = "<group>"; };
@@ -347,22 +347,22 @@
 		F2D143351DDE227000288DFC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F25B15FA1DF2C3220013F60C /* CTCastlingRights.swift */,
+				F25B15FB1DF2C3220013F60C /* CTChessboardView.swift */,
+				F25B15FC1DF2C3220013F60C /* CTConstants.swift */,
+				F25B15FD1DF2C3220013F60C /* CTEnums.swift */,
+				F25B15FE1DF2C3220013F60C /* CTFENParser.swift */,
+				F25B15FF1DF2C3220013F60C /* CTGame.swift */,
+				F25B16001DF2C3220013F60C /* CTMove.swift */,
+				F25B16011DF2C3220013F60C /* CTMoveBuilder.swift */,
+				F25B16021DF2C3220013F60C /* CTMoveGenerator.swift */,
+				F25B16031DF2C3220013F60C /* CTMoveNode.swift */,
+				F25B16041DF2C3220013F60C /* CTPieceSet.swift */,
+				F25B16051DF2C3220013F60C /* CTPosition.swift */,
+				F25B16061DF2C3220013F60C /* CTUtils.swift */,
+				F25B16071DF2C3220013F60C /* String+Extension.swift */,
+				F25B16081DF2C3220013F60C /* UIColor+Extension.swift */,
 				F2D344721DDE2F190067F51F /* PieceSets */,
-				F2D143361DDE235900288DFC /* CTCastlingRights.swift */,
-				F2D143371DDE235900288DFC /* CTChessboardView.swift */,
-				F2D143381DDE235900288DFC /* CTConstants.swift */,
-				F2D143391DDE235900288DFC /* CTEnums.swift */,
-				F2D1433A1DDE235900288DFC /* CTFENParser.swift */,
-				F2D1433B1DDE235900288DFC /* CTGame.swift */,
-				F2D1433C1DDE235900288DFC /* CTMove.swift */,
-				F2D1433D1DDE235900288DFC /* CTMoveBuilder.swift */,
-				F2D1433E1DDE235900288DFC /* CTMoveGenerator.swift */,
-				F2D1433F1DDE235900288DFC /* CTMoveNode.swift */,
-				F2D143401DDE235900288DFC /* CTPieceSet.swift */,
-				F2D143411DDE235900288DFC /* CTPosition.swift */,
-				F2D143421DDE235900288DFC /* CTUtils.swift */,
-				F2D143431DDE235900288DFC /* String+Extension.swift */,
-				F2D143441DDE235900288DFC /* UIColor+Extension.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -557,6 +557,7 @@
 					F2D1435E1DDE245800288DFC = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = YZB6HYGFR3;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					F2D1437B1DDE260600288DFC = {
@@ -804,21 +805,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2D143691DDE248D00288DFC /* CTCastlingRights.swift in Sources */,
-				F2D1436A1DDE248D00288DFC /* CTChessboardView.swift in Sources */,
-				F2D1436B1DDE248D00288DFC /* CTConstants.swift in Sources */,
-				F2D1436C1DDE248D00288DFC /* CTEnums.swift in Sources */,
-				F2D1436D1DDE248D00288DFC /* CTFENParser.swift in Sources */,
-				F2D1436E1DDE248D00288DFC /* CTGame.swift in Sources */,
-				F2D1436F1DDE248D00288DFC /* CTMove.swift in Sources */,
-				F2D143701DDE248D00288DFC /* CTMoveBuilder.swift in Sources */,
-				F2D143711DDE248D00288DFC /* CTMoveGenerator.swift in Sources */,
-				F2D143721DDE248D00288DFC /* CTMoveNode.swift in Sources */,
-				F2D143731DDE248D00288DFC /* CTPieceSet.swift in Sources */,
-				F2D143741DDE248D00288DFC /* CTPosition.swift in Sources */,
-				F2D143751DDE248D00288DFC /* CTUtils.swift in Sources */,
-				F2D143761DDE248D00288DFC /* String+Extension.swift in Sources */,
-				F2D143771DDE248D00288DFC /* UIColor+Extension.swift in Sources */,
+				F25B16091DF2C3220013F60C /* CTCastlingRights.swift in Sources */,
+				F25B160F1DF2C3220013F60C /* CTMove.swift in Sources */,
+				F25B160D1DF2C3220013F60C /* CTFENParser.swift in Sources */,
+				F25B16101DF2C3220013F60C /* CTMoveBuilder.swift in Sources */,
+				F25B160E1DF2C3220013F60C /* CTGame.swift in Sources */,
+				F25B160B1DF2C3220013F60C /* CTConstants.swift in Sources */,
+				F25B160A1DF2C3220013F60C /* CTChessboardView.swift in Sources */,
+				F25B16141DF2C3220013F60C /* CTPosition.swift in Sources */,
+				F25B16161DF2C3220013F60C /* String+Extension.swift in Sources */,
+				F25B16171DF2C3220013F60C /* UIColor+Extension.swift in Sources */,
+				F25B16151DF2C3220013F60C /* CTUtils.swift in Sources */,
+				F25B160C1DF2C3220013F60C /* CTEnums.swift in Sources */,
+				F25B16131DF2C3220013F60C /* CTPieceSet.swift in Sources */,
+				F25B16111DF2C3220013F60C /* CTMoveGenerator.swift in Sources */,
+				F25B16121DF2C3220013F60C /* CTMoveNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1164,6 +1165,7 @@
 		F2DAFE8F1DDF74B30094F9A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1203,6 +1205,7 @@
 		F2DAFE901DDF74B30094F9A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
