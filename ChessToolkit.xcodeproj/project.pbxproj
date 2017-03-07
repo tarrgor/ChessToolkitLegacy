@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20F822B1E6F54F8006360FE /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D143531DDE23F000288DFC /* SVGKit.framework */; };
 		F25B16091DF2C3220013F60C /* CTCastlingRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B15FA1DF2C3220013F60C /* CTCastlingRights.swift */; };
 		F25B160B1DF2C3220013F60C /* CTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B15FC1DF2C3220013F60C /* CTConstants.swift */; };
 		F25B160C1DF2C3220013F60C /* CTEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B15FD1DF2C3220013F60C /* CTEnums.swift */; };
@@ -326,6 +327,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20F822B1E6F54F8006360FE /* SVGKit.framework in Frameworks */,
 				F29DEC5A1DF2CBDA00047BBD /* ChessToolkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
