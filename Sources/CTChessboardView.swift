@@ -5,6 +5,7 @@
 
 import UIKit
 import SVGKit
+import ChessToolkit
 
 let kLabelXOffsetFactor: CGFloat = 0.068
 let kLabelYOffsetFactor: CGFloat = 0.045

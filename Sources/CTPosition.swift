@@ -68,7 +68,7 @@ public final class CTPosition {
     return _moveHistory.last
   }
   
-  var moveGenerator: CTMoveGenerator {
+  public var moveGenerator: CTMoveGenerator {
     return self._moveGenerator
   }
   

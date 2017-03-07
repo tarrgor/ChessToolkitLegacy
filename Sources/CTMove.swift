@@ -8,17 +8,17 @@
 
 import Foundation
 
-struct CTMove : Equatable, CustomStringConvertible {
+public struct CTMove : Equatable, CustomStringConvertible {
   
-  var piece: CTPiece
-  var from: CTSquare
-  var to: CTSquare
-  var captured: CTPiece
-  var enPassant: Bool = false
-  var promotionPiece: CTPiece
-  var castlingRightsBeforeMove: CTCastlingRights
-  var check: Bool
-  var moveNumber: Int
+  public let piece: CTPiece
+  public let from: CTSquare
+  public let to: CTSquare
+  public let captured: CTPiece
+  public let enPassant: Bool
+  public let promotionPiece: CTPiece
+  public let castlingRightsBeforeMove: CTCastlingRights
+  public var check: Bool
+  public let moveNumber: Int
   
   var castling: Bool {
     if piece == .whiteKing && from == .e1 {
@@ -46,7 +46,7 @@ struct CTMove : Equatable, CustomStringConvertible {
     return false
   }
   
-  var description : String {
+  public var description : String {
     return "\(from.toRowAndColumn()) - \(to.toRowAndColumn())"
   }
   
@@ -110,6 +110,6 @@ struct CTMove : Equatable, CustomStringConvertible {
   }
 }
 
-func ==(lhs: CTMove, rhs: CTMove) -> Bool {
+public func ==(lhs: CTMove, rhs: CTMove) -> Bool {
   return lhs.from == rhs.from && lhs.to == rhs.to && lhs.piece == rhs.piece && lhs.promotionPiece == rhs.promotionPiece
 }

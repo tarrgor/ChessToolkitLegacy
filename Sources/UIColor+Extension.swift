@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChessToolkit
 
 extension UIColor {
   

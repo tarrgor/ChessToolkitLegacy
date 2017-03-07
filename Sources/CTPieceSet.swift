@@ -8,6 +8,7 @@
 
 import UIKit
 import SVGKit
+import ChessToolkit
 
 class CTPieceSet {
   
@@ -36,7 +37,7 @@ class CTPieceSet {
       image = cachedImg
     } else {
       if let name = _configuration[piece] {
-        if let svgImage = SVGKImage(named: "\(name)", in: CTConstants.kFrameworkBundle) {
+        if let svgImage = SVGKImage(named: "\(name)", in: CTUIConstants.kFrameworkBundle) {
           image = svgImage
           _cache.updateValue(svgImage, forKey: piece)
         } else {
@@ -62,7 +63,7 @@ class CTPieceSet {
     let fileName = "PieceSet_\(self.name)"
     let ext = "plist"
     
-    if let configPath = CTConstants.kFrameworkBundle.path(forResource: fileName, ofType: ext) {
+    if let configPath = CTUIConstants.kFrameworkBundle.path(forResource: fileName, ofType: ext) {
       if let plistFile = NSDictionary(contentsOfFile: configPath) {
         let enumerator = plistFile.keyEnumerator()
         while let key = enumerator.nextObject() as? String {

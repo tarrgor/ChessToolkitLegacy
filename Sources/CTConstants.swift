@@ -26,11 +26,6 @@ struct CTConstants {
     .invalid, .invalid, .invalid, .invalid, .invalid, .invalid, .invalid, .invalid, .invalid, .invalid, .invalid, .invalid
   ]
   
-  // MARK: Framework Constants
-  
-  static let kFrameworkIdentifier = "org.karrmarr.ChessToolkit-iOS"
-  static let kFrameworkBundle = Bundle(identifier: kFrameworkIdentifier)!
-  
   // MARK: FEN Constants
   
   static let kFENNotSpecified = "-"

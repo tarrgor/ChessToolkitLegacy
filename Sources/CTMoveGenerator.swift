@@ -8,13 +8,13 @@
 
 import Foundation
 
-final class CTMoveGenerator {
+public final class CTMoveGenerator {
   
   var position: CTPosition
   
   // MARK: Initialization
   
-  required init(position: CTPosition) {
+  public required init(position: CTPosition) {
     self.position = position
   }
   
@@ -230,7 +230,7 @@ final class CTMoveGenerator {
     return moves
   }
   
-  func generateAllMovesForSide(_ side: CTSide, legalOnly: Bool = true) -> [CTMove] {
+  public func generateAllMovesForSide(_ side: CTSide, legalOnly: Bool = true) -> [CTMove] {
     var moves = [CTMove]()
     
     if side == .white {

@@ -57,15 +57,15 @@ public enum CTPiece : Int {
     .whiteKing      : "K"
   ]
   
-  static func fromFEN(_ fen:Character) -> CTPiece? {
+  public static func fromFEN(_ fen:Character) -> CTPiece? {
     return kFENPieceMap[fen]
   }
   
-  func toFEN() -> Character? {
+  public func toFEN() -> Character? {
     return CTPiece.kPieceFENMap[self]
   }
   
-  func toPGN() -> String {
+  public func toPGN() -> String {
     var pgn: String
     switch self {
     case .whiteKnight, .blackKnight:
@@ -84,7 +84,7 @@ public enum CTPiece : Int {
     return pgn
   }
   
-  func side() -> CTSide? {
+  public func side() -> CTSide? {
     if self != .empty && self != .invalid {
       return self.rawValue > 0 ? .white : .black
     }
@@ -162,30 +162,30 @@ public enum CTSquare : Int {
     [ a8, b8, c8, d8, e8, f8, g8, h8 ]
   ]
   
-  static func fromString(_ square: String) -> CTSquare? {
+  public static func fromString(_ square: String) -> CTSquare? {
     if let result = kSquareMap[square.lowercased()] {
       return result
     }
     return nil
   }
   
-  static func fromRow(_ row: Int, column: Int) -> CTSquare? {
+  public static func fromRow(_ row: Int, column: Int) -> CTSquare? {
     let value = (row * 12 + 26) + column
     return self.init(rawValue: value)
   }
   
-  func toString() -> String {
+  public func toString() -> String {
     return CTSquare.kStringMap[self]!
   }
   
-  func toRowAndColumn() -> (row: Int, column: Int) {
+  public func toRowAndColumn() -> (row: Int, column: Int) {
     let value = self.rawValue - 26
     let row = value / 12
     let column = value % 12
     return (row, column)
   }
   
-  func up() -> CTSquare? {
+  public func up() -> CTSquare? {
     let value = self.rawValue + 12
     if value <= 117 {
       return CTSquare(rawValue: value)
@@ -193,7 +193,7 @@ public enum CTSquare : Int {
     return nil
   }
   
-  func upLeft() -> CTSquare? {
+  public func upLeft() -> CTSquare? {
     let value = self.rawValue + 11
     if value <= 116 {
       return CTSquare(rawValue: value)
@@ -201,7 +201,7 @@ public enum CTSquare : Int {
     return nil
   }
   
-  func upRight() -> CTSquare? {
+  public func upRight() -> CTSquare? {
     let value = self.rawValue + 13
     if value <= 117 {
       return CTSquare(rawValue: value)
@@ -209,7 +209,7 @@ public enum CTSquare : Int {
     return nil
   }
   
-  func down() -> CTSquare? {
+  public func down() -> CTSquare? {
     let value = self.rawValue - 12
     if value >= 26 {
       return CTSquare(rawValue: value)
@@ -217,7 +217,7 @@ public enum CTSquare : Int {
     return nil
   }
   
-  func downLeft() -> CTSquare? {
+  public func downLeft() -> CTSquare? {
     let value = self.rawValue - 13
     if value >= 26 {
       return CTSquare(rawValue: value)
@@ -225,7 +225,7 @@ public enum CTSquare : Int {
     return nil
   }
   
-  func downRight() -> CTSquare? {
+  public func downRight() -> CTSquare? {
     let value = self.rawValue - 11
     if value >= 27 {
       return CTSquare(rawValue: value)
@@ -233,7 +233,7 @@ public enum CTSquare : Int {
     return nil
   }
   
-  func right() -> CTSquare? {
+  public func right() -> CTSquare? {
     let value = self.rawValue + 1
     if value <= 117 {
       return CTSquare(rawValue: value)
@@ -241,7 +241,7 @@ public enum CTSquare : Int {
     return nil
   }
   
-  func left() -> CTSquare? {
+  public func left() -> CTSquare? {
     let value = self.rawValue - 1
     if value >= 26 {
       return CTSquare(rawValue: value)
