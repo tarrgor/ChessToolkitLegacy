@@ -236,19 +236,19 @@
 			remoteGlobalIDString = 18F3BFF21A81E0C700692297;
 			remoteInfo = iOSLibStaticTest;
 		};
-		F2D344701DDE2E610067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = DCB3185014EB418E001CFBEE;
-			remoteInfo = CocoaLumberjack;
-		};
 		F2DAFE8C1DDF74B30094F9A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F2D1432E1DDE222800288DFC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F2D1435E1DDE245800288DFC;
 			remoteInfo = "ChessToolkit-iOS";
+		};
+		F2F2155E1E86DB5A000BBC9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 19FF46011B8B4CF400B43179;
+			remoteInfo = "CocoaLumberjack-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -474,22 +474,22 @@
 		F2D344371DDE2E090067F51F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */,
-				F2D3444C1DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
+				F2D344521DDE2E090067F51F /* libCocoaLumberjack.a */,
 				F2D3444E1DDE2E090067F51F /* CocoaLumberjack.framework */,
-				F2D344501DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
-				F2D344521DDE2E090067F51F /* libCocoaLumberjack-iOS-Static.a */,
-				F2D344541DDE2E090067F51F /* CocoaLumberjack.framework */,
-				F2D344561DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
+				F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */,
 				F2D344581DDE2E090067F51F /* CocoaLumberjack.framework */,
+				F2D344541DDE2E090067F51F /* CocoaLumberjack.framework */,
+				F2D344501DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
+				F2D3444C1DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
 				F2D3445A1DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
+				F2D344561DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
+				F2D344681DDE2E090067F51F /* iOSLibStaticTest.app */,
 				F2D3445C1DDE2E090067F51F /* FmwkTest.app */,
-				F2D3445E1DDE2E090067F51F /* SwiftTest.app */,
 				F2D344601DDE2E090067F51F /* iOSSwiftTest.app */,
+				F2D3445E1DDE2E090067F51F /* SwiftTest.app */,
+				F2D344661DDE2E090067F51F /* tvOSSwiftTest.app */,
 				F2D344621DDE2E090067F51F /* watchOSSwiftTest.app */,
 				F2D344641DDE2E090067F51F /* watchOSSwiftTest Extension.appex */,
-				F2D344661DDE2E090067F51F /* tvOSSwiftTest.app */,
-				F2D344681DDE2E090067F51F /* iOSLibStaticTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -605,8 +605,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				F2F2155F1E86DB5A000BBC9A /* PBXTargetDependency */,
 				F2D143951DDE27BA00288DFC /* PBXTargetDependency */,
-				F2D344711DDE2E610067F51F /* PBXTargetDependency */,
 				F29DEC421DF2CB9D00047BBD /* PBXTargetDependency */,
 			);
 			name = "ChessToolkit-Example";
@@ -767,10 +767,10 @@
 			remoteRef = F2D3444F1DDE2E090067F51F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F2D344521DDE2E090067F51F /* libCocoaLumberjack-iOS-Static.a */ = {
+		F2D344521DDE2E090067F51F /* libCocoaLumberjack.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libCocoaLumberjack-iOS-Static.a";
+			path = libCocoaLumberjack.a;
 			remoteRef = F2D344511DDE2E090067F51F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -970,15 +970,15 @@
 			name = "SVGKitFramework-iOS";
 			targetProxy = F2D143941DDE27BA00288DFC /* PBXContainerItemProxy */;
 		};
-		F2D344711DDE2E610067F51F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaLumberjack;
-			targetProxy = F2D344701DDE2E610067F51F /* PBXContainerItemProxy */;
-		};
 		F2DAFE8D1DDF74B30094F9A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F2D1435E1DDE245800288DFC /* ChessToolkit-iOS */;
 			targetProxy = F2DAFE8C1DDF74B30094F9A3 /* PBXContainerItemProxy */;
+		};
+		F2F2155F1E86DB5A000BBC9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CocoaLumberjack-iOS";
+			targetProxy = F2F2155E1E86DB5A000BBC9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
