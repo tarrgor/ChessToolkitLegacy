@@ -42,11 +42,11 @@
 		F2A1FDA21E86EE4A00ED1166 /* CTUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215B91E86EDDD000BBC9A /* CTUIConstants.swift */; };
 		F2A1FDA31E86EE4A00ED1166 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215BA1E86EDDD000BBC9A /* UIColor+Extension.swift */; };
 		F2A1FDBE1E86F25900ED1166 /* ChessToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D1435F1DDE245800288DFC /* ChessToolkit.framework */; };
-		F2A1FDC41E86F29400ED1166 /* CTFENParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDA51E86F0E600ED1166 /* CTFENParserTests.swift */; };
-		F2A1FDC51E86F29400ED1166 /* CTGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDA61E86F0E600ED1166 /* CTGameTests.swift */; };
-		F2A1FDC61E86F29400ED1166 /* CTMoveGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDA71E86F0E600ED1166 /* CTMoveGeneratorTests.swift */; };
-		F2A1FDC71E86F29400ED1166 /* CTMoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDA81E86F0E600ED1166 /* CTMoveTests.swift */; };
-		F2A1FDC81E86F29400ED1166 /* CTPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDA91E86F0E600ED1166 /* CTPositionTests.swift */; };
+		F2A1FDD41E86F40300ED1166 /* CTFENParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDCA1E86F3F300ED1166 /* CTFENParserTests.swift */; };
+		F2A1FDD51E86F40300ED1166 /* CTGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDCB1E86F3F300ED1166 /* CTGameTests.swift */; };
+		F2A1FDD61E86F40300ED1166 /* CTMoveGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDCC1E86F3F300ED1166 /* CTMoveGeneratorTests.swift */; };
+		F2A1FDD71E86F40300ED1166 /* CTMoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDCD1E86F3F300ED1166 /* CTMoveTests.swift */; };
+		F2A1FDD81E86F40300ED1166 /* CTPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDCE1E86F3F300ED1166 /* CTPositionTests.swift */; };
 		F2D143641DDE245800288DFC /* ChessToolkit-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D143621DDE245800288DFC /* ChessToolkit-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2D1437F1DDE260600288DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1437E1DDE260600288DFC /* AppDelegate.swift */; };
 		F2D143811DDE260600288DFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143801DDE260600288DFC /* ViewController.swift */; };
@@ -285,12 +285,12 @@
 		F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29DEC3E1DF2CB9D00047BBD /* ChessToolkitUI-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkitUI-iOS.h"; sourceTree = "<group>"; };
 		F29DEC3F1DF2CB9D00047BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2A1FDA51E86F0E600ED1166 /* CTFENParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTFENParserTests.swift; sourceTree = "<group>"; };
-		F2A1FDA61E86F0E600ED1166 /* CTGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTGameTests.swift; sourceTree = "<group>"; };
-		F2A1FDA71E86F0E600ED1166 /* CTMoveGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveGeneratorTests.swift; sourceTree = "<group>"; };
-		F2A1FDA81E86F0E600ED1166 /* CTMoveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveTests.swift; sourceTree = "<group>"; };
-		F2A1FDA91E86F0E600ED1166 /* CTPositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPositionTests.swift; sourceTree = "<group>"; };
 		F2A1FDB91E86F25900ED1166 /* ChessToolkit-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ChessToolkit-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2A1FDCA1E86F3F300ED1166 /* CTFENParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTFENParserTests.swift; sourceTree = "<group>"; };
+		F2A1FDCB1E86F3F300ED1166 /* CTGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTGameTests.swift; sourceTree = "<group>"; };
+		F2A1FDCC1E86F3F300ED1166 /* CTMoveGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveGeneratorTests.swift; sourceTree = "<group>"; };
+		F2A1FDCD1E86F3F300ED1166 /* CTMoveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveTests.swift; sourceTree = "<group>"; };
+		F2A1FDCE1E86F3F300ED1166 /* CTPositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPositionTests.swift; sourceTree = "<group>"; };
 		F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SVGKit-iOS.xcodeproj"; path = "SVGKit/SVGKit-iOS.xcodeproj"; sourceTree = "<group>"; };
 		F2D1435F1DDE245800288DFC /* ChessToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D143621DDE245800288DFC /* ChessToolkit-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkit-iOS.h"; sourceTree = "<group>"; };
@@ -394,16 +394,16 @@
 			path = "ChessToolkitUI-iOS";
 			sourceTree = "<group>";
 		};
-		F2A1FDA41E86F0E600ED1166 /* ChessToolkit */ = {
+		F2A1FDC91E86F3F300ED1166 /* ChessToolkitTests */ = {
 			isa = PBXGroup;
 			children = (
-				F2A1FDA51E86F0E600ED1166 /* CTFENParserTests.swift */,
-				F2A1FDA61E86F0E600ED1166 /* CTGameTests.swift */,
-				F2A1FDA71E86F0E600ED1166 /* CTMoveGeneratorTests.swift */,
-				F2A1FDA81E86F0E600ED1166 /* CTMoveTests.swift */,
-				F2A1FDA91E86F0E600ED1166 /* CTPositionTests.swift */,
+				F2A1FDCA1E86F3F300ED1166 /* CTFENParserTests.swift */,
+				F2A1FDCB1E86F3F300ED1166 /* CTGameTests.swift */,
+				F2A1FDCC1E86F3F300ED1166 /* CTMoveGeneratorTests.swift */,
+				F2A1FDCD1E86F3F300ED1166 /* CTMoveTests.swift */,
+				F2A1FDCE1E86F3F300ED1166 /* CTPositionTests.swift */,
 			);
-			path = ChessToolkit;
+			path = ChessToolkitTests;
 			sourceTree = "<group>";
 		};
 		F2D1432D1DDE222800288DFC = {
@@ -526,7 +526,7 @@
 		F2DAFE6D1DDF74010094F9A3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F2A1FDA41E86F0E600ED1166 /* ChessToolkit */,
+				F2A1FDC91E86F3F300ED1166 /* ChessToolkitTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -999,11 +999,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2A1FDC41E86F29400ED1166 /* CTFENParserTests.swift in Sources */,
-				F2A1FDC51E86F29400ED1166 /* CTGameTests.swift in Sources */,
-				F2A1FDC61E86F29400ED1166 /* CTMoveGeneratorTests.swift in Sources */,
-				F2A1FDC71E86F29400ED1166 /* CTMoveTests.swift in Sources */,
-				F2A1FDC81E86F29400ED1166 /* CTPositionTests.swift in Sources */,
+				F2A1FDD41E86F40300ED1166 /* CTFENParserTests.swift in Sources */,
+				F2A1FDD51E86F40300ED1166 /* CTGameTests.swift in Sources */,
+				F2A1FDD61E86F40300ED1166 /* CTMoveGeneratorTests.swift in Sources */,
+				F2A1FDD71E86F40300ED1166 /* CTMoveTests.swift in Sources */,
+				F2A1FDD81E86F40300ED1166 /* CTPositionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
