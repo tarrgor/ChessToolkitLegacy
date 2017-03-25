@@ -10,8 +10,8 @@ import PackageDescription
 
 let package = Package(
   name: "ChessToolkit",
-  targets: [
-    Target(name: "ChessToolkit"),
+  exclude: [
+    "Sources/ChessToolkitUI", "Sources/*.svg", "Sources/*.plist"
   ]
 )
 
