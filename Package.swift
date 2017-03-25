@@ -11,7 +11,7 @@ import PackageDescription
 let package = Package(
   name: "ChessToolkit",
   targets: [
-    Target(name: "ChessToolkit-macOS"),
+    Target(name: "ChessToolkit"),
   ]
 )
 
