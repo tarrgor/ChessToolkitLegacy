@@ -22,15 +22,15 @@ public final class CTPosition {
   
   fileprivate var _moveHistory = [CTMove]()
   
-  var enPassantSquare: CTSquare? {
+  public var enPassantSquare: CTSquare? {
     return _enPassantSquare
   }
   
-  var halfMoveClock: Int {
+  public var halfMoveClock: Int {
     return _halfMoveClock
   }
   
-  var promotionPieceWhite: CTPiece {
+  public var promotionPieceWhite: CTPiece {
     get {
       return _promotionPieceWhite
     }
@@ -41,7 +41,7 @@ public final class CTPosition {
     }
   }
   
-  var promotionPieceBlack: CTPiece {
+  public var promotionPieceBlack: CTPiece {
     get {
       return _promotionPieceBlack
     }
@@ -64,7 +64,7 @@ public final class CTPosition {
     return _fullMoveNumber
   }
   
-  var lastMove: CTMove? {
+  public var lastMove: CTMove? {
     return _moveHistory.last
   }
   
@@ -72,7 +72,7 @@ public final class CTPosition {
     return self._moveGenerator
   }
   
-  var check: Bool {
+  public var check: Bool {
     var result = false
     let opposite: CTSide = sideToMove == .white ? .black : .white
     let king: CTPiece = sideToMove == .white ? .whiteKing : .blackKing
@@ -241,7 +241,7 @@ public final class CTPosition {
     return false
   }
   
-  func filterPiece(_ piece: CTPiece, action: (CTSquare) -> ()) {
+  public func filterPiece(_ piece: CTPiece, action: (CTSquare) -> ()) {
     for square in CTSquare.allSquares {
       if _posData[square.rawValue] == piece {
         action(square)
@@ -251,7 +251,7 @@ public final class CTPosition {
   
   // MARK: Conversion methods
   
-  func toFEN() -> String {
+  public func toFEN() -> String {
     let parser = CTFENParser()
     parser.posData = _posData
     parser.castlingRights = _castlingRights
