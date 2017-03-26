@@ -1661,6 +1661,7 @@
 				F2A1FDC31E86F25900ED1166 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2D143311DDE222800288DFC /* Build configuration list for PBXProject "ChessToolkit" */ = {
 			isa = XCConfigurationList;
