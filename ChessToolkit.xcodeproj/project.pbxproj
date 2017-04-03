@@ -282,6 +282,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F217C2CE1E92569B00371996 /* ChessToolkit-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ChessToolkit-Playground.playground"; sourceTree = "<group>"; };
 		F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29DEC3E1DF2CB9D00047BBD /* ChessToolkitUI-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkitUI-iOS.h"; sourceTree = "<group>"; };
 		F29DEC3F1DF2CB9D00047BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -409,6 +410,7 @@
 		F2D1432D1DDE222800288DFC = {
 			isa = PBXGroup;
 			children = (
+				F217C2CE1E92569B00371996 /* ChessToolkit-Playground.playground */,
 				F2F2158F1E86E0F5000BBC9A /* Package.swift */,
 				F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */,
 				F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */,
