@@ -381,8 +381,15 @@ public final class CTPosition {
 extension CTPosition: CustomStringConvertible {
   public var description: String {
     var result = ""
-    for square in CTSquare.allSquares {
-      result += "\(pieceAt(square).description) "
+    for row in 0...7 {
+      for col in 0...7 {
+        if let square = CTSquare.fromRow(row, column: col) {
+          result += "\(pieceAt(square).description) "
+        } else {
+          result += "?? "
+        }
+      }
+      result += "\n"
     }
     return result
   }

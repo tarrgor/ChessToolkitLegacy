@@ -95,7 +95,8 @@ public enum CTPiece : Int {
 extension CTPiece: CustomStringConvertible {
   public var description: String {
     guard self.rawValue != 0 && self.rawValue != 99 else { return ".." }
-    return "\(self.rawValue > 0 ? "W" : "B")\(self.toPGN().uppercased())"
+    let piece = self.toPGN().uppercased()
+    return "\(self.rawValue > 0 ? "W" : "B")\(piece != "" ? piece : "P")"
   }
 }
 
