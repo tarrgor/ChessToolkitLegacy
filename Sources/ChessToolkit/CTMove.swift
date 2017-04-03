@@ -62,7 +62,7 @@ public struct CTMove : Equatable, CustomStringConvertible {
     self.moveNumber = moveNumber
   }
   
-  func toNotation(_ style: CTMoveNotationStyle) -> String {
+  public func toNotation(_ style: CTMoveNotationStyle) -> String {
     if castling {
       var notation = "O-O"
       if to == .c8 || to == .c1 {
