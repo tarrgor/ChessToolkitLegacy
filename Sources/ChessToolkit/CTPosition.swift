@@ -377,3 +377,21 @@ public final class CTPosition {
     }
   }
 }
+
+extension CTPosition: CustomStringConvertible {
+  public var description: String {
+    var result = ""
+    for square in CTSquare.allSquares {
+      result += "\(pieceAt(square).description) "
+    }
+    return result
+  }
+}
+
+
+
+
+
+
+
+

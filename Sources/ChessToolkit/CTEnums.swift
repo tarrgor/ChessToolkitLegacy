@@ -92,6 +92,13 @@ public enum CTPiece : Int {
   }
 }
 
+extension CTPiece: CustomStringConvertible {
+  public var description: String {
+    guard self.rawValue != 0 && self.rawValue != 99 else { return ".." }
+    return "\(self.rawValue > 0 ? "W" : "B")\(self.toPGN().uppercased())"
+  }
+}
+
 public enum CTSquare : Int {
   case a1 = 26, b1, c1, d1, e1, f1, g1, h1
   case a2 = 38, b2, c2, d2, e2, f2, g2, h2
