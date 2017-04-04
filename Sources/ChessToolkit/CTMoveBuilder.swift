@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class CTMoveBuilder {
+public final class CTMoveBuilder {
   
   fileprivate var piece: CTPiece
   fileprivate var from: CTSquare
@@ -32,7 +32,7 @@ final class CTMoveBuilder {
   
   // MARK: Static build functions
   
-  static func build(_ position: CTPosition, from: CTSquare, to: CTSquare) -> CTMove {
+  public static func build(_ position: CTPosition, from: CTSquare, to: CTSquare) -> CTMove {
     let opposite: CTSide = position.pieceAt(from).side() == .white ? .black : .white
     let piece = position.pieceAt(from)
     let builder = CTMoveBuilder(piece: position.pieceAt(from), from: from, to: to)
