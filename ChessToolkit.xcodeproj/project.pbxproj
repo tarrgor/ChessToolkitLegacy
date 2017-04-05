@@ -74,6 +74,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F217D7DB1E94CD660056B889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 19FF46011B8B4CF400B43179;
+			remoteInfo = "CocoaLumberjack-iOS";
+		};
+		F217D7DD1E94CD730056B889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 825CDAAE1BDA4BC0003C1C12;
+			remoteInfo = "SVGKitFramework-iOS";
+		};
 		F29DEC411DF2CB9D00047BBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F2D1432E1DDE222800288DFC /* Project object */;
@@ -623,6 +637,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				F217D7DE1E94CD730056B889 /* PBXTargetDependency */,
+				F217D7DC1E94CD660056B889 /* PBXTargetDependency */,
 				F29DEC591DF2CBD000047BBD /* PBXTargetDependency */,
 			);
 			name = "ChessToolkitUI-iOS";
@@ -1059,6 +1075,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F217D7DC1E94CD660056B889 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CocoaLumberjack-iOS";
+			targetProxy = F217D7DB1E94CD660056B889 /* PBXContainerItemProxy */;
+		};
+		F217D7DE1E94CD730056B889 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SVGKitFramework-iOS";
+			targetProxy = F217D7DD1E94CD730056B889 /* PBXContainerItemProxy */;
+		};
 		F29DEC421DF2CB9D00047BBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F29DEC3B1DF2CB9D00047BBD /* ChessToolkitUI-iOS */;

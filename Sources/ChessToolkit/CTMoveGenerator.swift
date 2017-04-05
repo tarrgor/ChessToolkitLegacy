@@ -27,11 +27,11 @@ public final class CTMoveGenerator {
       if let target = square.up() {
         if self!.position.pieceAt(target) == .empty {
           moves.append(CTMoveBuilder.build(self!.position, from: square, to: target))
-        }
-        if square.rawValue >= 38 && square.rawValue <= 45 {
-          if let target2 = target.up() {
-            if self!.position.pieceAt(target2) == .empty {
-              moves.append(CTMoveBuilder.build(self!.position, from: square, to: target2))
+          if square.rawValue >= 38 && square.rawValue <= 45 {
+            if let target2 = target.up() {
+              if self!.position.pieceAt(target2) == .empty {
+                moves.append(CTMoveBuilder.build(self!.position, from: square, to: target2))
+              }
             }
           }
         }
@@ -58,11 +58,11 @@ public final class CTMoveGenerator {
       if let target = square.down() {
         if self!.position.pieceAt(target) == .empty {
           moves.append(CTMoveBuilder.build(self!.position, from: square, to: target))
-        }
-        if square.rawValue >= 98 && square.rawValue <= 105 {
-          if let target2 = target.down() {
-            if self!.position.pieceAt(target2) == .empty {
-              moves.append(CTMoveBuilder.build(self!.position, from: square, to: target2))
+          if square.rawValue >= 98 && square.rawValue <= 105 {
+            if let target2 = target.down() {
+              if self!.position.pieceAt(target2) == .empty {
+                moves.append(CTMoveBuilder.build(self!.position, from: square, to: target2))
+              }
             }
           }
         }
