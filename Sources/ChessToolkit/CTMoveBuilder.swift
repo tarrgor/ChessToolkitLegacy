@@ -17,11 +17,12 @@ public final class CTMoveBuilder {
   fileprivate var enPassant: Bool = false
   fileprivate var promotionPiece: CTPiece = .empty
   fileprivate var castlingRightsBeforeMove: CTCastlingRights!
+  fileprivate var enPassantSquareBeforeMove: CTSquare?
   fileprivate var moveNumber: Int = 1
   
   fileprivate var move: CTMove {
     return CTMove(piece: piece, from: from, to: to, captured: captured, enPassant: enPassant, promotionPiece: promotionPiece,
-      castlingRights: castlingRightsBeforeMove, moveNumber: moveNumber)
+                  castlingRights: castlingRightsBeforeMove, enPassantSquare: enPassantSquareBeforeMove, moveNumber: moveNumber)
   }
   
   fileprivate init(piece: CTPiece, from: CTSquare, to: CTSquare) {
@@ -61,6 +62,7 @@ public final class CTMoveBuilder {
     }
     
     builder.castlingRightsBeforeMove = position.castlingRights
+    builder.enPassantSquareBeforeMove = position.enPassantSquare
     
     builder.moveNumber = position.moveNumber
     

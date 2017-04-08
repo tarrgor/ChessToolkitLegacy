@@ -17,6 +17,7 @@ public struct CTMove : Equatable, CustomStringConvertible {
   public let enPassant: Bool
   public let promotionPiece: CTPiece
   public let castlingRightsBeforeMove: CTCastlingRights
+  public let enPassantSquareBeforeMove: CTSquare?
   public var check: Bool
   public let moveNumber: Int
   
@@ -50,7 +51,7 @@ public struct CTMove : Equatable, CustomStringConvertible {
     return "\(from.toRowAndColumn()) - \(to.toRowAndColumn())"
   }
   
-  init(piece: CTPiece, from: CTSquare, to: CTSquare, captured: CTPiece, enPassant: Bool, promotionPiece: CTPiece, castlingRights: CTCastlingRights, moveNumber: Int) {
+  init(piece: CTPiece, from: CTSquare, to: CTSquare, captured: CTPiece, enPassant: Bool, promotionPiece: CTPiece, castlingRights: CTCastlingRights, enPassantSquare: CTSquare?, moveNumber: Int) {
     self.piece = piece
     self.from = from
     self.to = to
@@ -58,6 +59,7 @@ public struct CTMove : Equatable, CustomStringConvertible {
     self.enPassant = enPassant
     self.promotionPiece = promotionPiece
     self.castlingRightsBeforeMove = castlingRights
+    self.enPassantSquareBeforeMove = enPassantSquare
     self.check = false
     self.moveNumber = moveNumber
   }

@@ -8,6 +8,12 @@
 
 import Foundation
 
+/// Custom protocol variation of Hashable to return an UInt64 instead
+/// of an Int
+public protocol CTHashable: Equatable {
+  var hashKey: UInt64 { get }
+}
+
 public final class CTPosition {
   fileprivate var _posData = Array(repeating: (CTPiece).invalid, count: 144)
   fileprivate var _castlingRights = CTCastlingRights()
@@ -21,6 +27,10 @@ public final class CTPosition {
   fileprivate var _moveGenerator: CTMoveGenerator!
   
   fileprivate var _moveHistory = [CTMove]()
+  
+  fileprivate var _hashKey: UInt64 = 0
+  
+  // MARK: - Public properties
   
   public var enPassantSquare: CTSquare? {
     return _enPassantSquare
@@ -87,15 +97,15 @@ public final class CTPosition {
     return result
   }
   
+  // MARK: - Initialization
+  
   public init() {
     setupInitialPosition()
-    
     _moveGenerator = CTMoveGenerator(position: self)
   }
   
   public init(fen: String) {
     setToFEN(fen)
-    
     _moveGenerator = CTMoveGenerator(position: self)
   }
   
@@ -106,6 +116,7 @@ public final class CTPosition {
     _enPassantSquare = nil
     _halfMoveClock = 0
     _fullMoveNumber = 1
+    self._hashKey = calculateHashKey()
   }
   
   public func pieceAt(_ square: CTSquare) -> CTPiece {
@@ -129,8 +140,10 @@ public final class CTPosition {
     _sideToMove = parser.sideToMove
     _halfMoveClock = parser.halfMoveClock
     _fullMoveNumber = parser.fullMoveNumber
+    self._hashKey = calculateHashKey()
   }
   
+  @discardableResult
   public func makeMove(from: CTSquare, to: CTSquare, validate: Bool = true, notifications: Bool = true) -> Bool {
     // Validation
     var move = validateMove(from, to: to, validate: validate)
@@ -138,8 +151,10 @@ public final class CTPosition {
     if (move != nil) {
       // Execute move in the position
       let piece = pieceAt(move!.from)
+      removeHash(for: piece, from: move!.from)
       removePieceAt(move!.from)
       setPiece(piece, square: move!.to)
+      addHash(for: piece, on: move!.to)
       
       if move!.castling {
         handleCastling(move!)
@@ -171,10 +186,12 @@ public final class CTPosition {
       }
       
       // Set en passant square if needed
+      hashEpSquare()
       _enPassantSquare = enPassantSquareAfterMove(move!)
+      hashEpSquare()
       
       // Switch side to move
-      _sideToMove = _sideToMove == .white ? .black : .white
+      switchSideToMove()
       
       // Set check flag if necessary
       move!.setCheck(check)
@@ -200,24 +217,31 @@ public final class CTPosition {
     }
   }
   
+  @discardableResult
   public func takeBackMove() -> Bool {
     // Get the last move out of history
     if let move = _moveHistory.last {
       // Takeback move in the position
       let piece = move.piece
+      removeHash(for: piece, from: move.to)
       removePieceAt(move.to)
       setPiece(piece, square: move.from)
+      addHash(for: piece, on: move.from)
       
       // Castling? Re-Position the rook.
       if move.castling {
         handleTakeBackCastling(move)
       }
       
+      // Restore enPassant square
+      hashEpSquare()
+      _enPassantSquare = move.enPassantSquareBeforeMove
+      hashEpSquare()
+      
       // Bring back captured piece if exists
       var captureSquare = move.to
       if move.enPassant {
         captureSquare = move.piece.side() == .white ? move.to.down()! : move.to.up()!
-        _enPassantSquare = move.to
       }
       setPiece(move.captured, square: captureSquare)
       
@@ -225,7 +249,7 @@ public final class CTPosition {
       _castlingRights = move.castlingRightsBeforeMove
       
       // Switch side to move
-      _sideToMove = _sideToMove == .white ? .black : .white
+      switchSideToMove()
       
       // Decrease full move number when White's move was taken back
       if _sideToMove == .black {
@@ -264,6 +288,29 @@ public final class CTPosition {
   }
   
   // MARK: Private methods
+  
+  fileprivate func hashEpSquare() {
+    if _enPassantSquare != nil {
+      _hashKey ^= HashUtils.shared.hash(for: _enPassantSquare!)
+    }
+  }
+  
+  fileprivate func removeHash(for piece: CTPiece, from square: CTSquare) {
+    if piece != .empty && piece != .invalid {
+      _hashKey ^= HashUtils.shared.hash(for: piece, on: square)
+    }
+  }
+  
+  fileprivate func addHash(for piece: CTPiece, on square: CTSquare) {
+    if piece != .empty && piece != .invalid {
+      _hashKey ^= HashUtils.shared.hash(for: piece, on: square)
+    }
+  }
+  
+  fileprivate func switchSideToMove() {
+    _sideToMove = _sideToMove == .white ? .black : .white
+    _hashKey ^= HashUtils.shared.sideHashKey
+  }
   
   fileprivate func validateMove(_ from: CTSquare, to: CTSquare, validate: Bool) -> CTMove? {
     // Validation
@@ -395,9 +442,35 @@ extension CTPosition: CustomStringConvertible {
   }
 }
 
+extension CTPosition: CTHashable {
+  
+  public var hashKey: UInt64 {
+    return self._hashKey
+  }
+  
+  public /*fileprivate*/ func calculateHashKey() -> UInt64 {
+    var result: UInt64 = 0
+    for square in CTSquare.allSquares {
+      let piece = pieceAt(square)
+      if piece != .empty && piece != .invalid {
+        result ^= HashUtils.shared.hash(for: piece, on: square)
+      }
+    }
 
+    if self.sideToMove == .white {
+      result ^= HashUtils.shared.sideHashKey
+    }
+    if enPassantSquare != nil {
+      result ^= HashUtils.shared.hash(for: enPassantSquare!)
+    }
+    return result
+  }
+  
+}
 
-
+public func ==(lhs: CTPosition, rhs: CTPosition) -> Bool {
+  return lhs.hashKey == rhs.hashKey
+}
 
 
 

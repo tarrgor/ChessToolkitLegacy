@@ -24,7 +24,7 @@ public enum CTPiece : Int {
   case blackQueen = -5
   case blackKing = -6
   
-  static var allPieces = [ whitePawn, whiteKnight, whiteBishop, whiteRook, whiteQueen, whiteKing,
+  public static var allPieces = [ whitePawn, whiteKnight, whiteBishop, whiteRook, whiteQueen, whiteKing,
     blackPawn, blackKnight, blackBishop, blackRook, blackQueen, blackKing ]
   
   fileprivate static let kFENPieceMap : Dictionary<Character, CTPiece> = [

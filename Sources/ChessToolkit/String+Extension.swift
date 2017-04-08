@@ -14,15 +14,17 @@ public extension String {
     return self.trimmingCharacters(in: CharacterSet.whitespaces)
   }
   
-  subscript (i: Int) -> Character {
-    return self[self.characters.index(self.startIndex, offsetBy: i)]
+  subscript (index: Int) -> Character {
+    return self[self.characters.index(self.startIndex, offsetBy: index)]
+  }
+
+  subscript (index: Int) -> String {
+    return String(self[index] as Character)
   }
   
-  subscript (i: Int) -> String {
-    return String(self[i] as Character)
-  }
-  
-  subscript (r: Range<Int>) -> String {
-    return substring(with: (characters.index(startIndex, offsetBy: r.lowerBound) ..< characters.index(startIndex, offsetBy: r.upperBound)))
+  subscript (range: Range<Int>) -> String {
+    let lowerIndex = self.characters.index(self.startIndex, offsetBy: range.lowerBound)
+    let higherIndex = self.characters.index(self.startIndex, offsetBy: range.upperBound)
+    return substring(with: (lowerIndex ..< higherIndex))
   }
 }

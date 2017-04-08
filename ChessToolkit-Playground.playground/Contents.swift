@@ -3,6 +3,20 @@
 import Cocoa
 import ChessToolkit
 
-let position = CTPosition()
+func printPosValues(pos: CTPosition) {
+  print("Pos: \(pos.hashKey) \(pos.calculateHashKey())")
+}
 
-print(position)
+let pos = CTPosition()
+
+pos.makeMove(from: .d2, to: .d4)
+pos.makeMove(from: .h7, to: .h6)
+pos.makeMove(from: .d4, to: .d5)
+pos.makeMove(from: .e7, to: .e5)
+
+print(pos.enPassantSquare?.toString() ?? "No square")
+
+pos.takeBackMove()
+
+print(pos.enPassantSquare?.toString() ?? "No square")
+
