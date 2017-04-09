@@ -123,11 +123,13 @@ public final class CTPosition {
     return _posData[square.rawValue]
   }
   
-  public func setPiece(_ piece: CTPiece, square: CTSquare) {
+  public func setPiece(_ piece: CTPiece, square: CTSquare, hash: Bool = false) {
     _posData[square.rawValue] = piece
+    if hash { addHash(for: piece, on: square) }
   }
   
-  public func removePieceAt(_ square: CTSquare) {
+  public func removePieceAt(_ square: CTSquare, hash: Bool = false) {
+    if hash { removeHash(for: pieceAt(square), from: square) }
     _posData[square.rawValue] = .empty
   }
   
@@ -151,10 +153,8 @@ public final class CTPosition {
     if (move != nil) {
       // Execute move in the position
       let piece = pieceAt(move!.from)
-      removeHash(for: piece, from: move!.from)
-      removePieceAt(move!.from)
-      setPiece(piece, square: move!.to)
-      addHash(for: piece, on: move!.to)
+      removePieceAt(move!.from, hash: true)
+      setPiece(piece, square: move!.to, hash: true)
       
       if move!.castling {
         handleCastling(move!)
@@ -169,6 +169,7 @@ public final class CTPosition {
       }
       
       // Adjust castling flags
+      hashCastlingRights()
       if move!.piece == .whiteKing {
         _castlingRights.whiteCanCastleLong = false
         _castlingRights.whiteCanCastleShort = false
@@ -184,6 +185,7 @@ public final class CTPosition {
       } else if move!.piece == .blackRook && move!.from == .h8 {
         _castlingRights.blackCanCastleShort = false
       }
+      hashCastlingRights()
       
       // Set en passant square if needed
       hashEpSquare()
@@ -223,10 +225,8 @@ public final class CTPosition {
     if let move = _moveHistory.last {
       // Takeback move in the position
       let piece = move.piece
-      removeHash(for: piece, from: move.to)
-      removePieceAt(move.to)
-      setPiece(piece, square: move.from)
-      addHash(for: piece, on: move.from)
+      removePieceAt(move.to, hash: true)
+      setPiece(piece, square: move.from, hash: true)
       
       // Castling? Re-Position the rook.
       if move.castling {
@@ -239,14 +239,18 @@ public final class CTPosition {
       hashEpSquare()
       
       // Bring back captured piece if exists
-      var captureSquare = move.to
-      if move.enPassant {
-        captureSquare = move.piece.side() == .white ? move.to.down()! : move.to.up()!
+      if move.captured != .empty && move.captured != .invalid {
+        var captureSquare = move.to
+        if move.enPassant {
+          captureSquare = move.piece.side() == .white ? move.to.down()! : move.to.up()!
+        }
+        setPiece(move.captured, square: captureSquare)
       }
-      setPiece(move.captured, square: captureSquare)
       
       // Re-Set castling rights
+      hashCastlingRights()
       _castlingRights = move.castlingRightsBeforeMove
+      hashCastlingRights()
       
       // Switch side to move
       switchSideToMove()
@@ -288,6 +292,10 @@ public final class CTPosition {
   }
   
   // MARK: Private methods
+  
+  fileprivate func hashCastlingRights() {
+    _hashKey ^= HashUtils.shared.hash(for: castlingRights)
+  }
   
   fileprivate func hashEpSquare() {
     if _enPassantSquare != nil {
@@ -338,17 +346,17 @@ public final class CTPosition {
   fileprivate func handleCastling(_ move: CTMove) {
     switch move.to {
     case .c1:
-      removePieceAt(.a1)
-      setPiece(.whiteRook, square: .d1)
+      removePieceAt(.a1, hash: true)
+      setPiece(.whiteRook, square: .d1, hash: true)
     case .g1:
-      removePieceAt(.h1)
-      setPiece(.whiteRook, square: .f1)
+      removePieceAt(.h1, hash: true)
+      setPiece(.whiteRook, square: .f1, hash: true)
     case .c8:
-      removePieceAt(.a8)
-      setPiece(.blackRook, square: .d8)
+      removePieceAt(.a8, hash: true)
+      setPiece(.blackRook, square: .d8, hash: true)
     case .g8:
-      removePieceAt(.h8)
-      setPiece(.blackRook, square: .f8)
+      removePieceAt(.h8, hash: true)
+      setPiece(.blackRook, square: .f8, hash: true)
     default:
       print("Invalid castling.")
     }
@@ -358,11 +366,11 @@ public final class CTPosition {
     let side = move.piece.side()
     if side == .white {
       let target = move.to.down()
-      removePieceAt(target!)
+      removePieceAt(target!, hash: true)
     }
     if side == .black {
       let target = move.to.up()
-      removePieceAt(target!)
+      removePieceAt(target!, hash: true)
     }
   }
   
@@ -408,17 +416,17 @@ public final class CTPosition {
   fileprivate func handleTakeBackCastling(_ move: CTMove) {
     switch move.to {
     case .g1:
-      removePieceAt(.f1)
-      setPiece(.whiteRook, square: .h1)
+      removePieceAt(.f1, hash: true)
+      setPiece(.whiteRook, square: .h1, hash: true)
     case .c1:
-      removePieceAt(.d1)
-      setPiece(.whiteRook, square: .a1)
+      removePieceAt(.d1, hash: true)
+      setPiece(.whiteRook, square: .a1, hash: true)
     case .g8:
-      removePieceAt(.f8)
-      setPiece(.blackRook, square: .h8)
+      removePieceAt(.f8, hash: true)
+      setPiece(.blackRook, square: .h8, hash: true)
     case .c8:
-      removePieceAt(.d8)
-      setPiece(.blackRook, square: .a8)
+      removePieceAt(.d8, hash: true)
+      setPiece(.blackRook, square: .a8, hash: true)
     default:
       print("Invalid castling.")
     }
@@ -448,7 +456,7 @@ extension CTPosition: CTHashable {
     return self._hashKey
   }
   
-  public /*fileprivate*/ func calculateHashKey() -> UInt64 {
+  fileprivate func calculateHashKey() -> UInt64 {
     var result: UInt64 = 0
     for square in CTSquare.allSquares {
       let piece = pieceAt(square)
@@ -463,6 +471,7 @@ extension CTPosition: CTHashable {
     if enPassantSquare != nil {
       result ^= HashUtils.shared.hash(for: enPassantSquare!)
     }
+    result ^= HashUtils.shared.hash(for: castlingRights)
     return result
   }
   

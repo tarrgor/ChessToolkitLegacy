@@ -49,15 +49,23 @@ public struct CTCastlingRights {
       _blackCanCastleLong = newValue
     }
   }
+
+  public var bitMask: Int {
+    return (whiteCanCastleShort ? 8 : 0) +
+      (whiteCanCastleLong ? 4 : 0) +
+      (blackCanCastleShort ? 2 : 0) +
+      (blackCanCastleLong ? 1 : 0)
+  }
   
-  init() {
+  public init() {
     self.init(whiteCanCastleShort: true, whiteCanCastleLong: true, blackCanCastleShort: true, blackCanCastleLong: true)
   }
   
-  init(whiteCanCastleShort: Bool, whiteCanCastleLong: Bool, blackCanCastleShort: Bool, blackCanCastleLong: Bool) {
+  public init(whiteCanCastleShort: Bool, whiteCanCastleLong: Bool, blackCanCastleShort: Bool, blackCanCastleLong: Bool) {
     self._whiteCanCastleShort = whiteCanCastleShort
     self._whiteCanCastleLong = whiteCanCastleLong
     self._blackCanCastleShort = blackCanCastleShort
     self._blackCanCastleLong = blackCanCastleLong
   }
+
 }

@@ -699,4 +699,94 @@ class CTPositionTests: XCTestCase {
     
     XCTAssertEqual(pos.enPassantSquare, CTSquare.e6)
   }
+  
+  func testHashKeyIsDifferentIfCastlingRightsAreDifferent() {
+    let pos = CTPosition()
+    
+    pos.makeMove(from: .e2, to: .e4)
+    pos.makeMove(from: .e7, to: .e5)
+    pos.makeMove(from: .g1, to: .f3)
+    pos.makeMove(from: .b8, to: .c6)
+    pos.makeMove(from: .f1, to: .b5)
+    pos.makeMove(from: .g8, to: .f6)
+    
+    let initialHash = pos.hashKey
+    
+    pos.makeMove(from: .e1, to: .e2)
+    pos.makeMove(from: .f6, to: .g8)
+    pos.makeMove(from: .e2, to: .e1)
+    pos.makeMove(from: .g8, to: .f6)
+    
+    let hashWithDifferentCR = pos.hashKey
+    
+    XCTAssertNotEqual(initialHash, hashWithDifferentCR)
+  }
+  
+  func testCastlingPieceMovementIsHashedCorrectly() {
+    let pos = CTPosition()
+    
+    pos.makeMove(from: .e2, to: .e4)
+    pos.makeMove(from: .e7, to: .e5)
+    pos.makeMove(from: .g1, to: .f3)
+    pos.makeMove(from: .b8, to: .c6)
+    pos.makeMove(from: .f1, to: .b5)
+    pos.makeMove(from: .g8, to: .f6)
+    
+    let hashBeforeCastling = pos.hashKey
+    
+    pos.makeMove(from: .e1, to: .g1)
+    
+    let hashAfterCastling = pos.hashKey
+    
+    let rookHashH1 = HashUtils.shared.hash(for: .whiteRook, on: .h1)
+    let rookHashF1 = HashUtils.shared.hash(for: .whiteRook, on: .f1)
+    let kingHashG1 = HashUtils.shared.hash(for: .whiteKing, on: .g1)
+    let kingHashE1 = HashUtils.shared.hash(for: .whiteKing, on: .e1)
+    let castlingHashAfterCastling = HashUtils.shared.hash(for: pos.castlingRights)
+    let castlingHashExpectedAfterTakeBack = HashUtils.shared.hash(for: CTCastlingRights())
+    
+    var expectedHashKeyAfterTakeBack = hashAfterCastling
+    expectedHashKeyAfterTakeBack ^= rookHashF1
+    expectedHashKeyAfterTakeBack ^= rookHashH1
+    expectedHashKeyAfterTakeBack ^= kingHashG1
+    expectedHashKeyAfterTakeBack ^= kingHashE1
+    expectedHashKeyAfterTakeBack ^= castlingHashAfterCastling
+    expectedHashKeyAfterTakeBack ^= castlingHashExpectedAfterTakeBack
+    expectedHashKeyAfterTakeBack ^= HashUtils.shared.sideHashKey
+    
+    pos.takeBackMove()
+    
+    XCTAssertEqual(hashBeforeCastling, pos.hashKey)
+    XCTAssertEqual(hashBeforeCastling, expectedHashKeyAfterTakeBack)
+  }
+  
+  func testEnPassantMovementIsHashedCorrectly() {
+    let pos = CTPosition()
+    
+    pos.makeMove(from: .d2, to: .d4)
+    pos.makeMove(from: .h7, to: .h6)
+    pos.makeMove(from: .d4, to: .d5)
+    pos.makeMove(from: .e7, to: .e5)
+
+    let hashBeforeEp = pos.hashKey
+    
+    pos.makeMove(from: .d5, to: .e6)
+    
+    let hashAfterEp = pos.hashKey
+    
+    let hashPawnE6 = HashUtils.shared.hash(for: .whitePawn, on: .e6)
+    let hashPawnD5 = HashUtils.shared.hash(for: .whitePawn, on: .d5)
+    let hashPawnE5 = HashUtils.shared.hash(for: .blackPawn, on: .e5)
+    
+    var expectedHashKeyAfterTakeBack = hashAfterEp
+    expectedHashKeyAfterTakeBack ^= hashPawnE6
+    expectedHashKeyAfterTakeBack ^= hashPawnD5
+    expectedHashKeyAfterTakeBack ^= hashPawnE5
+    expectedHashKeyAfterTakeBack ^= HashUtils.shared.sideHashKey
+    
+    pos.takeBackMove()
+    
+    XCTAssertEqual(hashBeforeEp, pos.hashKey)
+    XCTAssertEqual(hashBeforeEp, expectedHashKeyAfterTakeBack)
+  }
 }

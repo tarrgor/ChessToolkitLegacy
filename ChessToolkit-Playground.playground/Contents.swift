@@ -7,16 +7,23 @@ func printPosValues(pos: CTPosition) {
   print("Pos: \(pos.hashKey) \(pos.calculateHashKey())")
 }
 
+
 let pos = CTPosition()
 
-pos.makeMove(from: .d2, to: .d4)
-pos.makeMove(from: .h7, to: .h6)
-pos.makeMove(from: .d4, to: .d5)
+pos.makeMove(from: .e2, to: .e4)
 pos.makeMove(from: .e7, to: .e5)
+pos.makeMove(from: .g1, to: .f3)
+pos.makeMove(from: .b8, to: .c6)
+pos.makeMove(from: .f1, to: .b5)
+pos.makeMove(from: .g8, to: .f6)
 
-print(pos.enPassantSquare?.toString() ?? "No square")
+print(pos)
+print(pos.hashKey)
 
-pos.takeBackMove()
+pos.makeMove(from: .e1, to: .e2)
+pos.makeMove(from: .f6, to: .g8)
+pos.makeMove(from: .e2, to: .e1)
+pos.makeMove(from: .g8, to: .f6)
 
-print(pos.enPassantSquare?.toString() ?? "No square")
-
+print(pos)
+print(pos.hashKey)

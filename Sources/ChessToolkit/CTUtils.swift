@@ -42,6 +42,12 @@ class HashUtils {
     UInt64.random(), UInt64.random(), UInt64.random(), UInt64.random(),
     UInt64.random(), UInt64.random(), UInt64.random(), UInt64.random()
   ]
+  fileprivate let _castlingRightsKeys: [UInt64] = [
+    UInt64.random(), UInt64.random(), UInt64.random(), UInt64.random(),
+    UInt64.random(), UInt64.random(), UInt64.random(), UInt64.random(),
+    UInt64.random(), UInt64.random(), UInt64.random(), UInt64.random(),
+    UInt64.random(), UInt64.random(), UInt64.random(), UInt64.random()
+  ]
 
   let sideHashKey: UInt64 = UInt64.random()
 
@@ -63,6 +69,10 @@ class HashUtils {
     let index = _epSquares.index(of: epSquare)
     assert(index != nil, "An invalid en passant square has been specified.")
     return _epHashKeys[index!]
+  }
+  
+  func hash(for castlingRights: CTCastlingRights) -> UInt64 {
+    return _castlingRightsKeys[castlingRights.bitMask]
   }
   
   private func getRandomNumbersForPieces() -> [UInt64] {
