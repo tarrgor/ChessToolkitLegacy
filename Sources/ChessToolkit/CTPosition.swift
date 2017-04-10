@@ -148,125 +148,119 @@ public final class CTPosition {
   @discardableResult
   public func makeMove(from: CTSquare, to: CTSquare, validate: Bool = true, notifications: Bool = true) -> Bool {
     // Validation
-    var move = validateMove(from, to: to, validate: validate)
+    guard var move = validateMove(from, to: to, validate: validate) else { return false }
     
-    if (move != nil) {
-      // Execute move in the position
-      let piece = pieceAt(move!.from)
-      removePieceAt(move!.from, hash: true)
-      setPiece(piece, square: move!.to, hash: true)
-      
-      if move!.castling {
-        handleCastling(move!)
-      }
-      
-      if move!.enPassant {
-        handleEnPassant(move!)
-      }
-      
-      if move!.promotion {
-        handlePromotion(move!)
-      }
-      
-      // Adjust castling flags
-      hashCastlingRights()
-      if move!.piece == .whiteKing {
-        _castlingRights.whiteCanCastleLong = false
-        _castlingRights.whiteCanCastleShort = false
-      } else if move!.piece == .blackKing {
-        _castlingRights.blackCanCastleLong = false
-        _castlingRights.blackCanCastleShort = false
-      } else if move!.piece == .whiteRook && move!.from == .a1 {
-        _castlingRights.whiteCanCastleLong = false
-      } else if move!.piece == .whiteRook && move!.from == .h1 {
-        _castlingRights.whiteCanCastleShort = false
-      } else if move!.piece == .blackRook && move!.from == .a8 {
-        _castlingRights.blackCanCastleLong = false
-      } else if move!.piece == .blackRook && move!.from == .h8 {
-        _castlingRights.blackCanCastleShort = false
-      }
-      hashCastlingRights()
-      
-      // Set en passant square if needed
-      hashEpSquare()
-      _enPassantSquare = enPassantSquareAfterMove(move!)
-      hashEpSquare()
-      
-      // Switch side to move
-      switchSideToMove()
-      
-      // Set check flag if necessary
-      move!.setCheck(check)
-      
-      // Increase full move number after Black move
-      if (_sideToMove == .white) {
-        _fullMoveNumber += 1
-      }
-      
-      // Save the played move into the history for takeback option
-      _moveHistory.append(move!)
-      
-      // Send notification DidMakeMove
-      if notifications {
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.post(name: Notification.Name(rawValue: CTConstants.kNotificationPositionDidMakeMove),
-          object: self, userInfo: [ CTConstants.kUserInfoAttributeMove : CTObjectWrapper<CTMove>(wrappedValue: move!) ])
-      }
-      
-      return true
-    } else {
-      return false
+    // Execute move in the position
+    let piece = pieceAt(move.from)
+    removePieceAt(move.from, hash: true)
+    setPiece(piece, square: move.to, hash: true)
+    
+    if move.castling {
+      handleCastling(move)
     }
+    
+    if move.enPassant {
+      handleEnPassant(move)
+    }
+    
+    if move.promotion {
+      handlePromotion(move)
+    }
+    
+    // Adjust castling flags
+    hashCastlingRights()
+    if move.piece == .whiteKing {
+      _castlingRights.whiteCanCastleLong = false
+      _castlingRights.whiteCanCastleShort = false
+    } else if move.piece == .blackKing {
+      _castlingRights.blackCanCastleLong = false
+      _castlingRights.blackCanCastleShort = false
+    } else if move.piece == .whiteRook && move.from == .a1 {
+      _castlingRights.whiteCanCastleLong = false
+    } else if move.piece == .whiteRook && move.from == .h1 {
+      _castlingRights.whiteCanCastleShort = false
+    } else if move.piece == .blackRook && move.from == .a8 {
+      _castlingRights.blackCanCastleLong = false
+    } else if move.piece == .blackRook && move.from == .h8 {
+      _castlingRights.blackCanCastleShort = false
+    }
+    hashCastlingRights()
+    
+    // Set en passant square if needed
+    hashEpSquare()
+    _enPassantSquare = enPassantSquareAfterMove(move)
+    hashEpSquare()
+    
+    // Switch side to move
+    switchSideToMove()
+    
+    // Set check flag if necessary
+    move.setCheck(check)
+    
+    // Increase full move number after Black move
+    if (_sideToMove == .white) {
+      _fullMoveNumber += 1
+    }
+    
+    // Save the played move into the history for takeback option
+    _moveHistory.append(move)
+    
+    // Send notification DidMakeMove
+    if notifications {
+      let notificationCenter = NotificationCenter.default
+      notificationCenter.post(name: Notification.Name(rawValue: CTConstants.kNotificationPositionDidMakeMove),
+                              object: self, userInfo: [ CTConstants.kUserInfoAttributeMove : CTObjectWrapper<CTMove>(wrappedValue: move) ])
+    }
+    
+    return true
   }
   
   @discardableResult
   public func takeBackMove() -> Bool {
     // Get the last move out of history
-    if let move = _moveHistory.last {
-      // Takeback move in the position
-      let piece = move.piece
-      removePieceAt(move.to, hash: true)
-      setPiece(piece, square: move.from, hash: true)
-      
-      // Castling? Re-Position the rook.
-      if move.castling {
-        handleTakeBackCastling(move)
-      }
-      
-      // Restore enPassant square
-      hashEpSquare()
-      _enPassantSquare = move.enPassantSquareBeforeMove
-      hashEpSquare()
-      
-      // Bring back captured piece if exists
-      if move.captured != .empty && move.captured != .invalid {
-        var captureSquare = move.to
-        if move.enPassant {
-          captureSquare = move.piece.side() == .white ? move.to.down()! : move.to.up()!
-        }
-        setPiece(move.captured, square: captureSquare)
-      }
-      
-      // Re-Set castling rights
-      hashCastlingRights()
-      _castlingRights = move.castlingRightsBeforeMove
-      hashCastlingRights()
-      
-      // Switch side to move
-      switchSideToMove()
-      
-      // Decrease full move number when White's move was taken back
-      if _sideToMove == .black {
-        _fullMoveNumber -= 1
-      }
-      
-      // Remove last move from history
-      _moveHistory.removeLast()
-      
-      return true
+    guard let move = _moveHistory.last else { return false }
+    
+    // Takeback move in the position
+    let piece = move.piece
+    removePieceAt(move.to, hash: true)
+    setPiece(piece, square: move.from, hash: true)
+    
+    // Castling? Re-Position the rook.
+    if move.castling {
+      handleTakeBackCastling(move)
     }
     
-    return false
+    // Restore enPassant square
+    hashEpSquare()
+    _enPassantSquare = move.enPassantSquareBeforeMove
+    hashEpSquare()
+    
+    // Bring back captured piece if exists
+    if move.captured != .empty && move.captured != .invalid {
+      var captureSquare = move.to
+      if move.enPassant {
+        captureSquare = move.piece.side() == .white ? move.to.down()! : move.to.up()!
+      }
+      setPiece(move.captured, square: captureSquare)
+    }
+    
+    // Re-Set castling rights
+    hashCastlingRights()
+    _castlingRights = move.castlingRightsBeforeMove
+    hashCastlingRights()
+    
+    // Switch side to move
+    switchSideToMove()
+    
+    // Decrease full move number when White's move was taken back
+    if _sideToMove == .black {
+      _fullMoveNumber -= 1
+    }
+    
+    // Remove last move from history
+    _moveHistory.removeLast()
+    
+    return true
   }
   
   public func filterPiece(_ piece: CTPiece, action: (CTSquare) -> ()) {
