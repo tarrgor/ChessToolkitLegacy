@@ -124,6 +124,12 @@ public final class CTPosition {
   }
   
   public func setPiece(_ piece: CTPiece, square: CTSquare, hash: Bool = false) {
+    if hash {
+      let existingPiece = pieceAt(square)
+      if existingPiece != .empty && existingPiece != .invalid {
+        removeHash(for: existingPiece, from: square)
+      }
+    }
     _posData[square.rawValue] = piece
     if hash { addHash(for: piece, on: square) }
   }
@@ -211,7 +217,9 @@ public final class CTPosition {
       notificationCenter.post(name: Notification.Name(rawValue: CTConstants.kNotificationPositionDidMakeMove),
                               object: self, userInfo: [ CTConstants.kUserInfoAttributeMove : CTObjectWrapper<CTMove>(wrappedValue: move) ])
     }
-    
+
+    //assert(_hashKey == calculateHashKey())
+
     return true
   }
   
@@ -241,7 +249,7 @@ public final class CTPosition {
       if move.enPassant {
         captureSquare = move.piece.side() == .white ? move.to.down()! : move.to.up()!
       }
-      setPiece(move.captured, square: captureSquare)
+      setPiece(move.captured, square: captureSquare, hash: true)
     }
     
     // Re-Set castling rights
@@ -260,6 +268,8 @@ public final class CTPosition {
     // Remove last move from history
     _moveHistory.removeLast()
     
+    //assert(_hashKey == calculateHashKey())
+
     return true
   }
   
@@ -450,7 +460,7 @@ extension CTPosition: CTHashable {
     return self._hashKey
   }
   
-  fileprivate func calculateHashKey() -> UInt64 {
+  func calculateHashKey() -> UInt64 {
     var result: UInt64 = 0
     for square in CTSquare.allSquares {
       let piece = pieceAt(square)
