@@ -831,4 +831,19 @@ class CTPositionTests: XCTestCase {
     XCTAssertEqual(pos.hashKey, expectedHash)
     XCTAssertEqual(pos.hashKey, pos.calculateHashKey())
   }
+  
+  func testPromotionWithCaptureIsHashedCorrectly() {
+    let pos = CTPosition(fen: "2r4k/1P6/8/8/8/8/8/4K3 w - - 0 1")
+    
+    pos.promotionPieceWhite = .whiteQueen
+    pos.makeMove(from: .b7, to: .c8)
+    
+    XCTAssertEqual(pos.pieceAt(.c8), .whiteQueen)
+    XCTAssertEqual(pos.hashKey, pos.calculateHashKey())
+    
+    pos.takeBackMove()
+    
+    XCTAssertEqual(pos.pieceAt(.b7), .whitePawn)
+    XCTAssertEqual(pos.hashKey, pos.calculateHashKey())
+  }
 }
