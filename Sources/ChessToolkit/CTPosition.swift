@@ -379,7 +379,7 @@ public final class CTPosition {
   }
   
   fileprivate func handlePromotion(_ move: CTMove) {
-    setPiece(move.promotionPiece, square: move.to)
+    setPiece(move.promotionPiece, square: move.to, hash: true)
   }
   
   fileprivate func enPassantSquareAfterMove(_ move: CTMove) -> CTSquare? {

@@ -735,6 +735,7 @@ class CTPositionTests: XCTestCase {
     let hashWithDifferentCR = pos.hashKey
     
     XCTAssertNotEqual(initialHash, hashWithDifferentCR)
+    XCTAssertEqual(hashWithDifferentCR, pos.calculateHashKey())
   }
   
   func testCastlingPieceMovementIsHashedCorrectly() {
@@ -773,8 +774,9 @@ class CTPositionTests: XCTestCase {
     
     XCTAssertEqual(hashBeforeCastling, pos.hashKey)
     XCTAssertEqual(hashBeforeCastling, expectedHashKeyAfterTakeBack)
+    XCTAssertEqual(pos.hashKey, pos.calculateHashKey())
   }
-  /*
+  
   func testEnPassantMovementIsHashedCorrectly() {
     let pos = CTPosition()
     
@@ -804,5 +806,29 @@ class CTPositionTests: XCTestCase {
     
     XCTAssertEqual(hashBeforeEp, pos.hashKey)
     XCTAssertEqual(hashBeforeEp, expectedHashKeyAfterTakeBack)
-  }*/
+    XCTAssertEqual(pos.hashKey, pos.calculateHashKey())
+  }
+  
+  func testPromotionIsHashedCorrectly() {
+    let pos = CTPosition(fen: "7k/1P6/8/8/8/8/8/4K3 w - - 0 1")
+    
+    pos.promotionPieceWhite = .whiteQueen
+    pos.makeMove(from: .b7, to: .b8)
+    
+    XCTAssertEqual(pos.pieceAt(.b8), .whiteQueen)
+    
+    let pawnHashB7 = HashUtils.shared.hash(for: .whitePawn, on: .b7)
+    let queenHashB8 = HashUtils.shared.hash(for: .whiteQueen, on: .b8)
+    
+    var expectedHash = pos.hashKey
+    expectedHash ^= queenHashB8
+    expectedHash ^= pawnHashB7
+    expectedHash ^= HashUtils.shared.sideHashKey
+    
+    pos.takeBackMove()
+    
+    XCTAssertEqual(pos.pieceAt(.b7), .whitePawn)
+    XCTAssertEqual(pos.hashKey, expectedHash)
+    XCTAssertEqual(pos.hashKey, pos.calculateHashKey())
+  }
 }
