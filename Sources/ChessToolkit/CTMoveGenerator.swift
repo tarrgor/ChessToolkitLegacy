@@ -20,17 +20,19 @@ public final class CTMoveGenerator {
   
   // MARK: Move generation
   
-  func generateWhitePawnMoves() -> [CTMove] {
+  func generateWhitePawnMoves(captureOnly: Bool = false) -> [CTMove] {
     var moves = [CTMove]()
     
     position.filterPiece(.whitePawn) { [weak self] square in
-      if let target = square.up() {
-        if self!.position.pieceAt(target) == .empty {
-          moves.append(CTMoveBuilder.build(self!.position, from: square, to: target))
-          if square.rawValue >= 38 && square.rawValue <= 45 {
-            if let target2 = target.up() {
-              if self!.position.pieceAt(target2) == .empty {
-                moves.append(CTMoveBuilder.build(self!.position, from: square, to: target2))
+      if !captureOnly {
+        if let target = square.up() {
+          if self!.position.pieceAt(target) == .empty {
+            moves.append(CTMoveBuilder.build(self!.position, from: square, to: target))
+            if square.rawValue >= 38 && square.rawValue <= 45 {
+              if let target2 = target.up() {
+                if self!.position.pieceAt(target2) == .empty {
+                  moves.append(CTMoveBuilder.build(self!.position, from: square, to: target2))
+                }
               }
             }
           }
@@ -51,17 +53,19 @@ public final class CTMoveGenerator {
     return moves
   }
   
-  func generateBlackPawnMoves() -> [CTMove] {
+  func generateBlackPawnMoves(captureOnly: Bool = false) -> [CTMove] {
     var moves = [CTMove]()
     
     position.filterPiece(.blackPawn) { [weak self] square in
-      if let target = square.down() {
-        if self!.position.pieceAt(target) == .empty {
-          moves.append(CTMoveBuilder.build(self!.position, from: square, to: target))
-          if square.rawValue >= 98 && square.rawValue <= 105 {
-            if let target2 = target.down() {
-              if self!.position.pieceAt(target2) == .empty {
-                moves.append(CTMoveBuilder.build(self!.position, from: square, to: target2))
+      if !captureOnly {
+        if let target = square.down() {
+          if self!.position.pieceAt(target) == .empty {
+            moves.append(CTMoveBuilder.build(self!.position, from: square, to: target))
+            if square.rawValue >= 98 && square.rawValue <= 105 {
+              if let target2 = target.down() {
+                if self!.position.pieceAt(target2) == .empty {
+                  moves.append(CTMoveBuilder.build(self!.position, from: square, to: target2))
+                }
               }
             }
           }
@@ -176,7 +180,7 @@ public final class CTMoveGenerator {
     return moves
   }
   
-  func generateKingMoves(_ side: CTSide) -> [CTMove] {
+  func generateKingMoves(_ side: CTSide, captureOnly: Bool = false) -> [CTMove] {
     let piece: CTPiece = side == .white ? .whiteKing : .blackKing
     
     var moves = [CTMove]()
@@ -202,26 +206,28 @@ public final class CTMoveGenerator {
       }
       
       // Castling
-      if side == .white {
-        if self!.position.castlingRights.whiteCanCastleShort {
-          if self!.position.pieceAt(.f1) == .empty && self!.position.pieceAt(.g1) == .empty {
-            moves.append(CTMoveBuilder.build(self!.position, from: .e1, to: .g1))
+      if !captureOnly {
+        if side == .white {
+          if self!.position.castlingRights.whiteCanCastleShort {
+            if self!.position.pieceAt(.f1) == .empty && self!.position.pieceAt(.g1) == .empty {
+              moves.append(CTMoveBuilder.build(self!.position, from: .e1, to: .g1))
+            }
           }
-        }
-        if self!.position.castlingRights.whiteCanCastleLong {
-          if self!.position.pieceAt(.d1) == .empty && self!.position.pieceAt(.c1) == .empty {
-            moves.append(CTMoveBuilder.build(self!.position, from: .e1, to: .c1))
+          if self!.position.castlingRights.whiteCanCastleLong {
+            if self!.position.pieceAt(.d1) == .empty && self!.position.pieceAt(.c1) == .empty {
+              moves.append(CTMoveBuilder.build(self!.position, from: .e1, to: .c1))
+            }
           }
-        }
-      } else {
-        if self!.position.castlingRights.blackCanCastleShort {
-          if self!.position.pieceAt(.f8) == .empty && self!.position.pieceAt(.g8) == .empty {
-            moves.append(CTMoveBuilder.build(self!.position, from: .e8, to: .g8))
+        } else {
+          if self!.position.castlingRights.blackCanCastleShort {
+            if self!.position.pieceAt(.f8) == .empty && self!.position.pieceAt(.g8) == .empty {
+              moves.append(CTMoveBuilder.build(self!.position, from: .e8, to: .g8))
+            }
           }
-        }
-        if self!.position.castlingRights.blackCanCastleLong {
-          if self!.position.pieceAt(.d8) == .empty && self!.position.pieceAt(.c8) == .empty {
-            moves.append(CTMoveBuilder.build(self!.position, from: .e8, to: .c8))
+          if self!.position.castlingRights.blackCanCastleLong {
+            if self!.position.pieceAt(.d8) == .empty && self!.position.pieceAt(.c8) == .empty {
+              moves.append(CTMoveBuilder.build(self!.position, from: .e8, to: .c8))
+            }
           }
         }
       }
@@ -231,6 +237,27 @@ public final class CTMoveGenerator {
   }
   
   public func generateAllMovesForSide(_ side: CTSide, legalOnly: Bool = true) -> [CTMove] {
+    var moves = [CTMove]()
+    
+    if side == .white {
+      moves.append(contentsOf: generateWhitePawnMoves())
+    } else {
+      moves.append(contentsOf: generateBlackPawnMoves())
+    }
+    
+    moves.append(contentsOf: generateBishopMoves(side))
+    moves.append(contentsOf: generateKnightMoves(side))
+    moves.append(contentsOf: generateRookMoves(side))
+    moves.append(contentsOf: generateQueenMoves(side))
+    moves.append(contentsOf: generateKingMoves(side))
+    
+    if (legalOnly) {
+      return filterLegalMoves(moves)
+    }
+    return moves
+  }
+  
+  public func generateCapturingMovesForSide(_ side: CTSide, legalOnly: Bool = true) -> [CTMove] {
     var moves = [CTMove]()
     
     if side == .white {

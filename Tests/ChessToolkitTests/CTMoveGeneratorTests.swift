@@ -57,10 +57,22 @@ class CTMoveGeneratorTests: XCTestCase {
     
     let moves = gen.generateWhitePawnMoves()
     
+    XCTAssertTrue(moveHasBeenFound(moves, from: .d4, to: .d5), "d4d5 has not been found.")
     XCTAssertTrue(moveHasBeenFound(moves, from: .d4, to: .e5), "d4e5 has not been found.")
     XCTAssertFalse(moveHasBeenFound(moves, from: .d4, to: .c5), "d4c5 has been found.")
   }
   
+  func testWhitePawnMovesAfterMovesD4AndE5WithCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqkbnr/pppp1ppp/8/4p3/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 2 2")
+    let gen = CTMoveGenerator(position: pos)
+    
+    let moves = gen.generateWhitePawnMoves(captureOnly: true)
+    
+    XCTAssertFalse(moveHasBeenFound(moves, from: .d4, to: .d5), "d4d5 has been found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .d4, to: .e5), "d4e5 has not been found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .d4, to: .c5), "d4c5 has been found.")
+  }
+
   func testWhitePawnMovesWithEnPassantFieldOnD6() {
     let pos = CTPosition(fen: "rnbqkbnr/p1p1ppp1/1p5p/3pP3/8/P7/1PPP1PPP/RNBQKBNR w KQkq d6 6 4")
     let gen = CTMoveGenerator(position: pos)
@@ -108,6 +120,18 @@ class CTMoveGeneratorTests: XCTestCase {
     
     let moves = gen.generateBlackPawnMoves()
     
+    XCTAssertTrue(moveHasBeenFound(moves, from: .e5, to: .e4), "e5e4 has not been found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .e5, to: .d4), "e5d4 has not been found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .e5, to: .f4), "e5f4 has been found.")
+  }
+  
+  func testBlackPawnMovesAfterMovesD4AndE5WithCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqkbnr/pppp1ppp/8/4p3/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 2 2")
+    let gen = CTMoveGenerator(position: pos)
+    
+    let moves = gen.generateBlackPawnMoves(captureOnly: true)
+    
+    XCTAssertFalse(moveHasBeenFound(moves, from: .e5, to: .e4), "e5e4 has been found.")
     XCTAssertTrue(moveHasBeenFound(moves, from: .e5, to: .d4), "e5d4 has not been found.")
     XCTAssertFalse(moveHasBeenFound(moves, from: .e5, to: .f4), "e5f4 has been found.")
   }
@@ -268,6 +292,16 @@ class CTMoveGeneratorTests: XCTestCase {
     XCTAssertTrue(moveHasBeenFound(moves, from: .e1, to: .c1), "Long Castling not found.")
   }
   
+  func testWhiteCastlingIsNotFoundWhenCaptureOnly() {
+    let pos = CTPosition(fen: "r3k2r/pppbqppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPPBQPPP/R3K2R w KQkq - 14 8")
+    let gen = CTMoveGenerator(position: pos)
+    
+    let moves = gen.generateKingMoves(.white, captureOnly: true)
+    
+    XCTAssertFalse(moveHasBeenFound(moves, from: .e1, to: .g1), "Short Castling found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .e1, to: .c1), "Long Castling found.")
+  }
+  
   func testBlackCastlingIsFound() {
     let pos = CTPosition(fen: "r3k2r/pppbqppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPPBQPPP/R3K2R w KQkq - 14 8")
     let gen = CTMoveGenerator(position: pos)
@@ -278,6 +312,16 @@ class CTMoveGeneratorTests: XCTestCase {
     XCTAssertTrue(moveHasBeenFound(moves, from: .e8, to: .c8), "Long Castling not found.")
   }
   
+  func testBlackCastlingIsNotFoundWhenCaptureOnly() {
+    let pos = CTPosition(fen: "r3k2r/pppbqppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPPBQPPP/R3K2R w KQkq - 14 8")
+    let gen = CTMoveGenerator(position: pos)
+    
+    let moves = gen.generateKingMoves(.black, captureOnly: true)
+    
+    XCTAssertFalse(moveHasBeenFound(moves, from: .e8, to: .g8), "Short Castling found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .e8, to: .c8), "Long Castling found.")
+  }
+
   func testIsSquareUnderAttackForWhite() {
     let pos = CTPosition(fen: "r3k2r/pppbqppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPPBQPPP/R3K2R w KQkq - 14 8")
     let gen = CTMoveGenerator(position: pos)
