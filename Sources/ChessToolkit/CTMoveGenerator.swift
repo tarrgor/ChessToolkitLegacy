@@ -86,7 +86,7 @@ public final class CTMoveGenerator {
     return moves
   }
   
-  func generateKnightMoves(_ side: CTSide) -> [CTMove] {
+  func generateKnightMoves(_ side: CTSide, captureOnly: Bool = false) -> [CTMove] {
     let piece: CTPiece = side == .white ? .whiteKnight : .blackKnight
     
     var moves = [CTMove]()
@@ -104,9 +104,12 @@ public final class CTMoveGenerator {
       ]
       
       for target in targets {
-        if target != nil {
-          if self!.position.pieceAt(target!).side() != side {
-            moves.append(CTMoveBuilder.build(self!.position, from: square, to: target!))
+        if let target = target, let gen = self {
+          if gen.position.pieceAt(target).side() != side {
+            let move = CTMoveBuilder.build(gen.position, from: square, to: target)
+            if !captureOnly || move.captured != .empty {
+              moves.append(move)
+            }
           }
         }
       }

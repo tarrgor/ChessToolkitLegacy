@@ -15,12 +15,7 @@ class CTMoveGeneratorTests: XCTestCase {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
   }
-  
-  override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    super.tearDown()
-  }
-  
+
   func testWhitePawnMovesWithInitialPosition() {
     let pos = CTPosition()
     let gen = CTMoveGenerator(position: pos)
@@ -160,6 +155,38 @@ class CTMoveGeneratorTests: XCTestCase {
     XCTAssertFalse(moveHasBeenFound(moves, from: .b1, to: .d2), "b1d2 found, square d2 is blocked.")
   }
   
+  func testWhiteKnightMovesAfter_E4E5_NF3_NF6() {
+    let pos = CTPosition()
+    
+    pos.makeMove(from: .e2, to: .e4)
+    pos.makeMove(from: .e7, to: .e5)
+    pos.makeMove(from: .g1, to: .f3)
+    pos.makeMove(from: .g8, to: .f6)
+    
+    let gen = CTMoveGenerator(position: pos)
+    
+    let moves = gen.generateKnightMoves(.white)
+    
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f3, to: .e5), "f3e5 not found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f3, to: .g1), "f3g1 not found.")
+  }
+
+  func testWhiteKnightMovesAfter_E4E5_NF3_NF6_WithCaptureOnly() {
+    let pos = CTPosition()
+    
+    pos.makeMove(from: .e2, to: .e4)
+    pos.makeMove(from: .e7, to: .e5)
+    pos.makeMove(from: .g1, to: .f3)
+    pos.makeMove(from: .g8, to: .f6)
+    
+    let gen = CTMoveGenerator(position: pos)
+    
+    let moves = gen.generateKnightMoves(.white, captureOnly: true)
+    
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f3, to: .e5), "f3e5 not found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .f3, to: .g1), "f3g1 found.")
+  }
+  
   func testBlackKnightMovesInitialPosition() {
     let pos = CTPosition()
     let gen = CTMoveGenerator(position: pos)
@@ -172,7 +199,41 @@ class CTMoveGeneratorTests: XCTestCase {
     XCTAssertFalse(moveHasBeenFound(moves, from: .b8, to: .b6), "b8b6 found.")
     XCTAssertFalse(moveHasBeenFound(moves, from: .b8, to: .d7), "b8d7 found, square d7 is blocked.")
   }
-  
+
+  func testBlackKnightMovesAfter_E4E5_NF3_NF6_H3() {
+    let pos = CTPosition()
+
+    pos.makeMove(from: .e2, to: .e4)
+    pos.makeMove(from: .e7, to: .e5)
+    pos.makeMove(from: .g1, to: .f3)
+    pos.makeMove(from: .g8, to: .f6)
+    pos.makeMove(from: .h2, to: .h3)
+
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateKnightMoves(.black)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f6, to: .e4), "f6e4 not found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f6, to: .g8), "f6g8 not found.")
+  }
+
+  func testBlackKnightMovesAfter_E4E5_NF3_NF6_H3_WithCaptureOnly() {
+    let pos = CTPosition()
+
+    pos.makeMove(from: .e2, to: .e4)
+    pos.makeMove(from: .e7, to: .e5)
+    pos.makeMove(from: .g1, to: .f3)
+    pos.makeMove(from: .g8, to: .f6)
+    pos.makeMove(from: .h2, to: .h3)
+
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateKnightMoves(.black, captureOnly: true)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f6, to: .e4), "f6e4 not found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .f6, to: .g8), "f6g8 found.")
+  }
+
   func testWhiteBishopMovesInitialPositionShouldBeEmpty() {
     let pos = CTPosition()
     let gen = CTMoveGenerator(position: pos)
