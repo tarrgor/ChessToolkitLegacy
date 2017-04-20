@@ -118,38 +118,38 @@ public final class CTMoveGenerator {
     return moves
   }
   
-  func generateBishopMoves(_ side: CTSide) -> [CTMove] {
+  func generateBishopMoves(_ side: CTSide, captureOnly: Bool = false) -> [CTMove] {
     let piece: CTPiece = side == .white ? .whiteBishop : .blackBishop
     
     var moves = [CTMove]()
     
     position.filterPiece(piece) { [weak self] square in
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.upLeft() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.upRight() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.downLeft() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.downRight() })
     }
     
     return moves
   }
   
-  func generateRookMoves(_ side: CTSide) -> [CTMove] {
+  func generateRookMoves(_ side: CTSide, captureOnly: Bool = false) -> [CTMove] {
     let piece: CTPiece = side == .white ? .whiteRook : .blackRook
     
     var moves = [CTMove]()
     
     position.filterPiece(piece) { [weak self] square in
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.up() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.down() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.left() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.right() })
     }
     
@@ -343,7 +343,8 @@ public final class CTMoveGenerator {
     return true
   }
   
-  fileprivate func movesInLine(side: CTSide, piece: CTPiece, square: CTSquare, update: (CTSquare) -> (CTSquare?)) -> [CTMove] {
+  fileprivate func movesInLine(side: CTSide, piece: CTPiece, square: CTSquare, captureOnly: Bool = false,
+                               update: (CTSquare) -> (CTSquare?)) -> [CTMove] {
     let opposite: CTSide = side == .white ? .black : .white
     
     var moves = [CTMove]()
@@ -352,7 +353,10 @@ public final class CTMoveGenerator {
     target = update(target!)
     
     while target != nil && position.pieceAt(target!).side() != side {
-      moves.append(CTMoveBuilder.build(position, from: square, to: target!))
+      let move = CTMoveBuilder.build(position, from: square, to: target!)
+      if !captureOnly || move.captured != .empty {
+        moves.append(move)
+      }
       if position.pieceAt(target!).side() == opposite {
         break
       } else {

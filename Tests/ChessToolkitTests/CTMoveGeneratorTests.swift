@@ -254,7 +254,27 @@ class CTMoveGeneratorTests: XCTestCase {
     XCTAssertFalse(moveHasBeenFound(moves, from: .f1, to: .g2), "f1g2 found, square is blocked.")
     XCTAssertFalse(moveHasBeenFound(moves, from: .f1, to: .h3), "f1g2 found, square is blocked.")
   }
-  
+
+  func testWhiteBishopMovesAfterSomeMovesWithoutCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqkbnr/pppp1pp1/7p/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 3")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateBishopMoves(.white)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .c4, to: .f7), "c4f7 not found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .c4, to: .d5), "c4d5 not found")
+  }
+
+  func testWhiteBishopMovesAfterSomeMovesWithCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqkbnr/pppp1pp1/7p/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 3")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateBishopMoves(.white, captureOnly: true)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .c4, to: .f7), "c4f7 not found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .c4, to: .d5), "c4d5 found")
+  }
+
   func testBlackBishopMovesAfterE4AndE5() {
     let pos = CTPosition(fen: "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 2 2")
     let gen = CTMoveGenerator(position: pos)
@@ -266,7 +286,27 @@ class CTMoveGeneratorTests: XCTestCase {
     XCTAssertFalse(moveHasBeenFound(moves, from: .f8, to: .g7), "f8g7 found, square is blocked.")
     XCTAssertFalse(moveHasBeenFound(moves, from: .f8, to: .h6), "f8h6 found, square is blocked.")
   }
-  
+
+  func testBlackBishopMovesAfterSomeMovesWithoutCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqk1nr/pppp1ppp/8/2b1p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateBishopMoves(.black)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .c5, to: .f2), "c5f2 not found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .c5, to: .d4), "c5d4 not found")
+  }
+
+  func testBlackBishopMovesAfterSomeMovesWithCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqk1nr/pppp1ppp/8/2b1p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateBishopMoves(.black, captureOnly: true)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .c5, to: .f2), "c5f2 not found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .c5, to: .d4), "c5d4 found")
+  }
+
   func testWhiteRookMovesAfterA4AndA5() {
     let pos = CTPosition(fen: "rnbqkbnr/1ppppppp/8/p7/P7/8/1PPPPPPP/RNBQKBNR w KQkq - 2 2")
     let gen = CTMoveGenerator(position: pos)
@@ -278,7 +318,27 @@ class CTMoveGeneratorTests: XCTestCase {
     XCTAssertFalse(moveHasBeenFound(moves, from: .a1, to: .b1), "a1b1 found, square is blocked.")
     XCTAssertFalse(moveHasBeenFound(moves, from: .a1, to: .a5), "a1a5 found, square is blocked.")
   }
-  
+
+  func testWhiteRookMovesAfterSomeMovesWithoutCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqkbn1/ppppppp1/5r2/7p/7P/3R4/PPPPPPP1/RNBQKBN1 w Qq - 4 4")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateRookMoves(.white)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .d3, to: .d7), "d3d7 not found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .d3, to: .d4), "d3d4 not found.")
+  }
+
+  func testWhiteRookMovesAfterSomeMovesWithCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqkbn1/ppppppp1/5r2/7p/7P/3R4/PPPPPPP1/RNBQKBN1 w Qq - 4 4")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateRookMoves(.white, captureOnly: true)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .d3, to: .d7), "d3d7 not found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .d3, to: .d4), "d3d4 found.")
+  }
+
   func testBlackRookMovesAfterA4AndA5() {
     let pos = CTPosition(fen: "rnbqkbnr/1ppppppp/8/p7/P7/8/1PPPPPPP/RNBQKBNR w KQkq - 2 2")
     let gen = CTMoveGenerator(position: pos)
