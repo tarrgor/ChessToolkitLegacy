@@ -449,7 +449,47 @@ class CTMoveGeneratorTests: XCTestCase {
     XCTAssertFalse(moveHasBeenFound(moves, from: .e1, to: .d1), "e1d1 found, square is blocked.")
     XCTAssertFalse(moveHasBeenFound(moves, from: .e1, to: .f2), "e1f2 found, square is blocked.")
   }
-  
+
+  func testWhiteKingMovesAfterSomeMovesWithoutCaptureOnly() {
+    let pos = CTPosition(fen: "rnb1kbnr/pppp1ppp/8/4p3/3PP3/3Q4/PPP2qPP/RNB1KBNR w KQkq - 0 4")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateKingMoves(.white)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .e1, to: .f2), "e1f2 not found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .e1, to: .d1), "e1d1 not found.")
+  }
+
+  func testWhiteKingMovesAfterSomeMovesWithCaptureOnly() {
+    let pos = CTPosition(fen: "rnb1kbnr/pppp1ppp/8/4p3/3PP3/3Q4/PPP2qPP/RNB1KBNR w KQkq - 0 4")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateKingMoves(.white, captureOnly: true)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .e1, to: .f2), "e1f2 not found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .e1, to: .d1), "e1d1 found.")
+  }
+
+  func testBlackKingMovesAfterSomeMovesWithoutCaptureOnly() {
+    let pos = CTPosition(fen: "rnb1kbnr/ppp2Qpp/3q4/3pp3/4PP2/8/PPPP2PP/RNB1KBNR b KQkq - 0 4")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateKingMoves(.black)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .e8, to: .f7), "e8f7 not found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .e8, to: .d8), "e8d8 not found.")
+  }
+
+  func testBlackKingMovesAfterSomeMovesWithCaptureOnly() {
+    let pos = CTPosition(fen: "rnb1kbnr/ppp2Qpp/3q4/3pp3/4PP2/8/PPPP2PP/RNB1KBNR b KQkq - 0 4")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateKingMoves(.black, captureOnly: true)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .e8, to: .f7), "e8f7 not found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .e8, to: .d8), "e8d8 found.")
+  }
+
   func testBlackKingMovesAfterE4E5D4D5() {
     let pos = CTPosition(fen: "rnbqkbnr/ppp2ppp/8/3pp3/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 4 3")
     let gen = CTMoveGenerator(position: pos)

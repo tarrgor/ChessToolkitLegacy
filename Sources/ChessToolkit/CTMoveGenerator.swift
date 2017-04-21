@@ -203,7 +203,10 @@ public final class CTMoveGenerator {
       for target in targets {
         if target != nil {
           if self!.position.pieceAt(target!).side() != side {
-            moves.append(CTMoveBuilder.build(self!.position, from: square, to: target!))
+            let move = CTMoveBuilder.build(self!.position, from: square, to: target!)
+            if !captureOnly || move.captured != .empty {
+              moves.append(move)
+            }
           }
         }
       }
