@@ -267,16 +267,16 @@ public final class CTMoveGenerator {
     var moves = [CTMove]()
     
     if side == .white {
-      moves.append(contentsOf: generateWhitePawnMoves())
+      moves.append(contentsOf: generateWhitePawnMoves(captureOnly: true))
     } else {
-      moves.append(contentsOf: generateBlackPawnMoves())
+      moves.append(contentsOf: generateBlackPawnMoves(captureOnly: true))
     }
     
-    moves.append(contentsOf: generateBishopMoves(side))
-    moves.append(contentsOf: generateKnightMoves(side))
-    moves.append(contentsOf: generateRookMoves(side))
-    moves.append(contentsOf: generateQueenMoves(side))
-    moves.append(contentsOf: generateKingMoves(side))
+    moves.append(contentsOf: generateBishopMoves(side, captureOnly: true))
+    moves.append(contentsOf: generateKnightMoves(side, captureOnly: true))
+    moves.append(contentsOf: generateRookMoves(side, captureOnly: true))
+    moves.append(contentsOf: generateQueenMoves(side, captureOnly: true))
+    moves.append(contentsOf: generateKingMoves(side, captureOnly: true))
     
     if (legalOnly) {
       return filterLegalMoves(moves)
