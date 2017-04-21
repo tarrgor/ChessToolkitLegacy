@@ -350,7 +350,27 @@ class CTMoveGeneratorTests: XCTestCase {
     XCTAssertFalse(moveHasBeenFound(moves, from: .a8, to: .b7), "a8b7 found, square is blocked.")
     XCTAssertFalse(moveHasBeenFound(moves, from: .a8, to: .a4), "a8a4 found, square is blocked.")
   }
-  
+
+  func testBlackRookMovesAfterSomeMovesWithoutCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqkbn1/ppppppp1/5r2/7p/6PP/3R4/PPPPPP2/RNBQKBN1 b Qq g3 0 4")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateRookMoves(.black)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f6, to: .f2), "f6f2 not found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f6, to: .f5), "f6f5 not found.")
+  }
+
+  func testBlackRookMovesAfterSomeMovesWithCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqkbn1/ppppppp1/5r2/7p/6PP/3R4/PPPPPP2/RNBQKBN1 b Qq g3 0 4")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateRookMoves(.black, captureOnly: true)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f6, to: .f2), "f6f2 not found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .f6, to: .f5), "f6f5 found.")
+  }
+
   func testWhiteQueenMovesAfterE4E5D4D5() {
     let pos = CTPosition(fen: "rnbqkbnr/ppp2ppp/8/3pp3/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 4 3")
     let gen = CTMoveGenerator(position: pos)
@@ -363,7 +383,47 @@ class CTMoveGeneratorTests: XCTestCase {
     XCTAssertFalse(moveHasBeenFound(moves, from: .d1, to: .c2), "d1c2 found, square is blocked.")
     XCTAssertFalse(moveHasBeenFound(moves, from: .d1, to: .b3), "d1b3 found, square is blocked.")
   }
-  
+
+  func testWhiteQueenMovesAfterSomeMovesWithoutCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqkbnr/pppp1p1p/6p1/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR w KQkq - 0 3")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateQueenMoves(.white)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .h5, to: .g6), "h5g6 not found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .h5, to: .h3), "h5h3 not found.")
+  }
+
+  func testWhiteQueenMovesAfterSomeMovesWithCaptureOnly() {
+    let pos = CTPosition(fen: "rnbqkbnr/pppp1p1p/6p1/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR w KQkq - 0 3")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateQueenMoves(.white, captureOnly: true)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .h5, to: .g6), "h5g6 not found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .h5, to: .h3), "h5h3 found.")
+  }
+
+  func testBlackQueenMovesAfterSomeMovesWithoutCaptureOnly() {
+    let pos = CTPosition(fen: "rnb1kbnr/pppp1ppp/5q2/4p2Q/4P2P/8/PPPP1PP1/RNB1KBNR b KQkq h3 0 3")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateQueenMoves(.black)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f6, to: .h4), "f6h4 not found.")
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f6, to: .f5), "f6f5 not found.")
+  }
+
+  func testBlackQueenMovesAfterSomeMovesWithCaptureOnly() {
+    let pos = CTPosition(fen: "rnb1kbnr/pppp1ppp/5q2/4p2Q/4P2P/8/PPPP1PP1/RNB1KBNR b KQkq h3 0 3")
+    let gen = CTMoveGenerator(position: pos)
+
+    let moves = gen.generateQueenMoves(.black, captureOnly: true)
+
+    XCTAssertTrue(moveHasBeenFound(moves, from: .f6, to: .h4), "f6h4 not found.")
+    XCTAssertFalse(moveHasBeenFound(moves, from: .f6, to: .f5), "f6f5 found.")
+  }
+
   func testBlackQueenMovesAfterE4E5D4D5() {
     let pos = CTPosition(fen: "rnbqkbnr/ppp2ppp/8/3pp3/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 4 3")
     let gen = CTMoveGenerator(position: pos)

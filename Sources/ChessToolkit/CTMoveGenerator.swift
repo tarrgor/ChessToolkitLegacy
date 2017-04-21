@@ -156,27 +156,27 @@ public final class CTMoveGenerator {
     return moves
   }
   
-  func generateQueenMoves(_ side: CTSide) -> [CTMove] {
+  func generateQueenMoves(_ side: CTSide, captureOnly: Bool = false) -> [CTMove] {
     let piece: CTPiece = side == .white ? .whiteQueen : .blackQueen
     
     var moves = [CTMove]()
     
     position.filterPiece(piece) { [weak self] square in
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.upLeft() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.upRight() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.downLeft() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.downRight() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.up() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.down() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.left() })
-      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square) {
+      moves.append(contentsOf: self!.movesInLine(side: side, piece: piece, square: square, captureOnly: captureOnly) {
         target in return target.right() })
     }
     
