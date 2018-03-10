@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F26BFE8D20540303001BE35B /* PieceSets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26BFE8A205402A9001BE35B /* PieceSets.xcassets */; };
+		F26BFE962054210F001BE35B /* PieceSet_Default.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26BFE932054210B001BE35B /* PieceSet_Default.plist */; };
+		F26BFE9720542114001BE35B /* PieceSets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26BFE922054210B001BE35B /* PieceSets.xcassets */; };
 		F29DEC401DF2CB9D00047BBD /* ChessToolkitUI-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F29DEC3E1DF2CB9D00047BBD /* ChessToolkitUI-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F29DEC431DF2CB9D00047BBD /* ChessToolkitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */; };
 		F29DEC441DF2CB9D00047BBD /* ChessToolkitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F29DEC4B1DF2CBBE00047BBD /* PieceSet_Default.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2D3448B1DDE2F490067F51F /* PieceSet_Default.plist */; };
 		F29DEC5A1DF2CBDA00047BBD /* ChessToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D1435F1DDE245800288DFC /* ChessToolkit.framework */; };
 		F2A1FD941E86EE3F00ED1166 /* CTCastlingRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2159F1E86ED8D000BBC9A /* CTCastlingRights.swift */; };
 		F2A1FD951E86EE3F00ED1166 /* CTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215A01E86ED8D000BBC9A /* CTConstants.swift */; };
@@ -97,7 +97,8 @@
 
 /* Begin PBXFileReference section */
 		F217C2CE1E92569B00371996 /* ChessToolkit-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ChessToolkit-Playground.playground"; sourceTree = "<group>"; };
-		F26BFE8A205402A9001BE35B /* PieceSets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PieceSets.xcassets; sourceTree = "<group>"; };
+		F26BFE922054210B001BE35B /* PieceSets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PieceSets.xcassets; sourceTree = "<group>"; };
+		F26BFE932054210B001BE35B /* PieceSet_Default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PieceSet_Default.plist; sourceTree = "<group>"; };
 		F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29DEC3E1DF2CB9D00047BBD /* ChessToolkitUI-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkitUI-iOS.h"; sourceTree = "<group>"; };
 		F29DEC3F1DF2CB9D00047BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 		F2D143851DDE260600288DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2D143881DDE260600288DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2D1438A1DDE260600288DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2D3448B1DDE2F490067F51F /* PieceSet_Default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PieceSet_Default.plist; sourceTree = "<group>"; };
 		F2DAFE8A1DDF74B30094F9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2F215671E86DFD7000BBC9A /* ChessToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F215691E86DFD7000BBC9A /* ChessToolkit-macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkit-macOS.h"; sourceTree = "<group>"; };
@@ -184,6 +184,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F26BFE91205420E7001BE35B /* PieceSets */ = {
+			isa = PBXGroup;
+			children = (
+				F26BFE932054210B001BE35B /* PieceSet_Default.plist */,
+				F26BFE922054210B001BE35B /* PieceSets.xcassets */,
+			);
+			path = PieceSets;
+			sourceTree = "<group>";
+		};
 		F29DEC3D1DF2CB9D00047BBD /* ChessToolkitUI-iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,16 +273,6 @@
 			path = "ChessToolkit-Example";
 			sourceTree = "<group>";
 		};
-		F2D344721DDE2F190067F51F /* PieceSets */ = {
-			isa = PBXGroup;
-			children = (
-				F2D3448B1DDE2F490067F51F /* PieceSet_Default.plist */,
-				F26BFE8A205402A9001BE35B /* PieceSets.xcassets */,
-			);
-			name = PieceSets;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		F2DAFE6D1DDF74010094F9A3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,11 +320,11 @@
 		F2F215921E86EC6C000BBC9A /* ChessToolkitUI */ = {
 			isa = PBXGroup;
 			children = (
+				F26BFE91205420E7001BE35B /* PieceSets */,
 				F2F215B71E86EDDD000BBC9A /* CTChessboardView.swift */,
 				F2F215B81E86EDDD000BBC9A /* CTPieceSet.swift */,
 				F2F215B91E86EDDD000BBC9A /* CTUIConstants.swift */,
 				F2F215BA1E86EDDD000BBC9A /* UIColor+Extension.swift */,
-				F2D344721DDE2F190067F51F /* PieceSets */,
 			);
 			path = ChessToolkitUI;
 			sourceTree = "<group>";
@@ -516,8 +515,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29DEC4B1DF2CBBE00047BBD /* PieceSet_Default.plist in Resources */,
-				F26BFE8D20540303001BE35B /* PieceSets.xcassets in Resources */,
+				F26BFE962054210F001BE35B /* PieceSet_Default.plist in Resources */,
+				F26BFE9720542114001BE35B /* PieceSets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
