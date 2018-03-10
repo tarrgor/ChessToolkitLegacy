@@ -21,11 +21,5 @@ public extension String {
   subscript (index: Int) -> String {
     return String(self[index] as Character)
   }
-  
-  subscript (range: Range<Int>) -> String {
-    let lowerIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
-    let higherIndex = self.index(self.startIndex, offsetBy: range.upperBound)
-    return substring(with: (lowerIndex ..< higherIndex))
-  }
 
 }

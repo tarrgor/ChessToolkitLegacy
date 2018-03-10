@@ -151,9 +151,10 @@ extension CTChessboardView {
   fileprivate func drawLabelForRow(_ row: Int, squareRect: CGRect) {
     let rowIndex = self.flipped ? 7 - row : row
     let label = _rowLabels[rowIndex] as NSString
-    let attributes = [ NSForegroundColorAttributeName : self.squareLabelColor,
-      NSFontAttributeName : self.squareLabelFont ] as [String : Any]
-    let textSize = label.size(attributes: attributes)
+    let attributes: [NSAttributedStringKey: Any] = [
+      NSAttributedStringKey.foregroundColor : self.squareLabelColor,
+      NSAttributedStringKey.font : self.squareLabelFont ]
+    let textSize = label.size(withAttributes: attributes)
 
     let goodBorder = self.border && self.borderWidth >= 16
     let xp = goodBorder ? squareRect.origin.x - self.borderWidth / 2 - textSize.width / 2 : squareRect.origin.x + self.squareSize * kLabelXOffsetFactor
@@ -165,9 +166,10 @@ extension CTChessboardView {
   fileprivate func drawLabelForColumn(_ column: Int, squareRect: CGRect) {
     let columnIndex = self.flipped ? 7 - column : column
     let label = _colLabels[columnIndex] as NSString
-    let attributes = [ NSForegroundColorAttributeName : self.squareLabelColor,
-      NSFontAttributeName : self.squareLabelFont ] as [String : Any]
-    let textSize = label.size(attributes: attributes)
+    let attributes: [NSAttributedStringKey: Any] = [
+      NSAttributedStringKey.foregroundColor : self.squareLabelColor,
+      NSAttributedStringKey.font : self.squareLabelFont ]
+    let textSize = label.size(withAttributes: attributes)
     
     let goodBorder = self.border && self.borderWidth >= 16
     let xp = goodBorder ? squareRect.midX - textSize.width / 2 : squareRect.origin.x + self.squareSize - self.squareSize * kLabelXOffsetFactor - textSize.width
