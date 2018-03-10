@@ -35,4 +35,6 @@ Carthage
 #
 # Pods/
 
+.build/
+.idea/
 
