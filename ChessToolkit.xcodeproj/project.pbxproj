@@ -7,23 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F20F822B1E6F54F8006360FE /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D143531DDE23F000288DFC /* SVGKit.framework */; };
+		F26BFE8D20540303001BE35B /* PieceSets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26BFE8A205402A9001BE35B /* PieceSets.xcassets */; };
 		F29DEC401DF2CB9D00047BBD /* ChessToolkitUI-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F29DEC3E1DF2CB9D00047BBD /* ChessToolkitUI-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F29DEC431DF2CB9D00047BBD /* ChessToolkitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */; };
 		F29DEC441DF2CB9D00047BBD /* ChessToolkitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F29DEC4B1DF2CBBE00047BBD /* PieceSet_Default.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2D3448B1DDE2F490067F51F /* PieceSet_Default.plist */; };
-		F29DEC4C1DF2CBBE00047BBD /* Chess_bdt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344731DDE2F3A0067F51F /* Chess_bdt45.svg */; };
-		F29DEC4D1DF2CBBE00047BBD /* Chess_blt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344741DDE2F3A0067F51F /* Chess_blt45.svg */; };
-		F29DEC4E1DF2CBBE00047BBD /* Chess_kdt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344751DDE2F3A0067F51F /* Chess_kdt45.svg */; };
-		F29DEC4F1DF2CBBE00047BBD /* Chess_klt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344761DDE2F3A0067F51F /* Chess_klt45.svg */; };
-		F29DEC501DF2CBBE00047BBD /* Chess_ndt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344771DDE2F3A0067F51F /* Chess_ndt45.svg */; };
-		F29DEC511DF2CBBE00047BBD /* Chess_nlt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344781DDE2F3A0067F51F /* Chess_nlt45.svg */; };
-		F29DEC521DF2CBBE00047BBD /* Chess_pdt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D344791DDE2F3A0067F51F /* Chess_pdt45.svg */; };
-		F29DEC531DF2CBBE00047BBD /* Chess_plt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D3447A1DDE2F3A0067F51F /* Chess_plt45.svg */; };
-		F29DEC541DF2CBBE00047BBD /* Chess_qdt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D3447B1DDE2F3A0067F51F /* Chess_qdt45.svg */; };
-		F29DEC551DF2CBBE00047BBD /* Chess_qlt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D3447C1DDE2F3A0067F51F /* Chess_qlt45.svg */; };
-		F29DEC561DF2CBBE00047BBD /* Chess_rdt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D3447D1DDE2F3A0067F51F /* Chess_rdt45.svg */; };
-		F29DEC571DF2CBBE00047BBD /* Chess_rlt45.svg in Resources */ = {isa = PBXBuildFile; fileRef = F2D3447E1DDE2F3A0067F51F /* Chess_rlt45.svg */; };
 		F29DEC5A1DF2CBDA00047BBD /* ChessToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D1435F1DDE245800288DFC /* ChessToolkit.framework */; };
 		F2A1FD941E86EE3F00ED1166 /* CTCastlingRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2159F1E86ED8D000BBC9A /* CTCastlingRights.swift */; };
 		F2A1FD951E86EE3F00ED1166 /* CTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215A01E86ED8D000BBC9A /* CTConstants.swift */; };
@@ -54,10 +42,6 @@
 		F2D143861DDE260600288DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D143851DDE260600288DFC /* Assets.xcassets */; };
 		F2D143891DDE260600288DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D143871DDE260600288DFC /* LaunchScreen.storyboard */; };
 		F2D1438E1DDE261800288DFC /* ChessToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D1435F1DDE245800288DFC /* ChessToolkit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		F2D143921DDE27BA00288DFC /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D143531DDE23F000288DFC /* SVGKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		F2D143931DDE27BA00288DFC /* SVGKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2D143531DDE23F000288DFC /* SVGKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F2D3446E1DDE2E610067F51F /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */; };
-		F2D3446F1DDE2E610067F51F /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2F2156B1E86DFD7000BBC9A /* ChessToolkit-macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F2F215691E86DFD7000BBC9A /* ChessToolkit-macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2F215AB1E86ED8D000BBC9A /* CTCastlingRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2159F1E86ED8D000BBC9A /* CTCastlingRights.swift */; };
 		F2F215AC1E86ED8D000BBC9A /* CTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215A01E86ED8D000BBC9A /* CTConstants.swift */; };
@@ -74,20 +58,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F217D7DB1E94CD660056B889 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 19FF46011B8B4CF400B43179;
-			remoteInfo = "CocoaLumberjack-iOS";
-		};
-		F217D7DD1E94CD730056B889 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 825CDAAE1BDA4BC0003C1C12;
-			remoteInfo = "SVGKitFramework-iOS";
-		};
 		F29DEC411DF2CB9D00047BBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F2D1432E1DDE222800288DFC /* Project object */;
@@ -109,174 +79,6 @@
 			remoteGlobalIDString = F2D1435E1DDE245800288DFC;
 			remoteInfo = "ChessToolkit-iOS";
 		};
-		F2D1434E1DDE23F000288DFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6639618E16145D0400E58CCA;
-			remoteInfo = "SVGKit-iOS";
-		};
-		F2D143501DDE23F000288DFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 55452BF119EC68A200B75A30;
-			remoteInfo = "SVGKit-iOS Tests";
-		};
-		F2D143521DDE23F000288DFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 825CDAAF1BDA4BC0003C1C12;
-			remoteInfo = "SVGKitFramework-iOS";
-		};
-		F2D143541DDE23F000288DFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 825CDAB81BDA4BC0003C1C12;
-			remoteInfo = "SVGKitFramework-iOSTests";
-		};
-		F2D143561DDE23F000288DFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 825CDAD31BDA4D38003C1C12;
-			remoteInfo = "SVGKitFramework-tvOS";
-		};
-		F2D143581DDE23F000288DFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 825CDADC1BDA4D38003C1C12;
-			remoteInfo = "SVGKitFramework-tvOSTests";
-		};
-		F2D143941DDE27BA00288DFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 825CDAAE1BDA4BC0003C1C12;
-			remoteInfo = "SVGKitFramework-iOS";
-		};
-		F2D344491DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCB3185114EB418E001CFBEE;
-			remoteInfo = CocoaLumberjack;
-		};
-		F2D3444B1DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 18F3BF0F1A81D8B700692297;
-			remoteInfo = CocoaLumberjackSwift;
-		};
-		F2D3444D1DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 19FF46021B8B4CF400B43179;
-			remoteInfo = "CocoaLumberjack-iOS";
-		};
-		F2D3444F1DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 19FF460F1B8B4D1400B43179;
-			remoteInfo = "CocoaLumberjackSwift-iOS";
-		};
-		F2D344511DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 18F3BFD71A81E06E00692297;
-			remoteInfo = "CocoaLumberjack-iOS-Static";
-		};
-		F2D344531DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 19190EDE1B84D812008D059E;
-			remoteInfo = "CocoaLumberjack-watchOS";
-		};
-		F2D344551DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 19190EEB1B84D826008D059E;
-			remoteInfo = "CocoaLumberjackSwift-watchOS";
-		};
-		F2D344571DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 19D90B261BBFA9DB00947169;
-			remoteInfo = "CocoaLumberjack-tvOS";
-		};
-		F2D344591DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 19D90B351BBFAA7500947169;
-			remoteInfo = "CocoaLumberjackSwift-tvOS";
-		};
-		F2D3445B1DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCB318CA14ED6C3B001CFBEE;
-			remoteInfo = FmwkTest;
-		};
-		F2D3445D1DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 55CCBEFF19BA679200957A39;
-			remoteInfo = SwiftTest;
-		};
-		F2D3445F1DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 18F3BF5F1A81DD2E00692297;
-			remoteInfo = iOSSwiftTest;
-		};
-		F2D344611DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 19EC14671B84D134000EC2E7;
-			remoteInfo = watchOSSwiftTest;
-		};
-		F2D344631DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 19EC14731B84D134000EC2E7;
-			remoteInfo = "watchOSSwiftTest Extension";
-		};
-		F2D344651DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 19406BE11BDBABFF001194DC;
-			remoteInfo = tvOSSwiftTest;
-		};
-		F2D344671DDE2E090067F51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 18F3BFF21A81E0C700692297;
-			remoteInfo = iOSLibStaticTest;
-		};
-		F2F2155E1E86DB5A000BBC9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 19FF46011B8B4CF400B43179;
-			remoteInfo = "CocoaLumberjack-iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -287,8 +89,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F29DEC441DF2CB9D00047BBD /* ChessToolkitUI.framework in Embed Frameworks */,
-				F2D3446F1DDE2E610067F51F /* CocoaLumberjack.framework in Embed Frameworks */,
-				F2D143931DDE27BA00288DFC /* SVGKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -297,6 +97,7 @@
 
 /* Begin PBXFileReference section */
 		F217C2CE1E92569B00371996 /* ChessToolkit-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ChessToolkit-Playground.playground"; sourceTree = "<group>"; };
+		F26BFE8A205402A9001BE35B /* PieceSets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PieceSets.xcassets; sourceTree = "<group>"; };
 		F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29DEC3E1DF2CB9D00047BBD /* ChessToolkitUI-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkitUI-iOS.h"; sourceTree = "<group>"; };
 		F29DEC3F1DF2CB9D00047BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -306,7 +107,6 @@
 		F2A1FDCC1E86F3F300ED1166 /* CTMoveGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveGeneratorTests.swift; sourceTree = "<group>"; };
 		F2A1FDCD1E86F3F300ED1166 /* CTMoveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveTests.swift; sourceTree = "<group>"; };
 		F2A1FDCE1E86F3F300ED1166 /* CTPositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPositionTests.swift; sourceTree = "<group>"; };
-		F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SVGKit-iOS.xcodeproj"; path = "SVGKit/SVGKit-iOS.xcodeproj"; sourceTree = "<group>"; };
 		F2D1435F1DDE245800288DFC /* ChessToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D143621DDE245800288DFC /* ChessToolkit-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkit-iOS.h"; sourceTree = "<group>"; };
 		F2D143631DDE245800288DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -317,19 +117,6 @@
 		F2D143851DDE260600288DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2D143881DDE260600288DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2D1438A1DDE260600288DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = CocoaLumberjack/Lumberjack.xcodeproj; sourceTree = "<group>"; };
-		F2D344731DDE2F3A0067F51F /* Chess_bdt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_bdt45.svg; sourceTree = "<group>"; };
-		F2D344741DDE2F3A0067F51F /* Chess_blt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_blt45.svg; sourceTree = "<group>"; };
-		F2D344751DDE2F3A0067F51F /* Chess_kdt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_kdt45.svg; sourceTree = "<group>"; };
-		F2D344761DDE2F3A0067F51F /* Chess_klt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_klt45.svg; sourceTree = "<group>"; };
-		F2D344771DDE2F3A0067F51F /* Chess_ndt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_ndt45.svg; sourceTree = "<group>"; };
-		F2D344781DDE2F3A0067F51F /* Chess_nlt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_nlt45.svg; sourceTree = "<group>"; };
-		F2D344791DDE2F3A0067F51F /* Chess_pdt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_pdt45.svg; sourceTree = "<group>"; };
-		F2D3447A1DDE2F3A0067F51F /* Chess_plt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_plt45.svg; sourceTree = "<group>"; };
-		F2D3447B1DDE2F3A0067F51F /* Chess_qdt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_qdt45.svg; sourceTree = "<group>"; };
-		F2D3447C1DDE2F3A0067F51F /* Chess_qlt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_qlt45.svg; sourceTree = "<group>"; };
-		F2D3447D1DDE2F3A0067F51F /* Chess_rdt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_rdt45.svg; sourceTree = "<group>"; };
-		F2D3447E1DDE2F3A0067F51F /* Chess_rlt45.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chess_rlt45.svg; sourceTree = "<group>"; };
 		F2D3448B1DDE2F490067F51F /* PieceSet_Default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PieceSet_Default.plist; sourceTree = "<group>"; };
 		F2DAFE8A1DDF74B30094F9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2F215671E86DFD7000BBC9A /* ChessToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -359,7 +146,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F20F822B1E6F54F8006360FE /* SVGKit.framework in Frameworks */,
 				F29DEC5A1DF2CBDA00047BBD /* ChessToolkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,8 +169,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2D143921DDE27BA00288DFC /* SVGKit.framework in Frameworks */,
-				F2D3446E1DDE2E610067F51F /* CocoaLumberjack.framework in Frameworks */,
 				F29DEC431DF2CB9D00047BBD /* ChessToolkitUI.framework in Frameworks */,
 				F2D1438E1DDE261800288DFC /* ChessToolkit.framework in Frameworks */,
 			);
@@ -426,8 +210,6 @@
 			children = (
 				F217C2CE1E92569B00371996 /* ChessToolkit-Playground.playground */,
 				F2F2158F1E86E0F5000BBC9A /* Package.swift */,
-				F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */,
-				F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */,
 				F2D143351DDE227000288DFC /* Sources */,
 				F2DAFE6D1DDF74010094F9A3 /* Tests */,
 				F2D143611DDE245800288DFC /* ChessToolkit-iOS */,
@@ -446,19 +228,6 @@
 				F2F215921E86EC6C000BBC9A /* ChessToolkitUI */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		F2D143461DDE23F000288DFC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F2D1434F1DDE23F000288DFC /* libSVGKit-iOS.2.0.0.a */,
-				F2D143511DDE23F000288DFC /* SVGKit-iOS Tests.xctest */,
-				F2D143531DDE23F000288DFC /* SVGKit.framework */,
-				F2D143551DDE23F000288DFC /* SVGKitFramework-iOSTests.xctest */,
-				F2D143571DDE23F000288DFC /* SVGKit.framework */,
-				F2D143591DDE23F000288DFC /* SVGKitFramework-tvOSTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F2D143601DDE245800288DFC /* Products */ = {
@@ -495,45 +264,11 @@
 			path = "ChessToolkit-Example";
 			sourceTree = "<group>";
 		};
-		F2D344371DDE2E090067F51F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F2D344521DDE2E090067F51F /* libCocoaLumberjack.a */,
-				F2D3444E1DDE2E090067F51F /* CocoaLumberjack.framework */,
-				F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */,
-				F2D344581DDE2E090067F51F /* CocoaLumberjack.framework */,
-				F2D344541DDE2E090067F51F /* CocoaLumberjack.framework */,
-				F2D344501DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
-				F2D3444C1DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
-				F2D3445A1DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
-				F2D344561DDE2E090067F51F /* CocoaLumberjackSwift.framework */,
-				F2D344681DDE2E090067F51F /* iOSLibStaticTest.app */,
-				F2D3445C1DDE2E090067F51F /* FmwkTest.app */,
-				F2D344601DDE2E090067F51F /* iOSSwiftTest.app */,
-				F2D3445E1DDE2E090067F51F /* SwiftTest.app */,
-				F2D344661DDE2E090067F51F /* tvOSSwiftTest.app */,
-				F2D344621DDE2E090067F51F /* watchOSSwiftTest.app */,
-				F2D344641DDE2E090067F51F /* watchOSSwiftTest Extension.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F2D344721DDE2F190067F51F /* PieceSets */ = {
 			isa = PBXGroup;
 			children = (
 				F2D3448B1DDE2F490067F51F /* PieceSet_Default.plist */,
-				F2D344731DDE2F3A0067F51F /* Chess_bdt45.svg */,
-				F2D344741DDE2F3A0067F51F /* Chess_blt45.svg */,
-				F2D344751DDE2F3A0067F51F /* Chess_kdt45.svg */,
-				F2D344761DDE2F3A0067F51F /* Chess_klt45.svg */,
-				F2D344771DDE2F3A0067F51F /* Chess_ndt45.svg */,
-				F2D344781DDE2F3A0067F51F /* Chess_nlt45.svg */,
-				F2D344791DDE2F3A0067F51F /* Chess_pdt45.svg */,
-				F2D3447A1DDE2F3A0067F51F /* Chess_plt45.svg */,
-				F2D3447B1DDE2F3A0067F51F /* Chess_qdt45.svg */,
-				F2D3447C1DDE2F3A0067F51F /* Chess_qlt45.svg */,
-				F2D3447D1DDE2F3A0067F51F /* Chess_rdt45.svg */,
-				F2D3447E1DDE2F3A0067F51F /* Chess_rlt45.svg */,
+				F26BFE8A205402A9001BE35B /* PieceSets.xcassets */,
 			);
 			name = PieceSets;
 			path = ..;
@@ -637,8 +372,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F217D7DE1E94CD730056B889 /* PBXTargetDependency */,
-				F217D7DC1E94CD660056B889 /* PBXTargetDependency */,
 				F29DEC591DF2CBD000047BBD /* PBXTargetDependency */,
 			);
 			name = "ChessToolkitUI-iOS";
@@ -694,8 +427,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F2F2155F1E86DB5A000BBC9A /* PBXTargetDependency */,
-				F2D143951DDE27BA00288DFC /* PBXTargetDependency */,
 				F29DEC421DF2CB9D00047BBD /* PBXTargetDependency */,
 			);
 			name = "ChessToolkit-Example";
@@ -769,16 +500,6 @@
 			mainGroup = F2D1432D1DDE222800288DFC;
 			productRefGroup = F2D143601DDE245800288DFC /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = F2D344371DDE2E090067F51F /* Products */;
-					ProjectRef = F2D344361DDE2E090067F51F /* Lumberjack.xcodeproj */;
-				},
-				{
-					ProductGroup = F2D143461DDE23F000288DFC /* Products */;
-					ProjectRef = F2D143451DDE23F000288DFC /* SVGKit-iOS.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				F2D1435E1DDE245800288DFC /* ChessToolkit-iOS */,
@@ -790,181 +511,13 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		F2D1434F1DDE23F000288DFC /* libSVGKit-iOS.2.0.0.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libSVGKit-iOS.2.0.0.a";
-			remoteRef = F2D1434E1DDE23F000288DFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D143511DDE23F000288DFC /* SVGKit-iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SVGKit-iOS Tests.xctest";
-			remoteRef = F2D143501DDE23F000288DFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D143531DDE23F000288DFC /* SVGKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SVGKit.framework;
-			remoteRef = F2D143521DDE23F000288DFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D143551DDE23F000288DFC /* SVGKitFramework-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SVGKitFramework-iOSTests.xctest";
-			remoteRef = F2D143541DDE23F000288DFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D143571DDE23F000288DFC /* SVGKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SVGKit.framework;
-			remoteRef = F2D143561DDE23F000288DFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D143591DDE23F000288DFC /* SVGKitFramework-tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SVGKitFramework-tvOSTests.xctest";
-			remoteRef = F2D143581DDE23F000288DFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D3444A1DDE2E090067F51F /* CocoaLumberjack.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaLumberjack.framework;
-			remoteRef = F2D344491DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D3444C1DDE2E090067F51F /* CocoaLumberjackSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaLumberjackSwift.framework;
-			remoteRef = F2D3444B1DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D3444E1DDE2E090067F51F /* CocoaLumberjack.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaLumberjack.framework;
-			remoteRef = F2D3444D1DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D344501DDE2E090067F51F /* CocoaLumberjackSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaLumberjackSwift.framework;
-			remoteRef = F2D3444F1DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D344521DDE2E090067F51F /* libCocoaLumberjack.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libCocoaLumberjack.a;
-			remoteRef = F2D344511DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D344541DDE2E090067F51F /* CocoaLumberjack.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaLumberjack.framework;
-			remoteRef = F2D344531DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D344561DDE2E090067F51F /* CocoaLumberjackSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaLumberjackSwift.framework;
-			remoteRef = F2D344551DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D344581DDE2E090067F51F /* CocoaLumberjack.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaLumberjack.framework;
-			remoteRef = F2D344571DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D3445A1DDE2E090067F51F /* CocoaLumberjackSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CocoaLumberjackSwift.framework;
-			remoteRef = F2D344591DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D3445C1DDE2E090067F51F /* FmwkTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = FmwkTest.app;
-			remoteRef = F2D3445B1DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D3445E1DDE2E090067F51F /* SwiftTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SwiftTest.app;
-			remoteRef = F2D3445D1DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D344601DDE2E090067F51F /* iOSSwiftTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = iOSSwiftTest.app;
-			remoteRef = F2D3445F1DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D344621DDE2E090067F51F /* watchOSSwiftTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = watchOSSwiftTest.app;
-			remoteRef = F2D344611DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D344641DDE2E090067F51F /* watchOSSwiftTest Extension.appex */ = {
-			isa = PBXReferenceProxy;
-			fileType = "wrapper.app-extension";
-			path = "watchOSSwiftTest Extension.appex";
-			remoteRef = F2D344631DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D344661DDE2E090067F51F /* tvOSSwiftTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = tvOSSwiftTest.app;
-			remoteRef = F2D344651DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F2D344681DDE2E090067F51F /* iOSLibStaticTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = iOSLibStaticTest.app;
-			remoteRef = F2D344671DDE2E090067F51F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		F29DEC3A1DF2CB9D00047BBD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F29DEC4B1DF2CBBE00047BBD /* PieceSet_Default.plist in Resources */,
-				F29DEC4C1DF2CBBE00047BBD /* Chess_bdt45.svg in Resources */,
-				F29DEC4D1DF2CBBE00047BBD /* Chess_blt45.svg in Resources */,
-				F29DEC4E1DF2CBBE00047BBD /* Chess_kdt45.svg in Resources */,
-				F29DEC4F1DF2CBBE00047BBD /* Chess_klt45.svg in Resources */,
-				F29DEC501DF2CBBE00047BBD /* Chess_ndt45.svg in Resources */,
-				F29DEC511DF2CBBE00047BBD /* Chess_nlt45.svg in Resources */,
-				F29DEC521DF2CBBE00047BBD /* Chess_pdt45.svg in Resources */,
-				F29DEC531DF2CBBE00047BBD /* Chess_plt45.svg in Resources */,
-				F29DEC541DF2CBBE00047BBD /* Chess_qdt45.svg in Resources */,
-				F29DEC551DF2CBBE00047BBD /* Chess_qlt45.svg in Resources */,
-				F29DEC561DF2CBBE00047BBD /* Chess_rdt45.svg in Resources */,
-				F29DEC571DF2CBBE00047BBD /* Chess_rlt45.svg in Resources */,
+				F26BFE8D20540303001BE35B /* PieceSets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,16 +628,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F217D7DC1E94CD660056B889 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CocoaLumberjack-iOS";
-			targetProxy = F217D7DB1E94CD660056B889 /* PBXContainerItemProxy */;
-		};
-		F217D7DE1E94CD730056B889 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SVGKitFramework-iOS";
-			targetProxy = F217D7DD1E94CD730056B889 /* PBXContainerItemProxy */;
-		};
 		F29DEC421DF2CB9D00047BBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F29DEC3B1DF2CB9D00047BBD /* ChessToolkitUI-iOS */;
@@ -1099,16 +642,6 @@
 			isa = PBXTargetDependency;
 			target = F2D1435E1DDE245800288DFC /* ChessToolkit-iOS */;
 			targetProxy = F2A1FDBF1E86F25900ED1166 /* PBXContainerItemProxy */;
-		};
-		F2D143951DDE27BA00288DFC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SVGKitFramework-iOS";
-			targetProxy = F2D143941DDE27BA00288DFC /* PBXContainerItemProxy */;
-		};
-		F2F2155F1E86DB5A000BBC9A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CocoaLumberjack-iOS";
-			targetProxy = F2F2155E1E86DB5A000BBC9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1166,7 +699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkitUI-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkitUI-iOS";
@@ -1211,7 +744,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkitUI-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkitUI-iOS";
@@ -1395,7 +928,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "ChessToolkit-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1455,7 +988,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "ChessToolkit-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-iOS";
@@ -1515,7 +1048,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "ChessToolkit-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1566,7 +1099,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "ChessToolkit-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-Example";

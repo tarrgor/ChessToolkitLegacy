@@ -123,7 +123,7 @@ class CTFENParser {
   
   fileprivate func parsePositionRow(_ row: String, startSquare: Int) {
     var square = startSquare
-    for char in row.characters {
+    for char in row {
       if let piece = CTPiece.fromFEN(char) {
         posData[square] = piece
         square += 1
@@ -159,7 +159,7 @@ class CTFENParser {
   }
   
   fileprivate func analyzeCastlingRights(_ rights: String) {
-    for char in rights.characters {
+    for char in rights {
       switch (char) {
       case CTConstants.kFENWhiteKingChar:
         castlingRights._whiteCanCastleShort = true
@@ -181,9 +181,9 @@ class CTFENParser {
   }
   
   fileprivate func analyzeEnPassantSquare(_ square: String) {
-    let length = square.characters.count
+    let length = square.count
     if (length < 1 || length > 2) {
-      setError("Invalid length of en passant square: \(square.characters.count)")
+      setError("Invalid length of en passant square: \(square.count)")
       return
     }
     

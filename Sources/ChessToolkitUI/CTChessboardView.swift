@@ -4,7 +4,6 @@
 //
 
 import UIKit
-import SVGKit
 import ChessToolkit
 
 let kLabelXOffsetFactor: CGFloat = 0.068
@@ -19,7 +18,7 @@ open class CTChessboardView : UIView {
   fileprivate var _referenceRect: CGRect = CGRect.zero
   fileprivate var _squareSize: CGFloat = 0
   
-  fileprivate var _draggedItem: SVGKImage?
+  fileprivate var _draggedItem: UIImage?
   fileprivate var _dragFromSquare: CTSquare?
   fileprivate var _draggedPiece: CTPiece?
   fileprivate var _dragImage: UIView?
@@ -141,8 +140,8 @@ extension CTChessboardView {
 
         let square = self.flipped ? CTSquare.fromRow(7 - row, column: 7 - col) : CTSquare.fromRow(row, column: col)
         if _dragFromSquare == nil || square != _dragFromSquare {
-          if let image: SVGKImage = pieceSet.imageForPiece(position.pieceAt(square!), size: self._squareSize) {
-            image.uiImage.draw(in: squareRect)
+          if let image = pieceSet.imageForPiece(position.pieceAt(square!)) {
+            image.draw(in: squareRect.insetBy(dx: 5, dy: 5))
           }
         }
       }
@@ -219,7 +218,7 @@ extension CTChessboardView {
           markPossibleSquares(square)
         }
         
-        _draggedItem = pieceSet.imageForPiece(piece, size: _squareSize)
+        _draggedItem = pieceSet.imageForPiece(piece)
         _dragFromSquare = square
         _draggedPiece = piece
         
@@ -349,23 +348,24 @@ extension CTChessboardView {
       pieceSize = pieceSize * 1.4
     }
     
-    if let pieceImage: SVGKImage = pieceSet.imageForPiece(piece, size: pieceSize) {
-      let imageView = SVGKFastImageView(svgkImage: pieceImage)
-      imageView?.translatesAutoresizingMaskIntoConstraints = false
+    if let pieceImage = pieceSet.imageForPiece(piece, size: CGSize(width: pieceSize, height: pieceSize)) {
+      let imageView = UIImageView(image: pieceImage)
+      imageView.translatesAutoresizingMaskIntoConstraints = false
       
       let backgroundView = UIView()
-      backgroundView.bounds = CGRect(x: 0, y: 0, width: (imageView?.bounds.size.width)! * 1.4, height: (imageView?.bounds.size.height)! * 1.4)
+      backgroundView.bounds = CGRect(x: 0, y: 0, width: (imageView.bounds.size.width) * 1.4,
+                                     height: (imageView.bounds.size.height) * 1.4)
       if (self.scalePiecesWhenDragged) {
         backgroundView.layer.cornerRadius = backgroundView.bounds.size.height / 2
         backgroundView.backgroundColor = self.scaledPieceBackgroundColor.withAlphaComponent(self.scaledPieceBackgroundAlpha)
       }
       backgroundView.center = location
-      backgroundView.addSubview(imageView!)
+      backgroundView.addSubview(imageView)
       
       self.addSubview(backgroundView)
       
-      imageView?.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor).isActive = true
-      imageView?.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
+      imageView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor).isActive = true
+      imageView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
       
       self._dragImage = backgroundView
     }

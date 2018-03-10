@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVGKit
 import ChessToolkit
 
 class CTPieceSet {
@@ -15,7 +14,7 @@ class CTPieceSet {
   fileprivate let kFileNamePrefix = "FileName."
   
   fileprivate var _configuration: Dictionary<CTPiece, String>!
-  fileprivate var _cache = Dictionary<CTPiece, SVGKImage>()
+  fileprivate var _cache = Dictionary<CTPiece, UIImage>()
   
   var name: String
   
@@ -29,26 +28,25 @@ class CTPieceSet {
   
   // MARK: Image handling
   
-  func imageForPiece(_ piece: CTPiece, size: CGFloat) -> SVGKImage? {
+  func imageForPiece(_ piece: CTPiece, size: CGSize? = nil) -> UIImage? {
     // Create and return image
-    var image: SVGKImage? = nil
+    var image: UIImage? = nil
     
     if let cachedImg = _cache[piece] {
       image = cachedImg
     } else {
       if let name = _configuration[piece] {
-        if let svgImage = SVGKImage(named: "\(name)", in: CTUIConstants.kFrameworkBundle) {
-          image = svgImage
-          _cache.updateValue(svgImage, forKey: piece)
-        } else {
-          print("Error while trying to load SVG image.")
+        if let pdfImage = UIImage(named: name, in: CTUIConstants.kFrameworkBundle, compatibleWith: nil) {
+          image = pdfImage
+          _cache.updateValue(image!, forKey: piece)
         }
       }
     }
     
-    if (image?.hasSize != nil) {
-      if size != image?.size.width {
-        image?.size = CGSize(width: size, height: size)
+    if let resizeImage = image, let size = size {
+      let renderer = UIGraphicsImageRenderer(size: size)
+      image = renderer.image { _ in
+        resizeImage.draw(in: CGRect(origin: CGPoint.zero, size: size))
       }
     }
     
@@ -69,7 +67,7 @@ class CTPieceSet {
         while let key = enumerator.nextObject() as? String {
           let value = plistFile.object(forKey: key)! as! String
           
-          let index = kFileNamePrefix.characters.count
+          let index = kFileNamePrefix.count
           let pieceChar: Character = key[index]
           
           if let piece = CTPiece.fromFEN(pieceChar) {

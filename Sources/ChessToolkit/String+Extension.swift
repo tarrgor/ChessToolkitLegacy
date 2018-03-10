@@ -15,7 +15,7 @@ public extension String {
   }
   
   subscript (index: Int) -> Character {
-    return self[self.characters.index(self.startIndex, offsetBy: index)]
+    return self[self.index(self.startIndex, offsetBy: index)]
   }
 
   subscript (index: Int) -> String {
@@ -23,8 +23,9 @@ public extension String {
   }
   
   subscript (range: Range<Int>) -> String {
-    let lowerIndex = self.characters.index(self.startIndex, offsetBy: range.lowerBound)
-    let higherIndex = self.characters.index(self.startIndex, offsetBy: range.upperBound)
+    let lowerIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
+    let higherIndex = self.index(self.startIndex, offsetBy: range.upperBound)
     return substring(with: (lowerIndex ..< higherIndex))
   }
+
 }
