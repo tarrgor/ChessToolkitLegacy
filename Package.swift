@@ -11,7 +11,7 @@ import PackageDescription
 let package = Package(
   name: "ChessToolkit",
   exclude: [
-    "Sources/ChessToolkitUI", "Sources/*.svg", "Sources/*.plist"
+    "Sources/ChessToolkitUI", "Sources/*.xcassets", "Sources/*.plist"
   ]
 )
 
