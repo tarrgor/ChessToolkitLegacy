@@ -11,7 +11,13 @@ import Foundation
 struct CTUIConstants {
   // MARK: Framework Constants
   
+  #if os(iOS)
   static let kFrameworkIdentifier = "org.karrmarr.ChessToolkitUI-iOS"
+  #elseif os(tvOS)
+  static let kFrameworkIdentifier = "org.karrmarr.ChessToolkitUI-tvOS"
+  #endif
+  
   static let kFrameworkBundle = Bundle(identifier: kFrameworkIdentifier)!
+  
 }
 
