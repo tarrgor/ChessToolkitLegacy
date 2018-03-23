@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F207A4AF2065747F006FFD17 /* CTChessboardView+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207A4AE2065747F006FFD17 /* CTChessboardView+iOS.swift */; };
+		F207A4B3206586CC006FFD17 /* CTChessboardView+tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207A4B2206586CC006FFD17 /* CTChessboardView+tvOS.swift */; };
 		F214A811206417A700A4CC73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214A810206417A700A4CC73 /* AppDelegate.swift */; };
 		F214A813206417A700A4CC73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214A812206417A700A4CC73 /* ViewController.swift */; };
 		F214A816206417A700A4CC73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F214A814206417A700A4CC73 /* Main.storyboard */; };
@@ -159,6 +160,7 @@
 
 /* Begin PBXFileReference section */
 		F207A4AE2065747F006FFD17 /* CTChessboardView+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTChessboardView+iOS.swift"; sourceTree = "<group>"; };
+		F207A4B2206586CC006FFD17 /* CTChessboardView+tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTChessboardView+tvOS.swift"; sourceTree = "<group>"; };
 		F214A80E206417A700A4CC73 /* ChessToolki-tvos-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChessToolki-tvos-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F214A810206417A700A4CC73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F214A812206417A700A4CC73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +290,14 @@
 				F207A4AE2065747F006FFD17 /* CTChessboardView+iOS.swift */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		F207A4B120658697006FFD17 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				F207A4B2206586CC006FFD17 /* CTChessboardView+tvOS.swift */,
+			);
+			path = tvOS;
 			sourceTree = "<group>";
 		};
 		F214A80F206417A700A4CC73 /* ChessToolki-tvos-Example */ = {
@@ -462,6 +472,7 @@
 		F2F215921E86EC6C000BBC9A /* ChessToolkitUI */ = {
 			isa = PBXGroup;
 			children = (
+				F207A4B120658697006FFD17 /* tvOS */,
 				F207A4B020657489006FFD17 /* iOS */,
 				F26BFE91205420E7001BE35B /* PieceSets */,
 				F2F215B71E86EDDD000BBC9A /* CTChessboardView.swift */,
@@ -831,6 +842,7 @@
 				F214A84C20641B2700A4CC73 /* CTChessboardView.swift in Sources */,
 				F214A84D20641B2700A4CC73 /* CTPieceSet.swift in Sources */,
 				F214A84E20641B2700A4CC73 /* CTUIConstants.swift in Sources */,
+				F207A4B3206586CC006FFD17 /* CTChessboardView+tvOS.swift in Sources */,
 				F214A84F20641B2700A4CC73 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,6 +23,9 @@ open class CTChessboardView : UIView {
   internal var _dragFromSquare: CTSquare?
   internal var _draggedPiece: CTPiece?
   internal var _dragImage: UIView?
+  #elseif os(tvOS)
+  internal var _panGestureRecognizer: UIPanGestureRecognizer?
+  internal var _panStartLocation: CGPoint?
   #endif
   
   fileprivate var _markings = Array<CTSquareMarkingStyle?>(repeating: nil, count: 144)
@@ -95,6 +98,9 @@ open class CTChessboardView : UIView {
       self._dragImage = nil
       self._dragFromSquare = nil
       self._draggedPiece = nil
+    #elseif os(tvOS)
+      self._panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panned(recognizer:)))
+      self.addGestureRecognizer(self._panGestureRecognizer!)
     #endif
   }
   
