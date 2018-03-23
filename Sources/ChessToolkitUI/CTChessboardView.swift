@@ -18,10 +18,12 @@ open class CTChessboardView : UIView {
   fileprivate var _referenceRect: CGRect = CGRect.zero
   fileprivate var _squareSize: CGFloat = 0
   
-  fileprivate var _draggedItem: UIImage?
-  fileprivate var _dragFromSquare: CTSquare?
-  fileprivate var _draggedPiece: CTPiece?
-  fileprivate var _dragImage: UIView?
+  #if os(iOS)
+  internal var _draggedItem: UIImage?
+  internal var _dragFromSquare: CTSquare?
+  internal var _draggedPiece: CTPiece?
+  internal var _dragImage: UIView?
+  #endif
   
   fileprivate var _markings = Array<CTSquareMarkingStyle?>(repeating: nil, count: 144)
   
@@ -84,6 +86,18 @@ open class CTChessboardView : UIView {
     
     initializeView()
   }
+  
+  private func initializeView() {
+    calculateSizes()
+    
+    #if os(iOS)
+      self._draggedItem = nil
+      self._dragImage = nil
+      self._dragFromSquare = nil
+      self._draggedPiece = nil
+    #endif
+  }
+  
 }
 
 extension CTChessboardView {
@@ -139,11 +153,18 @@ extension CTChessboardView {
         }
 
         let square = self.flipped ? CTSquare.fromRow(7 - row, column: 7 - col) : CTSquare.fromRow(row, column: col)
-        if _dragFromSquare == nil || square != _dragFromSquare {
-          if let image = pieceSet.imageForPiece(position.pieceAt(square!)) {
-            image.draw(in: squareRect.insetBy(dx: 5, dy: 5))
+        
+        #if os(iOS)
+          if _dragFromSquare == nil || square != _dragFromSquare {
+            if let image = pieceSet.imageForPiece(position.pieceAt(square!)) {
+              image.draw(in: squareRect.insetBy(dx: _squareSize * 0.12, dy: _squareSize * 0.12))
+            }
           }
-        }
+        #elseif os(tvOS)
+          if let image = pieceSet.imageForPiece(position.pieceAt(square!)) {
+            image.draw(in: squareRect.insetBy(dx: _squareSize * 0.12, dy: _squareSize * 0.12))
+          }
+        #endif
       }
     }
   }
@@ -201,82 +222,6 @@ extension CTChessboardView {
 }
 
 extension CTChessboardView {
-  // MARK: - Touch handling
-  
-  open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    if let touch = touches.first {
-      let location = touch.location(in: self)
-      let rowcol = rowAndColFromLocation(location)
-      let row = rowcol.row
-      let col = rowcol.column
-      
-      guard let square = CTSquare.fromRow(row, column: col) else {
-        return
-      }
-      
-      let piece = self.position.pieceAt(square)
-      if piece != .empty && piece != .invalid {
-        if self.markAllPossibleMoves {
-          markPossibleSquares(square)
-        }
-        
-        _draggedItem = pieceSet.imageForPiece(piece)
-        _dragFromSquare = square
-        _draggedPiece = piece
-        
-        createPieceImageSubview(piece, location: location)
-        
-        setNeedsDisplay()
-      }
-    }
-  }
-
-  open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-    if self._dragImage == nil {
-      return
-    }
-    
-    // let lastLocation = _dragLocation
-    if let touch = touches.first {
-      let location = touch.location(in: self)
-      self._dragImage?.center = location
-    }
-  }
-
-  open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    if let touch = touches.first {
-      let releaseLocation = touch.location(in: self)
-      
-      removePieceImageSubview()
-      
-      let rowcol = rowAndColFromLocation(releaseLocation)
-      let row = rowcol.row
-      let col = rowcol.column
-      
-      if let toSquare = CTSquare.fromRow(row, column: col), let fromSquare = _dragFromSquare {
-        
-        // update CTPosition
-        let _ = position.makeMove(from: fromSquare, to: toSquare)
-        
-      }
-      
-      _draggedItem = nil
-      _dragFromSquare = nil
-      _draggedPiece = nil
-      
-      clearAllMarkings()
-      setNeedsDisplay()
-    }
-  }
-  
-  open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-    removePieceImageSubview()
-    clearAllMarkings()
-    setNeedsDisplay()
-  }
-}
-
-extension CTChessboardView {
   // MARK: - Board control methods
   
   public func markSquare(_ square: CTSquare, style: CTSquareMarkingStyle) {
@@ -295,16 +240,7 @@ extension CTChessboardView {
 extension CTChessboardView {
   // MARK: - Private methods
   
-  fileprivate func initializeView() {
-    calculateSizes()
-    
-    self._draggedItem = nil
-    self._dragImage = nil
-    self._dragFromSquare = nil
-    self._draggedPiece = nil
-  }
-  
-  fileprivate func rowAndColFromLocation(_ location: CGPoint) -> (row: Int, column: Int) {
+  internal func rowAndColFromLocation(_ location: CGPoint) -> (row: Int, column: Int) {
     if location.x < self._referenceRect.origin.x ||
       location.x > self._referenceRect.origin.x + self._referenceRect.size.width {
         return (-1, -1)
@@ -328,7 +264,7 @@ extension CTChessboardView {
     return (row, col)
   }
   
-  fileprivate func rectForRow(_ row: Int, col: Int) -> CGRect {
+  internal func rectForRow(_ row: Int, col: Int) -> CGRect {
     var offset: CGFloat = 0.0
     if self.border {
       offset = self.borderWidth
@@ -337,14 +273,14 @@ extension CTChessboardView {
     return squareRect
   }
   
-  fileprivate func rectForLocation(_ location: CGPoint, sizeAddition: CGFloat = 0) -> CGRect {
+  internal func rectForLocation(_ location: CGPoint, sizeAddition: CGFloat = 0) -> CGRect {
     let refSize = _squareSize + sizeAddition
     let halfSize = refSize / 2
     let squareRect = CGRect(x: location.x - halfSize, y: location.y - halfSize, width: refSize, height: refSize)
     return squareRect
   }
   
-  fileprivate func createPieceImageSubview(_ piece: CTPiece, location: CGPoint) {
+  internal func createPieceImageSubview(_ piece: CTPiece, location: CGPoint) {
     var pieceSize = self.squareSize
     if self.scalePiecesWhenDragged {
       pieceSize = pieceSize * 1.4
@@ -369,16 +305,13 @@ extension CTChessboardView {
       imageView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor).isActive = true
       imageView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
       
-      self._dragImage = backgroundView
+      #if os(iOS)
+        self._dragImage = backgroundView
+      #endif
     }
   }
   
-  fileprivate func removePieceImageSubview() {
-    self._dragImage?.removeFromSuperview()
-    self._dragImage = nil
-  }
-  
-  fileprivate func markPossibleSquares(_ square: CTSquare) {
+  internal func markPossibleSquares(_ square: CTSquare) {
     let generator = self.position.moveGenerator
     let moves = generator.generateAllMovesForSide(self.position.sideToMove)
     moves.forEach { move in

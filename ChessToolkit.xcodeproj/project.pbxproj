@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F207A4AF2065747F006FFD17 /* CTChessboardView+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207A4AE2065747F006FFD17 /* CTChessboardView+iOS.swift */; };
 		F214A811206417A700A4CC73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214A810206417A700A4CC73 /* AppDelegate.swift */; };
 		F214A813206417A700A4CC73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214A812206417A700A4CC73 /* ViewController.swift */; };
 		F214A816206417A700A4CC73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F214A814206417A700A4CC73 /* Main.storyboard */; };
@@ -157,6 +158,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F207A4AE2065747F006FFD17 /* CTChessboardView+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTChessboardView+iOS.swift"; sourceTree = "<group>"; };
 		F214A80E206417A700A4CC73 /* ChessToolki-tvos-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChessToolki-tvos-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F214A810206417A700A4CC73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F214A812206417A700A4CC73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +282,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F207A4B020657489006FFD17 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F207A4AE2065747F006FFD17 /* CTChessboardView+iOS.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		F214A80F206417A700A4CC73 /* ChessToolki-tvos-Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +462,7 @@
 		F2F215921E86EC6C000BBC9A /* ChessToolkitUI */ = {
 			isa = PBXGroup;
 			children = (
+				F207A4B020657489006FFD17 /* iOS */,
 				F26BFE91205420E7001BE35B /* PieceSets */,
 				F2F215B71E86EDDD000BBC9A /* CTChessboardView.swift */,
 				F2F215B81E86EDDD000BBC9A /* CTPieceSet.swift */,
@@ -850,6 +861,7 @@
 				F2A1FDA01E86EE4A00ED1166 /* CTChessboardView.swift in Sources */,
 				F2A1FDA11E86EE4A00ED1166 /* CTPieceSet.swift in Sources */,
 				F2A1FDA21E86EE4A00ED1166 /* CTUIConstants.swift in Sources */,
+				F207A4AF2065747F006FFD17 /* CTChessboardView+iOS.swift in Sources */,
 				F2A1FDA31E86EE4A00ED1166 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
