@@ -34,7 +34,6 @@
 		F214A84C20641B2700A4CC73 /* CTChessboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215B71E86EDDD000BBC9A /* CTChessboardView.swift */; };
 		F214A84D20641B2700A4CC73 /* CTPieceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215B81E86EDDD000BBC9A /* CTPieceSet.swift */; };
 		F214A84E20641B2700A4CC73 /* CTUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215B91E86EDDD000BBC9A /* CTUIConstants.swift */; };
-		F214A84F20641B2700A4CC73 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215BA1E86EDDD000BBC9A /* UIColor+Extension.swift */; };
 		F214A85020641B3A00A4CC73 /* PieceSet_Default.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26BFE932054210B001BE35B /* PieceSet_Default.plist */; };
 		F214A85120641B3A00A4CC73 /* PieceSets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26BFE922054210B001BE35B /* PieceSets.xcassets */; };
 		F2492C51206C2E4700DCD798 /* TVOSAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2492C50206C2E4700DCD798 /* TVOSAssets.xcassets */; };
@@ -59,7 +58,6 @@
 		F2A1FDA01E86EE4A00ED1166 /* CTChessboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215B71E86EDDD000BBC9A /* CTChessboardView.swift */; };
 		F2A1FDA11E86EE4A00ED1166 /* CTPieceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215B81E86EDDD000BBC9A /* CTPieceSet.swift */; };
 		F2A1FDA21E86EE4A00ED1166 /* CTUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215B91E86EDDD000BBC9A /* CTUIConstants.swift */; };
-		F2A1FDA31E86EE4A00ED1166 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215BA1E86EDDD000BBC9A /* UIColor+Extension.swift */; };
 		F2A1FDBE1E86F25900ED1166 /* ChessToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D1435F1DDE245800288DFC /* ChessToolkit.framework */; };
 		F2A1FDD41E86F40300ED1166 /* CTFENParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDCA1E86F3F300ED1166 /* CTFENParserTests.swift */; };
 		F2A1FDD51E86F40300ED1166 /* CTGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDCB1E86F3F300ED1166 /* CTGameTests.swift */; };
@@ -217,7 +215,6 @@
 		F2F215B71E86EDDD000BBC9A /* CTChessboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTChessboardView.swift; sourceTree = "<group>"; };
 		F2F215B81E86EDDD000BBC9A /* CTPieceSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPieceSet.swift; sourceTree = "<group>"; };
 		F2F215B91E86EDDD000BBC9A /* CTUIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTUIConstants.swift; sourceTree = "<group>"; };
-		F2F215BA1E86EDDD000BBC9A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -481,7 +478,6 @@
 				F2F215B71E86EDDD000BBC9A /* CTChessboardView.swift */,
 				F2F215B81E86EDDD000BBC9A /* CTPieceSet.swift */,
 				F2F215B91E86EDDD000BBC9A /* CTUIConstants.swift */,
-				F2F215BA1E86EDDD000BBC9A /* UIColor+Extension.swift */,
 			);
 			path = ChessToolkitUI;
 			sourceTree = "<group>";
@@ -847,7 +843,6 @@
 				F214A84D20641B2700A4CC73 /* CTPieceSet.swift in Sources */,
 				F214A84E20641B2700A4CC73 /* CTUIConstants.swift in Sources */,
 				F207A4B3206586CC006FFD17 /* CTChessboardView+tvOS.swift in Sources */,
-				F214A84F20641B2700A4CC73 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,7 +873,6 @@
 				F2A1FDA11E86EE4A00ED1166 /* CTPieceSet.swift in Sources */,
 				F2A1FDA21E86EE4A00ED1166 /* CTUIConstants.swift in Sources */,
 				F207A4AF2065747F006FFD17 /* CTChessboardView+iOS.swift in Sources */,
-				F2A1FDA31E86EE4A00ED1166 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
