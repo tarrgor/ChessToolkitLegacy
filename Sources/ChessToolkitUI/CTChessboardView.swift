@@ -26,6 +26,7 @@ open class CTChessboardView : UIView {
   #elseif os(tvOS)
   internal var _panGestureRecognizer: UIPanGestureRecognizer?
   internal var _panStartLocation: CGPoint?
+  internal var _focusViews: [UIImageView] = Array<UIImageView>(repeating: UIImageView(), count: 64)
   #endif
   
   fileprivate var _markings = Array<CTSquareMarkingStyle?>(repeating: nil, count: 144)
@@ -81,27 +82,21 @@ open class CTChessboardView : UIView {
   public override init(frame: CGRect) {
     super.init(frame: frame)
 
+    // calculate square sizes
+    calculateSizes()
+    
+    // platform specific initialization
     initializeView()
   }
   
   required public init?(coder: NSCoder) {
     super.init(coder: coder)
     
-    initializeView()
-  }
-  
-  private func initializeView() {
+    // calculate square sizes
     calculateSizes()
-    
-    #if os(iOS)
-      self._draggedItem = nil
-      self._dragImage = nil
-      self._dragFromSquare = nil
-      self._draggedPiece = nil
-    #elseif os(tvOS)
-      self._panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panned(recognizer:)))
-      self.addGestureRecognizer(self._panGestureRecognizer!)
-    #endif
+
+    // platform specific initialization
+    initializeView()
   }
   
 }

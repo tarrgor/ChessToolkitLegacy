@@ -9,6 +9,17 @@ import UIKit
 import ChessToolkit
 
 extension CTChessboardView {
+  
+  // MARK: - Initialization
+  
+  internal func initializeView() {
+    // reset all dragging helper fields
+    self._draggedItem = nil
+    self._dragImage = nil
+    self._dragFromSquare = nil
+    self._draggedPiece = nil
+  }
+  
   // MARK: - Touch handling
   
   internal func removePieceImageSubview() {
