@@ -77,6 +77,10 @@
 		F2EC93A02340C32200411542 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EC939F2340C32200411542 /* ViewController.swift */; };
 		F2EC93A22340C32300411542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2EC93A12340C32300411542 /* Assets.xcassets */; };
 		F2EC93A52340C32300411542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2EC93A32340C32300411542 /* Main.storyboard */; };
+		F2EC93B02340C88D00411542 /* ChessToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F215671E86DFD7000BBC9A /* ChessToolkit.framework */; };
+		F2EC93B12340C88D00411542 /* ChessToolkit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2F215671E86DFD7000BBC9A /* ChessToolkit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2EC93B52340C89200411542 /* ChessToolkitUI2_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2EC938D2340C16600411542 /* ChessToolkitUI2_macOS.framework */; };
+		F2EC93B62340C89200411542 /* ChessToolkitUI2_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2EC938D2340C16600411542 /* ChessToolkitUI2_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2F2156B1E86DFD7000BBC9A /* ChessToolkit-macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F2F215691E86DFD7000BBC9A /* ChessToolkit-macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2F215AB1E86ED8D000BBC9A /* CTCastlingRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2159F1E86ED8D000BBC9A /* CTCastlingRights.swift */; };
 		F2F215AC1E86ED8D000BBC9A /* CTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215A01E86ED8D000BBC9A /* CTConstants.swift */; };
@@ -135,14 +139,14 @@
 			remoteGlobalIDString = F2D1435E1DDE245800288DFC;
 			remoteInfo = "ChessToolkit-iOS";
 		};
-		F2EC93AB2340C36D00411542 /* PBXContainerItemProxy */ = {
+		F2EC93B22340C88D00411542 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F2D1432E1DDE222800288DFC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F2F215661E86DFD7000BBC9A;
 			remoteInfo = "ChessToolkit-macOS";
 		};
-		F2EC93AD2340C37300411542 /* PBXContainerItemProxy */ = {
+		F2EC93B72340C89200411542 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F2D1432E1DDE222800288DFC /* Project object */;
 			proxyType = 1;
@@ -174,6 +178,18 @@
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F2EC93B42340C88D00411542 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F2EC93B12340C88D00411542 /* ChessToolkit.framework in Embed Frameworks */,
+				F2EC93B62340C89200411542 /* ChessToolkitUI2_macOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -315,6 +331,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2EC93B02340C88D00411542 /* ChessToolkit.framework in Frameworks */,
+				F2EC93B52340C89200411542 /* ChessToolkitUI2_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +441,7 @@
 				F2EC938E2340C16600411542 /* ChessToolkitUI2-macOS */,
 				F2EC939C2340C32200411542 /* ChessToolkit-macOS-Example */,
 				F2D143601DDE245800288DFC /* Products */,
+				F2EC93AF2340C88D00411542 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -519,6 +538,13 @@
 				F2EC93A72340C32300411542 /* ChessToolkit_macOS_Example.entitlements */,
 			);
 			path = "ChessToolkit-macOS-Example";
+			sourceTree = "<group>";
+		};
+		F2EC93AF2340C88D00411542 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F2F215681E86DFD7000BBC9A /* ChessToolkit-macOS */ = {
@@ -772,12 +798,13 @@
 				F2EC93972340C32200411542 /* Sources */,
 				F2EC93982340C32200411542 /* Frameworks */,
 				F2EC93992340C32200411542 /* Resources */,
+				F2EC93B42340C88D00411542 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F2EC93AE2340C37300411542 /* PBXTargetDependency */,
-				F2EC93AC2340C36D00411542 /* PBXTargetDependency */,
+				F2EC93B32340C88D00411542 /* PBXTargetDependency */,
+				F2EC93B82340C89200411542 /* PBXTargetDependency */,
 			);
 			name = "ChessToolkit-macOS-Example";
 			productName = "ChessToolkit-macOS-Example";
@@ -1142,15 +1169,15 @@
 			target = F2D1435E1DDE245800288DFC /* ChessToolkit-iOS */;
 			targetProxy = F2A1FDBF1E86F25900ED1166 /* PBXContainerItemProxy */;
 		};
-		F2EC93AC2340C36D00411542 /* PBXTargetDependency */ = {
+		F2EC93B32340C88D00411542 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F2F215661E86DFD7000BBC9A /* ChessToolkit-macOS */;
-			targetProxy = F2EC93AB2340C36D00411542 /* PBXContainerItemProxy */;
+			targetProxy = F2EC93B22340C88D00411542 /* PBXContainerItemProxy */;
 		};
-		F2EC93AE2340C37300411542 /* PBXTargetDependency */ = {
+		F2EC93B82340C89200411542 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F2EC938C2340C16600411542 /* ChessToolkitUI2-macOS */;
-			targetProxy = F2EC93AD2340C37300411542 /* PBXContainerItemProxy */;
+			targetProxy = F2EC93B72340C89200411542 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1228,7 +1255,6 @@
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 			};
@@ -1266,7 +1292,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 				VALIDATE_PRODUCT = YES;
@@ -1316,7 +1341,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1361,7 +1385,6 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 				VALIDATE_PRODUCT = YES;
@@ -1413,7 +1436,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1458,7 +1480,6 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 				VALIDATE_PRODUCT = YES;
@@ -1511,7 +1532,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1556,7 +1576,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1597,7 +1616,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1628,7 +1646,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1666,6 +1683,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 			};
 			name = Debug;
@@ -1701,6 +1719,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 			};
 			name = Release;
@@ -1765,7 +1784,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1824,7 +1842,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1886,7 +1903,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1936,7 +1952,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1986,7 +2001,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2031,7 +2045,6 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2078,7 +2091,6 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -2117,7 +2129,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -2164,7 +2175,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2207,7 +2217,6 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
