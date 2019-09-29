@@ -723,6 +723,9 @@
                             <constraint firstAttribute="bottom" secondItem="Goc-SP-JiM" secondAttribute="bottom" constant="20" id="ynK-oM-X82"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chessBoard" destination="Goc-SP-JiM" id="CEc-xE-1Zo"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
