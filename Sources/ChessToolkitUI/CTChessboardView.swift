@@ -173,9 +173,9 @@ extension CTChessboardView {
   fileprivate func drawLabelForRow(_ row: Int, squareRect: CGRect) {
     let rowIndex = self.flipped ? 7 - row : row
     let label = _rowLabels[rowIndex] as NSString
-    let attributes: [NSAttributedStringKey: Any] = [
-      NSAttributedStringKey.foregroundColor : self.squareLabelColor,
-      NSAttributedStringKey.font : self.squareLabelFont ]
+    let attributes: [NSAttributedString.Key: Any] = [
+      NSAttributedString.Key.foregroundColor : self.squareLabelColor,
+      NSAttributedString.Key.font : self.squareLabelFont ]
     let textSize = label.size(withAttributes: attributes)
 
     let goodBorder = self.border && self.borderWidth >= 16
@@ -188,9 +188,9 @@ extension CTChessboardView {
   fileprivate func drawLabelForColumn(_ column: Int, squareRect: CGRect) {
     let columnIndex = self.flipped ? 7 - column : column
     let label = _colLabels[columnIndex] as NSString
-    let attributes: [NSAttributedStringKey: Any] = [
-      NSAttributedStringKey.foregroundColor : self.squareLabelColor,
-      NSAttributedStringKey.font : self.squareLabelFont ]
+    let attributes: [NSAttributedString.Key: Any] = [
+      NSAttributedString.Key.foregroundColor : self.squareLabelColor,
+      NSAttributedString.Key.font : self.squareLabelFont ]
     let textSize = label.size(withAttributes: attributes)
     
     let goodBorder = self.border && self.borderWidth >= 16

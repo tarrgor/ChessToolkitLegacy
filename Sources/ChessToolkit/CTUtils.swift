@@ -59,14 +59,14 @@ class HashUtils {
   }
   
   func hash(for piece: CTPiece, on square: CTSquare) -> UInt64 {
-    let sqIdx = _squares.index(of: square)
-    let pcIdx = _pieces.index(of: piece)
+    let sqIdx = _squares.firstIndex(of: square)
+    let pcIdx = _pieces.firstIndex(of: piece)
     assert(sqIdx != nil && pcIdx != nil, "Invalid index encountered.")
     return _pieceHashKeys[sqIdx!][pcIdx!]
   }
   
   func hash(for epSquare: CTSquare) -> UInt64 {
-    let index = _epSquares.index(of: epSquare)
+    let index = _epSquares.firstIndex(of: epSquare)
     assert(index != nil, "An invalid en passant square has been specified.")
     return _epHashKeys[index!]
   }
