@@ -27,3 +27,4 @@ pos.makeMove(from: .g8, to: .f6)
 
 print(pos)
 print(pos.hashKey)
+

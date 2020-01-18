@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,12 +37,15 @@
 		F214A85020641B3A00A4CC73 /* PieceSet_Default.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26BFE932054210B001BE35B /* PieceSet_Default.plist */; };
 		F214A85120641B3A00A4CC73 /* PieceSets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26BFE922054210B001BE35B /* PieceSets.xcassets */; };
 		F2492C51206C2E4700DCD798 /* TVOSAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2492C50206C2E4700DCD798 /* TVOSAssets.xcassets */; };
+		F253793023CB654C00DDD0A2 /* PieceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253792F23CB654C00DDD0A2 /* PieceSet.swift */; };
+		F253793223CB71BA00DDD0A2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253793123CB71BA00DDD0A2 /* Errors.swift */; };
 		F26BFE962054210F001BE35B /* PieceSet_Default.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26BFE932054210B001BE35B /* PieceSet_Default.plist */; };
 		F26BFE9720542114001BE35B /* PieceSets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26BFE922054210B001BE35B /* PieceSets.xcassets */; };
 		F29DEC401DF2CB9D00047BBD /* ChessToolkitUI-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F29DEC3E1DF2CB9D00047BBD /* ChessToolkitUI-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F29DEC431DF2CB9D00047BBD /* ChessToolkitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */; };
 		F29DEC441DF2CB9D00047BBD /* ChessToolkitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F29DEC5A1DF2CBDA00047BBD /* ChessToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D1435F1DDE245800288DFC /* ChessToolkit.framework */; };
+		F29E0A8A23CA8A8900E2E3E5 /* PieceSets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29E0A8823CA8A8900E2E3E5 /* PieceSets.xcassets */; };
 		F2A1FD941E86EE3F00ED1166 /* CTCastlingRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2159F1E86ED8D000BBC9A /* CTCastlingRights.swift */; };
 		F2A1FD951E86EE3F00ED1166 /* CTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215A01E86ED8D000BBC9A /* CTConstants.swift */; };
 		F2A1FD961E86EE3F00ED1166 /* CTEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F215A11E86ED8D000BBC9A /* CTEnums.swift */; };
@@ -64,6 +67,8 @@
 		F2A1FDD61E86F40300ED1166 /* CTMoveGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDCC1E86F3F300ED1166 /* CTMoveGeneratorTests.swift */; };
 		F2A1FDD71E86F40300ED1166 /* CTMoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDCD1E86F3F300ED1166 /* CTMoveTests.swift */; };
 		F2A1FDD81E86F40300ED1166 /* CTPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1FDCE1E86F3F300ED1166 /* CTPositionTests.swift */; };
+		F2CEAB2F23D2FFED00022C1D /* NodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CEAB2D23D2FEF000022C1D /* NodeBuilder.swift */; };
+		F2CEAB3123D306B600022C1D /* BoardConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CEAB3023D306B600022C1D /* BoardConfiguration.swift */; };
 		F2D143641DDE245800288DFC /* ChessToolkit-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D143621DDE245800288DFC /* ChessToolkit-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2D1437F1DDE260600288DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1437E1DDE260600288DFC /* AppDelegate.swift */; };
 		F2D143811DDE260600288DFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D143801DDE260600288DFC /* ViewController.swift */; };
@@ -209,19 +214,24 @@
 		F214A83420641AE700A4CC73 /* ChessToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F214A83620641AE700A4CC73 /* ChessToolkit_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessToolkit_tvOS.h; sourceTree = "<group>"; };
 		F214A83720641AE700A4CC73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F217C2CE1E92569B00371996 /* ChessToolkit-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ChessToolkit-Playground.playground"; sourceTree = "<group>"; };
+		F217C2CE1E92569B00371996 /* ChessToolkit-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ChessToolkit-Playground.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F2492C50206C2E4700DCD798 /* TVOSAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TVOSAssets.xcassets; sourceTree = "<group>"; };
+		F253792F23CB654C00DDD0A2 /* PieceSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceSet.swift; sourceTree = "<group>"; };
+		F253793123CB71BA00DDD0A2 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		F26BFE922054210B001BE35B /* PieceSets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PieceSets.xcassets; sourceTree = "<group>"; };
 		F26BFE932054210B001BE35B /* PieceSet_Default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PieceSet_Default.plist; sourceTree = "<group>"; };
 		F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29DEC3E1DF2CB9D00047BBD /* ChessToolkitUI-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkitUI-iOS.h"; sourceTree = "<group>"; };
 		F29DEC3F1DF2CB9D00047BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F29E0A8823CA8A8900E2E3E5 /* PieceSets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PieceSets.xcassets; sourceTree = "<group>"; };
 		F2A1FDB91E86F25900ED1166 /* ChessToolkit-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ChessToolkit-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A1FDCA1E86F3F300ED1166 /* CTFENParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTFENParserTests.swift; sourceTree = "<group>"; };
 		F2A1FDCB1E86F3F300ED1166 /* CTGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTGameTests.swift; sourceTree = "<group>"; };
 		F2A1FDCC1E86F3F300ED1166 /* CTMoveGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveGeneratorTests.swift; sourceTree = "<group>"; };
 		F2A1FDCD1E86F3F300ED1166 /* CTMoveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTMoveTests.swift; sourceTree = "<group>"; };
 		F2A1FDCE1E86F3F300ED1166 /* CTPositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPositionTests.swift; sourceTree = "<group>"; };
+		F2CEAB2D23D2FEF000022C1D /* NodeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeBuilder.swift; sourceTree = "<group>"; };
+		F2CEAB3023D306B600022C1D /* BoardConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardConfiguration.swift; sourceTree = "<group>"; };
 		F2D1435F1DDE245800288DFC /* ChessToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChessToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D143621DDE245800288DFC /* ChessToolkit-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessToolkit-iOS.h"; sourceTree = "<group>"; };
 		F2D143631DDE245800288DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -515,8 +525,13 @@
 		F2EC93872340C08700411542 /* ChessToolkitUI2 */ = {
 			isa = PBXGroup;
 			children = (
+				F29E0A8823CA8A8900E2E3E5 /* PieceSets.xcassets */,
 				F2EC93952340C25A00411542 /* ChessBoard.swift */,
 				F2EC93B92340CB0200411542 /* ChessBoardScene.swift */,
+				F253792F23CB654C00DDD0A2 /* PieceSet.swift */,
+				F253793123CB71BA00DDD0A2 /* Errors.swift */,
+				F2CEAB2D23D2FEF000022C1D /* NodeBuilder.swift */,
+				F2CEAB3023D306B600022C1D /* BoardConfiguration.swift */,
 			);
 			path = ChessToolkitUI2;
 			sourceTree = "<group>";
@@ -839,7 +854,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					F214A80D206417A700A4CC73 = {
 						CreatedOnToolsVersion = 9.2;
@@ -901,7 +916,7 @@
 				};
 			};
 			buildConfigurationList = F2D143311DDE222800288DFC /* Build configuration list for PBXProject "ChessToolkit" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -991,6 +1006,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29E0A8A23CA8A8900E2E3E5 /* PieceSets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1107,6 +1123,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CEAB2F23D2FFED00022C1D /* NodeBuilder.swift in Sources */,
+				F2CEAB3123D306B600022C1D /* BoardConfiguration.swift in Sources */,
+				F253793223CB71BA00DDD0A2 /* Errors.swift in Sources */,
+				F253793023CB654C00DDD0A2 /* PieceSet.swift in Sources */,
 				F2EC93BA2340CB0200411542 /* ChessBoardScene.swift in Sources */,
 				F2EC93962340C25A00411542 /* ChessBoard.swift in Sources */,
 			);
@@ -1252,7 +1272,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolki-tvos-Example/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolki-tvos-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1290,12 +1313,16 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolki-tvos-Example/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolki-tvos-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 				VALIDATE_PRODUCT = YES;
@@ -1337,7 +1364,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkitUI-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkitUI-tvOS";
 				PRODUCT_NAME = ChessToolkitUI;
@@ -1382,13 +1413,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkitUI-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkitUI-tvOS";
 				PRODUCT_NAME = ChessToolkitUI;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 				VALIDATE_PRODUCT = YES;
@@ -1432,7 +1468,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkit-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolkit-tvOS";
 				PRODUCT_NAME = ChessToolkit;
@@ -1477,13 +1517,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkit-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolkit-tvOS";
 				PRODUCT_NAME = ChessToolkit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 				VALIDATE_PRODUCT = YES;
@@ -1527,7 +1572,11 @@
 				INFOPLIST_FILE = "ChessToolkitUI-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkitUI-iOS";
 				PRODUCT_NAME = ChessToolkitUI;
@@ -1572,13 +1621,18 @@
 				INFOPLIST_FILE = "ChessToolkitUI-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkitUI-iOS";
 				PRODUCT_NAME = ChessToolkitUI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1613,7 +1667,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkit-iOS-Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1644,12 +1702,17 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkit-iOS-Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1778,7 +1841,11 @@
 				INFOPLIST_FILE = "ChessToolkit-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-iOS";
@@ -1838,13 +1905,18 @@
 				INFOPLIST_FILE = "ChessToolkit-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-iOS";
 				PRODUCT_NAME = ChessToolkit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1898,7 +1970,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "ChessToolkit-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-Example";
@@ -1949,12 +2024,16 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "ChessToolkit-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-Example";
 				PRODUCT_NAME = ChessToolkitExample;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1975,6 +2054,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1996,7 +2076,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkitUI2-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolkitUI2-macOS";
@@ -2025,6 +2109,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -2041,14 +2126,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkitUI2-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolkitUI2-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2071,6 +2161,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = "ChessToolkit-macOS-Example/ChessToolkit_macOS_Example.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -2087,7 +2178,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkit-macOS-Example/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolkit-macOS-Example";
@@ -2115,6 +2209,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = "ChessToolkit-macOS-Example/ChessToolkit_macOS_Example.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -2126,13 +2221,17 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkit-macOS-Example/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolkit-macOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -2148,7 +2247,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2170,7 +2269,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkit-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-macOS";
@@ -2196,7 +2299,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2213,14 +2316,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "ChessToolkit-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.karrmarr.ChessToolkit-macOS";
 				PRODUCT_NAME = ChessToolkit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
