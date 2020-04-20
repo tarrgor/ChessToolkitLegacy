@@ -184,7 +184,7 @@
 /* Begin PBXFileReference section */
 		F207A4AE2065747F006FFD17 /* CTChessboardView+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTChessboardView+iOS.swift"; sourceTree = "<group>"; };
 		F207A4B2206586CC006FFD17 /* CTChessboardView+tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTChessboardView+tvOS.swift"; sourceTree = "<group>"; };
-		F214A80E206417A700A4CC73 /* ChessToolki-tvos-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChessToolki-tvos-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F214A80E206417A700A4CC73 /* ChessToolkit-tvos-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChessToolkit-tvos-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F214A810206417A700A4CC73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F214A812206417A700A4CC73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F214A815206417A700A4CC73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -339,7 +339,7 @@
 			path = tvOS;
 			sourceTree = "<group>";
 		};
-		F214A80F206417A700A4CC73 /* ChessToolki-tvos-Example */ = {
+		F214A80F206417A700A4CC73 /* ChessToolkit-tvos-Example */ = {
 			isa = PBXGroup;
 			children = (
 				F214A810206417A700A4CC73 /* AppDelegate.swift */,
@@ -348,7 +348,7 @@
 				F214A817206417A700A4CC73 /* Assets.xcassets */,
 				F214A819206417A700A4CC73 /* Info.plist */,
 			);
-			path = "ChessToolki-tvos-Example";
+			path = "ChessToolkit-tvos-Example";
 			sourceTree = "<group>";
 		};
 		F214A82320641A9E00A4CC73 /* ChessToolkitUI-tvOS */ = {
@@ -411,7 +411,7 @@
 				F2DAFE871DDF74B30094F9A3 /* ChessToolkit-iOS-Tests */,
 				F29DEC3D1DF2CB9D00047BBD /* ChessToolkitUI-iOS */,
 				F2F215681E86DFD7000BBC9A /* ChessToolkit-macOS */,
-				F214A80F206417A700A4CC73 /* ChessToolki-tvos-Example */,
+				F214A80F206417A700A4CC73 /* ChessToolkit-tvos-Example */,
 				F214A82320641A9E00A4CC73 /* ChessToolkitUI-tvOS */,
 				F214A83520641AE700A4CC73 /* ChessToolkit-tvOS */,
 				F2EC939C2340C32200411542 /* ChessToolkit-macOS-Example */,
@@ -437,7 +437,7 @@
 				F29DEC3C1DF2CB9D00047BBD /* ChessToolkitUI.framework */,
 				F2F215671E86DFD7000BBC9A /* ChessToolkit.framework */,
 				F2A1FDB91E86F25900ED1166 /* ChessToolkit-iOS-Tests.xctest */,
-				F214A80E206417A700A4CC73 /* ChessToolki-tvos-Example.app */,
+				F214A80E206417A700A4CC73 /* ChessToolkit-tvos-Example.app */,
 				F214A82220641A9E00A4CC73 /* ChessToolkitUI.framework */,
 				F214A83420641AE700A4CC73 /* ChessToolkit.framework */,
 				F2EC939B2340C32200411542 /* ChessToolkit-macOS-Example.app */,
@@ -590,9 +590,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F214A80D206417A700A4CC73 /* ChessToolki-tvos-Example */ = {
+		F214A80D206417A700A4CC73 /* ChessToolkit-tvos-Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F214A81C206417A700A4CC73 /* Build configuration list for PBXNativeTarget "ChessToolki-tvos-Example" */;
+			buildConfigurationList = F214A81C206417A700A4CC73 /* Build configuration list for PBXNativeTarget "ChessToolkit-tvos-Example" */;
 			buildPhases = (
 				F214A80A206417A700A4CC73 /* Sources */,
 				F214A80B206417A700A4CC73 /* Frameworks */,
@@ -605,9 +605,9 @@
 				F214A82820641A9E00A4CC73 /* PBXTargetDependency */,
 				F214A83A20641AE700A4CC73 /* PBXTargetDependency */,
 			);
-			name = "ChessToolki-tvos-Example";
+			name = "ChessToolkit-tvos-Example";
 			productName = "ChessToolki-tvos-Example";
-			productReference = F214A80E206417A700A4CC73 /* ChessToolki-tvos-Example.app */;
+			productReference = F214A80E206417A700A4CC73 /* ChessToolkit-tvos-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F214A82120641A9E00A4CC73 /* ChessToolkitUI-tvOS */ = {
@@ -838,7 +838,7 @@
 				F214A83320641AE700A4CC73 /* ChessToolkit-tvOS */,
 				F29DEC3B1DF2CB9D00047BBD /* ChessToolkitUI-iOS */,
 				F214A82120641A9E00A4CC73 /* ChessToolkitUI-tvOS */,
-				F214A80D206417A700A4CC73 /* ChessToolki-tvos-Example */,
+				F214A80D206417A700A4CC73 /* ChessToolkit-tvos-Example */,
 				F2D1437B1DDE260600288DFC /* ChessToolkit-Example */,
 				F2EC939A2340C32200411542 /* ChessToolkit-macOS-Example */,
 				F2A1FDB81E86F25900ED1166 /* ChessToolkit-iOS-Tests */,
@@ -1149,14 +1149,14 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "ChessToolki-tvos-Example/Info.plist";
+				INFOPLIST_FILE = "ChessToolkit-tvos-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolki-tvos-Example";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolkit-tvos-Example";
+				PRODUCT_NAME = "ChessToolkit-tvos-Example";
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1190,14 +1190,14 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "ChessToolki-tvos-Example/Info.plist";
+				INFOPLIST_FILE = "ChessToolkit-tvos-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolki-tvos-Example";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.tklusemann.ChessToolkit-tvos-Example";
+				PRODUCT_NAME = "ChessToolkit-tvos-Example";
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -2110,7 +2110,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F214A81C206417A700A4CC73 /* Build configuration list for PBXNativeTarget "ChessToolki-tvos-Example" */ = {
+		F214A81C206417A700A4CC73 /* Build configuration list for PBXNativeTarget "ChessToolkit-tvos-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F214A81A206417A700A4CC73 /* Debug */,
