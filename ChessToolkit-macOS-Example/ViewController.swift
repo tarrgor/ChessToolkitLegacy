@@ -6,11 +6,8 @@
 //
 
 import Cocoa
-import ChessToolkitUI2_macOS
 
 class ViewController: NSViewController {
-  
-  @IBOutlet weak var chessBoard: ChessBoard!
   
   override func viewDidLoad() {
     super.viewDidLoad()

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -679,7 +679,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-792" y="-29"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -700,7 +700,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-792" y="221"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -709,27 +709,11 @@
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Goc-SP-JiM" customClass="ChessBoard" customModule="ChessToolkitUI2_macOS">
-                                <rect key="frame" x="20" y="20" width="440" height="440"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Goc-SP-JiM" secondAttribute="height" multiplier="1:1" id="tl5-Cu-aqq"/>
-                                </constraints>
-                            </customView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="Goc-SP-JiM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="IvA-8r-Dxo"/>
-                            <constraint firstItem="Goc-SP-JiM" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="plq-mb-Cr1"/>
-                            <constraint firstAttribute="bottom" secondItem="Goc-SP-JiM" secondAttribute="bottom" constant="20" id="ynK-oM-X82"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="chessBoard" destination="Goc-SP-JiM" id="CEc-xE-1Zo"/>
-                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155" y="760"/>
+            <point key="canvasLocation" x="-712" y="731"/>
         </scene>
     </scenes>
 </document>
